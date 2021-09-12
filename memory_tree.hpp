@@ -15,4 +15,9 @@ class Memory_Tree{ //binary tree used for the budddy algorithm
     private:
         Memory_Tree_Node* root;
     public:
+        Memory_Tree();
+        ~Memory_Tree();
+        inline Memory_Tree_Node* get_root(){
+            return this->root;
+        }
 };
