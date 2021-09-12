@@ -10,7 +10,7 @@ class Process{
     public:
         Process(int s, int life, int start);
         ~Process();
-}
+};
 
 class Memory_Block{
     private:
@@ -24,7 +24,7 @@ class Memory_Block{
 
         Memory_Block(int s, int x, int y);
         ~Memory_Block();
-}
+};
 
 class Memory_List{
     private:
@@ -42,8 +42,8 @@ class Memory_List{
         inline Memory_Block* get_tail(){
             return this->tail;
         }
-}
+};
 
 class Pending_Processes_List{   //aka L
 
-}
+};
