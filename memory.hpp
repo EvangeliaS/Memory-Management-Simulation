@@ -43,3 +43,7 @@ class Memory_List{
             return this->tail;
         }
 }
+
+class Pending_Processes_List{   //aka L
+
+}
