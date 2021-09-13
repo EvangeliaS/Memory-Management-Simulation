@@ -20,6 +20,9 @@ class Memory_List_Node{
         inline Process* get_process(){
             return this->process;
         }
+        inline int get_end(){
+            return this->end;
+        }
 };
 
 class Memory_List{
@@ -31,8 +34,8 @@ class Memory_List{
         ~Memory_List();
         bool check_empty_block();
         bool spot_empty_block();
-        int best_fit(Process* process);
-        int worst_fit(Process* process);
+        Memory_List_Node* best_fit(Process* process);
+        Memory_List_Node* worst_fit(Process* process);
         int insert_node(Process* proc, int algorithm);
         int delete_node(Process* proc);
         int search_node(int x);

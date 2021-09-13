@@ -8,6 +8,7 @@ Process::Process(int s, int life){
     this->lifetime = life;
     this->size = s;
     this->pending = true;
+    this->next = NULL;
 }
 
 Process::~Process(){
@@ -26,15 +27,13 @@ Pending_Processes_List::~Pending_Processes_List(){
 int Pending_Processes_List::add_process(Process* new_node){
     if(head==NULL){
         head = new_node;
-        head->next = NULL;
         tail = new_node;
-        tail->next = NULL;
         return 0;
     }
     if(head->next==NULL){
         head->next = new_node;
         tail = new_node;
-        tail->next = NULL;
+        //tail->next = NULL;
         return 0;
     }
     tail->next = new_node;

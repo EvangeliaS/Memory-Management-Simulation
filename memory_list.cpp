@@ -40,25 +40,33 @@ Memory_List::~Memory_List(){
     this->tail = NULL;
 }
 
-int Memory_List::best_fit(Process* proc){
+Memory_List_Node* Memory_List::best_fit(Process* proc){
 }
 
-int Memory_List::worst_fit(Process* proc){
+Memory_List_Node* Memory_List::worst_fit(Process* proc){
 
 }
 
 int Memory_List::insert_node(Process* proc, int algorithm){
     Memory_List_Node* temp = this->head;
     if(algorithm == BEST_FIT){
-        if(head==NULL){
-            head = new Memory_List_Node(proc->get_size(), best_fit(proc), ptime, proc);
-            tail = head;
-            return 0;
+        Memory_List_Node* prev = best_fit(proc);
+        if(prev){
+            if(head==NULL){
+                head = new Memory_List_Node(proc->get_size(), best_fit(proc)->get_end()+1, ptime, proc);
+                tail = head;
+                return 0;
+            }
+            if(head->next==NULL){
+                //tail->next = NULL;
+                return 0;
+            }
         }
+        return -1;  
     }
     if(algorithm == WORST_FIT){
         if(head==NULL){
-            head = new Memory_List_Node(proc->get_size(), worst_fit(proc), ptime, proc);
+            head = new Memory_List_Node(proc->get_size(), worst_fit(proc)->get_end()+1, ptime, proc);
             tail = head;
             return 0;
         }
