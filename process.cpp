@@ -24,7 +24,7 @@ Pending_Processes_List::~Pending_Processes_List(){
     this->head = NULL;
 }
 
-int Pending_Processes_List::add_process(Process* new_node){
+int Pending_Processes_List::append_process(Process* new_node){
     if(head==NULL){
         head = new_node;
         tail = new_node;

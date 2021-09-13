@@ -17,12 +17,21 @@ class Memory_List_Node{
 
         Memory_List_Node(int s, int x, int time, Process*);
         ~Memory_List_Node();
-        inline Process* get_process(){
-            return this->process;
+        void print();
+        
+        inline int get_start(){
+            return this->start;
         }
         inline int get_end(){
             return this->end;
         }
+        inline int get_size(){
+            return this->size;
+        }
+        inline Process* get_process(){
+            return this->process;
+        }
+        
 };
 
 class Memory_List{
@@ -37,6 +46,7 @@ class Memory_List{
         int insert_to_memory(Process* proc, Memory_List_Node* algorithm);
         int delete_node(Process* proc);
         int search_node(int x);
+        void display();
 
         inline void init_head(Memory_List_Node* node){
             this->head = node;
