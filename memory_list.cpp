@@ -40,40 +40,39 @@ Memory_List::~Memory_List(){
     this->tail = NULL;
 }
 
-Memory_List_Node* Memory_List::best_fit(Process* proc){
-}
 
-Memory_List_Node* Memory_List::worst_fit(Process* proc){
-
-}
-
-int Memory_List::insert_node(Process* proc, int algorithm){
-    Memory_List_Node* temp = this->head;
-    if(algorithm == BEST_FIT){
-        Memory_List_Node* prev = best_fit(proc);
-        if(prev){
-            if(head==NULL){
-                head = new Memory_List_Node(proc->get_size(), best_fit(proc)->get_end()+1, ptime, proc);
-                tail = head;
-                return 0;
-            }
-            if(head->next==NULL){
-                //tail->next = NULL;
-                return 0;
-            }
-        }
-        return -1;  
-    }
-    if(algorithm == WORST_FIT){
-        if(head==NULL){
-            head = new Memory_List_Node(proc->get_size(), worst_fit(proc)->get_end()+1, ptime, proc);
-            tail = head;
-            return 0;
-        }
-            
+Memory_List_Node* best_fit(Process* process, Pending_Processes_List* L, Memory_List* memory){
+    if(memory->is_empty()){
+        memory->init_head(new Memory_List_Node(process->get_size(), 0, ptime, process));
+        return memory->get_head();
     }
     else{
+
+    }
+}
+Memory_List_Node* worst_fit(Process* process, Pending_Processes_List* L, Memory_List* memory){
+    if(memory->is_empty()){
+        memory->init_head(new Memory_List_Node(process->get_size(), 0, ptime, process));
+        return memory->get_head();
+    }
+}
+
+int Memory_List::insert_to_memory(Process* proc, Memory_List_Node* algorithm_node){
+    if(algorithm_node!=NULL && algorithm_node!=this->head){
+        Memory_List_Node* prev = algorithm_node;
+        Memory_List_Node* new_node = new Memory_List_Node(proc->get_size(), algorithm_node->get_end()+1, ptime, proc);
+        new_node->next = prev->next;
+        new_node->prev = prev;
+        prev->next->prev = new_node;
+        prev->next = new_node;
+        return 0;
+    }
+    else if(algorithm_node!=NULL && algorithm_node==this->head){
+        //the item was already added in the memory, by the best/worst fit algorithm
+        return 1;
+    }
+    else{
+        //there was no space in memory
         return -1;
     }
-    return -1;
 }
