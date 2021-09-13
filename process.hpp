@@ -45,7 +45,6 @@ class Pending_Processes_List{   //aka L singly linked list
         ~Pending_Processes_List();
         int add_process(Process*);
         Process* pop_process(); //returns and removes the first process in the list(fifo)
-        Process* find_process(int id);
         inline Process* get_head(){
             return this->head;
         }

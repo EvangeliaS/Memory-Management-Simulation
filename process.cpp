@@ -40,6 +40,7 @@ int Pending_Processes_List::add_process(Process* new_node){
     tail->next = new_node;
     new_node = tail;
     tail->next = NULL;
+    return 0;
 
 }
 Process* Pending_Processes_List::pop_process(){
