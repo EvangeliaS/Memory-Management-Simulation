@@ -36,7 +36,7 @@ class Process{
         }
 };
 
-class Pending_Processes_List{   //aka L
+class Pending_Processes_List{   //aka L singly linked list
     private:
         Process* head;
         Process* tail;
@@ -44,7 +44,8 @@ class Pending_Processes_List{   //aka L
         Pending_Processes_List();
         ~Pending_Processes_List();
         int add_process(Process*);
-        int remove_process(Process*);
+        Process* pop_process(); //returns and removes the first process in the list(fifo)
+        Process* find_process(int id);
         inline Process* get_head(){
             return this->head;
         }
