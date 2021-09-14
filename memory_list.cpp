@@ -36,11 +36,12 @@ Memory_List::~Memory_List(){
     Memory_List_Node* prev = this->head;
     Memory_List_Node* temp = prev->next;
 
-    while(prev){
+    while(temp!=NULL){
         delete prev;
         prev = temp;
         temp = temp->next;
     }
+    delete prev;
     this->head = NULL;
     this->tail = NULL;
 }
@@ -68,6 +69,10 @@ int Memory_List::insert_to_memory(Process* proc, Memory_List_Node* algorithm_nod
         //cout << "No space available or item already in list . " << endl;
         return -1;
     }
+}
+
+int Memory_List::delete_node(Process* proc){
+    
 }
 
 void Memory_List::display(){

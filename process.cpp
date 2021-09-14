@@ -25,6 +25,14 @@ Pending_Processes_List::Pending_Processes_List(){
 }
 
 Pending_Processes_List::~Pending_Processes_List(){
+    Process* temp = this->head;
+    Process* next = temp->next;
+    while(next!=NULL){
+        delete temp;
+        temp = next;
+        next = next->next;
+    }
+    delete temp;
     this->head = NULL;
 }
 

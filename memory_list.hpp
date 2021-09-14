@@ -46,7 +46,7 @@ class Memory_List{
         bool spot_empty_block();
         int insert_to_memory(Process* process, Memory_List_Node* algorithm);
         int delete_node(Process* proc);
-        int search_node(int x);
+        int search_node();
         void display();
 
         inline void init_head(Memory_List_Node* node){

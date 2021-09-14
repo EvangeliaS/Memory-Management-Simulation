@@ -23,6 +23,9 @@ int main(){
     L->printList();
 
     cout << endl;
+
+    delete L;
+    delete memory;
     
     
 }
