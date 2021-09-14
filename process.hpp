@@ -13,8 +13,9 @@ class Process{
         bool pending; //if the process is pending in the l list the variable is 1, if 0 the process is in the memory
     public:
         Process* next; //for the pending processes list
-        Process(int s, int life);
+        Process(int size, int lifetime);
         ~Process();
+        void print();
         inline void start_process(int time){
             this->start_time = time;
             this->pending = false;
@@ -44,6 +45,7 @@ class Pending_Processes_List{   //aka L singly linked list
         Pending_Processes_List();
         ~Pending_Processes_List();
         int append_process(Process*);
+        void printList();
         Process* pop_process(); //returns and removes the first process in the list(fifo)
         inline Process* get_head(){
             return this->head;

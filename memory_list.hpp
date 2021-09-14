@@ -15,7 +15,7 @@ class Memory_List_Node{
         Memory_List_Node* next;
         Memory_List_Node* prev;
 
-        Memory_List_Node(int s, int x, int time, Process*);
+        Memory_List_Node(int size, int start, int time, Process*);
         ~Memory_List_Node();
         void print();
         
@@ -38,12 +38,13 @@ class Memory_List{
     private:
         Memory_List_Node* head;
         Memory_List_Node* tail;
+        int list_size;
     public:
-        Memory_List();
+        Memory_List(int size);
         ~Memory_List();
         bool check_empty_block();
         bool spot_empty_block();
-        int insert_to_memory(Process* proc, Memory_List_Node* algorithm);
+        int insert_to_memory(Process* process, Memory_List_Node* algorithm);
         int delete_node(Process* proc);
         int search_node(int x);
         void display();
@@ -63,6 +64,12 @@ class Memory_List{
         inline bool is_empty(){
             if(head == NULL)    return true;
             else return false;
+        }
+        inline int get_listSize(){
+            return this->list_size;
+        }
+        inline void set_tail(Memory_List_Node* new_tail){
+            this->tail = new_tail;
         }
 };
 
