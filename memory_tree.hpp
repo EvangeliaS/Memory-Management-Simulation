@@ -14,6 +14,7 @@ class Memory_Tree_Node{
         ~Memory_Tree_Node();
         bool is_leaf();
         int break_node();
+        int remove_process();
         inline bool stores_process(){
             if(this->process==NULL) return false;
             else return true;
@@ -41,7 +42,10 @@ class Memory_Tree{ //binary tree used for the buddy algorithm
         ~Memory_Tree();
         int insert_process(Process* process, Memory_Tree_Node* buddy, Pending_Processes_List* L);
         void merge_nodes();
+        int remove_process(Process* process);
+        Memory_Tree_Node* search_process(Process* process, Memory_Tree_Node* node);
         void destroy_node(Memory_Tree_Node* node);
+        Memory_Tree_Node* destroy_specific_node(Memory_Tree_Node* child,Memory_Tree_Node* root, Memory_Tree_Node* node);
         void printPreorder(Memory_Tree_Node* node);
         Memory_Tree_Node* find_tree_node(int size , Memory_Tree_Node* node);    //searches preorderly for the last tree node that is bigger than the "size"
         inline Memory_Tree_Node* get_root(){

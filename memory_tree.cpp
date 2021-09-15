@@ -15,10 +15,10 @@ Memory_Tree_Node::~Memory_Tree_Node(){
     if(this->stores_process()){
         delete this->process;
     }
-/*    else{ 
+    else{
         this->right = NULL;
         this->left  = NULL;
-    }*/
+    }
 }
 
 
@@ -33,6 +33,17 @@ int Memory_Tree_Node::break_node(){
     if(this->is_leaf()){
         this->left  = new Memory_Tree_Node((this->node_size/2));
         this->right = new Memory_Tree_Node((this->node_size/2));
+        return 0;
+    }
+    else{
+        return -1;
+    }
+}
+
+int Memory_Tree_Node::remove_process(){
+    if(this->process!=NULL){
+        delete this->process;
+        this->process = NULL;
         return 0;
     }
     else{
@@ -61,6 +72,43 @@ int Memory_Tree::insert_process(Process* process, Memory_Tree_Node* buddy, Pendi
     return -1;
 }
 
+void Memory_Tree::merge_nodes(){
+
+}
+
+int Memory_Tree::remove_process(Process* process){
+    Memory_Tree_Node* node = this->search_process(process, this->root);
+    if(node==NULL){
+        return -1;
+    }
+    else{
+        cout << node->get_process()->get_size() << endl;
+        Memory_Tree_Node* temp = this->destroy_specific_node(this->root->left,this->root, node);
+        return 0;
+    }
+}
+
+
+Memory_Tree_Node* Memory_Tree::search_process(Process* process, Memory_Tree_Node* node){
+    Memory_Tree_Node* left = NULL,  *right = NULL;
+    if(node==NULL){
+        return NULL;
+    }
+    if(node->get_process()==process){
+        return node;
+    }
+    if((left = search_process(process, node->left))!=NULL){
+        return left;
+    }
+    else if((right = search_process(process, node->right))!=NULL){
+        return right;
+    }
+    else{
+        return NULL;
+    }
+}
+
+
 
 Memory_Tree_Node* Memory_Tree::find_tree_node(int size, Memory_Tree_Node* node){
     Memory_Tree_Node* left = NULL,  *right = NULL;
@@ -86,24 +134,54 @@ void Memory_Tree::destroy_node(Memory_Tree_Node* node){
     if(node==NULL){
         return;
     }
-    destroy_node(node->left);
-    destroy_node(node->right);
+    //if(node->left!=NULL){
+        //cout << node->left->is_leaf() << endl;
+        destroy_node(node->left);
+
+   // if(node->right!=NULL){
+        //cout << node->left->is_leaf() << endl;
+        destroy_node(node->right);
+    
+//    if (node->left==NULL && node->right==NULL){
+  //      return;
     delete node;
-    //node = NULL;
+    node = NULL;
+}
+
+Memory_Tree_Node* Memory_Tree::destroy_specific_node(Memory_Tree_Node* child,Memory_Tree_Node* parent, Memory_Tree_Node* node){
+    if(child == NULL){
+        return NULL;
+    }   
+    if ((child==node) && (child->left == NULL) && (child->right == NULL)) {
+        if (parent->left == node){
+            delete parent->left; 
+            parent->left = NULL;
+        }
+        else{
+            delete parent->right; 
+            parent->right = NULL;
+        }
+    }
+    else{
+        destroy_specific_node(child->right,parent, node);
+        destroy_specific_node(child->left,parent, node);
+    }
 }
 
 void Memory_Tree::printPreorder(Memory_Tree_Node* node){
     if (node == NULL)
         return;
 
-    cout << node->get_node_size() << " ";
     if(node->stores_process()){
+        cout << node->get_node_size() << " ";
         cout << " id: " << node->get_process()->get_process_id() << " size: " << node->get_process()->get_size() << endl;
     }
     else if(!node->is_leaf()){
+        cout << node->get_node_size() << " ";
         cout << " Not available " << endl;
     }
     else{
+        cout << node->get_node_size() << " ";
         cout << " Available " << endl;
     }
     cout << endl; 

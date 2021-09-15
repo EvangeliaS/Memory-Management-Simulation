@@ -6,7 +6,6 @@ using namespace std;
 
 
 int main(){
-    cout << "Hello bro" << endl;
     int list_size = 1024;
     //Memory_List* memory = new Memory_List(list_size);
     Memory_Tree* tree = new Memory_Tree(list_size);
@@ -36,9 +35,13 @@ int main(){
     tree->insert_process(proc, buddy_algorithm(proc, tree), L);
     
     proc = new Process(16, life);  
-     tree->insert_process(proc, buddy_algorithm(proc, tree), L);
+    tree->insert_process(proc, buddy_algorithm(proc, tree), L);
    
     tree->printPreorder(tree->get_root());
+
+    //tree->remove_process(proc);
+
+    //tree->printPreorder(tree->get_root());
 /*
     cout << endl;
     memory->delete_node_by_position(400);
