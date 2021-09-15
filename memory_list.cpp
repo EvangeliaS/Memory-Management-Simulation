@@ -147,12 +147,17 @@ Memory_List_Node* best_fit(Process* process, Pending_Processes_List* L, Memory_L
         current = current->next;
     }
     memory->set_tail(current);
+
     Memory_List_Node* temp = memory->get_head();
+
     if(temp->next!=NULL){
         int best_fit_empty_block = temp->next->get_start() - temp->get_end() - 1;
+        Memory_List_Node* best_fit = temp;
         while(temp!=NULL && temp->next!=NULL){
             if(((temp->next->get_start() - temp->get_end() - 1) >= process->get_size()) && (temp->next->get_start() - temp->get_end() - 1) <= best_fit_empty_block){
                 best_fit_empty_block = temp->next->get_start() - temp->get_end() - 1;
+                best_fit = temp;
+                cout <<"New best is " << best_fit->next->get_start() -  best_fit->get_end()  -1  << endl;
             }
             temp = temp->next;
         }
@@ -161,9 +166,11 @@ Memory_List_Node* best_fit(Process* process, Pending_Processes_List* L, Memory_L
             L->append_process(process);
             return NULL;
         }
-        if(temp!=NULL){
-            cout << "ooooooooooooooooo" <<endl;
-            return temp;
+        else if(best_fit_empty_block < process->get_size() &&  ((memory->get_tail()->get_end() + process->get_size()) < memory->get_listSize())){
+            return temp; //last node
+        }
+        else{
+            return best_fit;
         }
 
         return NULL;

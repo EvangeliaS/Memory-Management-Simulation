@@ -36,7 +36,7 @@ int main(){
     memory->display();
 
     proc = new Process(100, life);
-    cout << "________________________" << memory->insert_to_memory(proc, worst_fit(proc, L, memory));
+    cout << "________________________" << memory->insert_to_memory(proc, best_fit(proc, L, memory));
     
     memory->display();
     
