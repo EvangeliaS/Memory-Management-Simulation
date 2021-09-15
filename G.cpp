@@ -19,6 +19,22 @@ int main(){
         cout << endl;
     }
     memory->display();
+
+    cout << endl;
+    memory->delete_node_by_position(400);
+    memory->display();
+    proc = new Process(100, life);
+    cout << "________________________" << memory->insert_to_memory(proc, worst_fit(proc, L, memory));
+    cout << endl;
+    memory->display();
+
+    memory->delete_node_by_position(600);
+    memory->display();
+    proc = new Process(200, life);
+    cout << "________________________" << memory->insert_to_memory(proc, worst_fit(proc, L, memory));
+    cout << endl;
+    memory->display();
+
     cout << endl;
     L->printList();
 
