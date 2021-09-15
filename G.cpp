@@ -11,17 +11,33 @@ int main(){
     //Memory_List* memory = new Memory_List(list_size);
     Memory_Tree* tree = new Memory_Tree(list_size);
     Pending_Processes_List* L = new Pending_Processes_List();
-    int size = 200;
+    int size = 10;
     Process* proc = NULL;
     int life = 2;
-    for(int i = 0; i<10; i++){
+    for(int i = 0; i<11; i++){
         life++;
-        size = size/2;
         proc = new Process(size, life);
         tree->insert_process(proc, buddy_algorithm(proc, tree), L);
         cout << endl;
+        size+=20;
     }
 
+
+    proc = new Process(100, life);
+    tree->insert_process(proc, buddy_algorithm(proc, tree), L);
+    
+    proc = new Process(200, life);   
+
+    tree->insert_process(proc, buddy_algorithm(proc, tree), L);
+
+
+    proc = new Process(500, life);   
+
+    tree->insert_process(proc, buddy_algorithm(proc, tree), L);
+    
+    proc = new Process(16, life);  
+     tree->insert_process(proc, buddy_algorithm(proc, tree), L);
+   
     tree->printPreorder(tree->get_root());
 /*
     cout << endl;

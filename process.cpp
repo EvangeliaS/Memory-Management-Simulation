@@ -25,6 +25,9 @@ Pending_Processes_List::Pending_Processes_List(){
 }
 
 Pending_Processes_List::~Pending_Processes_List(){
+    if(head==NULL){
+        return;
+    }
     Process* temp = this->head;
     Process* next = temp->next;
     while(next!=NULL){
