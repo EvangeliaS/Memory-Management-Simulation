@@ -11,37 +11,38 @@ int main(){
     Memory_Tree* tree = new Memory_Tree(list_size);
     Pending_Processes_List* L = new Pending_Processes_List();
     int size = 10;
-    Process* proc = NULL;
+    Process* proc , *proc1, *proc2, *proc3= NULL;
     int life = 2;
-    for(int i = 0; i<11; i++){
+    proc = new Process(size, life);
+    tree->insert_process(proc, buddy_algorithm(proc, tree), L);
+    for(int i = 0; i<10; i++){
         life++;
-        proc = new Process(size, life);
-        tree->insert_process(proc, buddy_algorithm(proc, tree), L);
+         size+=20;
+        proc1 = new Process(size, life);
+        tree->insert_process(proc1, buddy_algorithm(proc1, tree), L);
         cout << endl;
-        size+=20;
+       
     }
 
-
-    proc = new Process(100, life);
-    tree->insert_process(proc, buddy_algorithm(proc, tree), L);
+    proc2 = new Process(16, life);  
+    tree->insert_process(proc2, buddy_algorithm(proc2, tree), L);
+   
+    proc3 = new Process(100, life);
+    tree->insert_process(proc3, buddy_algorithm(proc3, tree), L);
     
-    proc = new Process(200, life);   
+    proc3 = new Process(200, life);   
 
-    tree->insert_process(proc, buddy_algorithm(proc, tree), L);
+    tree->insert_process(proc3, buddy_algorithm(proc3, tree), L);
 
 
-    proc = new Process(500, life);   
+    proc3 = new Process(500, life);   
 
-    tree->insert_process(proc, buddy_algorithm(proc, tree), L);
-    
-    proc = new Process(16, life);  
-    tree->insert_process(proc, buddy_algorithm(proc, tree), L);
+    tree->insert_process(proc3, buddy_algorithm(proc3, tree), L);
    
     tree->printPreorder(tree->get_root());
 
-    //tree->remove_process(proc);
+    tree->remove_process(proc);
 
-    //tree->printPreorder(tree->get_root());
 /*
     cout << endl;
     memory->delete_node_by_position(400);
@@ -64,7 +65,20 @@ int main(){
     memory->display();
 */    
 
-    cout << endl;
+    cout <<"^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" << endl;
+
+    tree->printPreorder(tree->get_root());
+    tree->remove_process(proc2);
+    tree->printPreorder(tree->get_root());
+
+    proc3 = new Process(31, life);
+    tree->insert_process(proc3, buddy_algorithm(proc3, tree), L);
+
+    tree->printPreorder(tree->get_root());
+   
+   // tree->remove_process(proc1);
+    //tree->remove_process(proc2);
+
     L->printList();
 
     cout << endl;

@@ -72,10 +72,6 @@ int Memory_Tree::insert_process(Process* process, Memory_Tree_Node* buddy, Pendi
     return -1;
 }
 
-void Memory_Tree::merge_nodes(){
-
-}
-
 int Memory_Tree::remove_process(Process* process){
     Memory_Tree_Node* node = this->search_process(process, this->root);
     if(node==NULL){
@@ -153,18 +149,28 @@ Memory_Tree_Node* Memory_Tree::destroy_specific_node(Memory_Tree_Node* child,Mem
         return NULL;
     }   
     if ((child==node) && (child->left == NULL) && (child->right == NULL)) {
-        if (parent->left == node){
+        if (parent->left == node && parent->right->stores_process()==false){
             delete parent->left; 
-            parent->left = NULL;
-        }
-        else{
             delete parent->right; 
+            parent->left = NULL;
             parent->right = NULL;
+        }
+        else if(parent->left == node &&  parent->right->stores_process()==true){
+            parent->left->remove_process();
+        }
+        else if(parent->right == node && parent->left->stores_process()==false){
+            delete parent->left; 
+            delete parent->right; 
+            parent->left = NULL;
+            parent->right = NULL;
+        }
+        else if(parent->right == node && parent->left->stores_process()==true){
+            parent->right->remove_process();
         }
     }
     else{
-        destroy_specific_node(child->right,parent, node);
-        destroy_specific_node(child->left,parent, node);
+        destroy_specific_node(child->right,child, node);
+        destroy_specific_node(child->left,child, node);
     }
 }
 

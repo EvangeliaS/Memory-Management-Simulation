@@ -41,7 +41,6 @@ class Memory_Tree{ //binary tree used for the buddy algorithm
         Memory_Tree(int size);
         ~Memory_Tree();
         int insert_process(Process* process, Memory_Tree_Node* buddy, Pending_Processes_List* L);
-        void merge_nodes();
         int remove_process(Process* process);
         Memory_Tree_Node* search_process(Process* process, Memory_Tree_Node* node);
         void destroy_node(Memory_Tree_Node* node);
