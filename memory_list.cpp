@@ -50,8 +50,7 @@ int Memory_List::insert_to_memory(Process* proc, Memory_List_Node* algorithm_nod
     if(algorithm_node!=NULL){
         Memory_List_Node* prev = algorithm_node;
         if((algorithm_node->get_end()+1+proc->get_size())>=this->list_size){  //checks if the end of the node is bigger or equal to the end of the memory
-            cout << algorithm_node->get_end() << "   " << proc->get_size() << endl;
-            cout<< "iiiiiiiiiiiiii" << "   "<< algorithm_node->get_end()+1+proc->get_size() << endl;
+            //cout << algorithm_node->get_end() << "   " << proc->get_size() << endl;
             return -1;
         }
         Memory_List_Node* new_node = new Memory_List_Node(proc->get_size(), algorithm_node->get_end()+1, ptime, proc);
@@ -226,4 +225,22 @@ Memory_List_Node* worst_fit(Process* process, Pending_Processes_List* L, Memory_
     else{
         return temp;
     } 
+}
+
+
+int add_pending_process(Memory_List* memory, Pending_Processes_List* L, int algorithm){
+    Process* current = L->pop_process();
+    while(current!=NULL){
+        if(algorithm==BEST_FIT){
+            if(memory->insert_to_memory(current, best_fit(current, L, memory))==0){   
+                current = L->pop_process();
+            }
+        }
+        else if(algorithm==WORST_FIT){
+            if(memory->insert_to_memory(current, worst_fit(current, L, memory))==0){   
+                current = L->pop_process();
+            }
+        }
+    }
+    return 0;
 }

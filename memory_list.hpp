@@ -78,3 +78,4 @@ class Memory_List{
 
 Memory_List_Node* best_fit(Process* process, Pending_Processes_List* L, Memory_List* memory);
 Memory_List_Node* worst_fit(Process* process, Pending_Processes_List* L, Memory_List* memory);
+int add_pending_process(Memory_List* memory, Pending_Processes_List* L, int algorithm);
