@@ -131,7 +131,7 @@ void Memory_List::display(){
     }
 }
 
-Memory_List_Node* best_fit(Process* process, Pending_Processes_List* L, Memory_List* memory){
+Memory_List_Node* best_fit(Process* process, Pending_Processes_List* L, Memory_List* memory, bool pending){
     if(process->get_size() >= memory->get_listSize()){
         return NULL;
     }
@@ -153,15 +153,18 @@ Memory_List_Node* best_fit(Process* process, Pending_Processes_List* L, Memory_L
         int best_fit_empty_block = temp->next->get_start() - temp->get_end() - 1;
         Memory_List_Node* best_fit = temp;
         while(temp!=NULL && temp->next!=NULL){
-            if(((temp->next->get_start() - temp->get_end() - 1) >= process->get_size()) && (temp->next->get_start() - temp->get_end() - 1) <= best_fit_empty_block){
+            if((temp->next->get_start() - temp->get_end() - 1 >= process->get_size()) && ((temp->next->get_start() - temp->get_end() - 1 <= best_fit_empty_block) || best_fit_empty_block==0)){
                 best_fit_empty_block = temp->next->get_start() - temp->get_end() - 1;
                 best_fit = temp;
                 cout <<"New best is " << best_fit->next->get_start() -  best_fit->get_end()  -1  << endl;
             }
             temp = temp->next;
         }
-        if(best_fit_empty_block < process->get_size()&& memory->get_tail()->get_end() + process->get_size() >=memory->get_listSize()){
+        if((best_fit_empty_block < process->get_size()) && (memory->get_tail()->get_end() + process->get_size() >= memory->get_listSize())){
             cout << "There is not available space in the memory. Pushing process in the Pending Processes List..." << endl;
+            if(pending==true){
+                return NULL;
+            }
             L->append_process(process);
             return NULL;
         }
@@ -180,7 +183,7 @@ Memory_List_Node* best_fit(Process* process, Pending_Processes_List* L, Memory_L
     
 }
 
-Memory_List_Node* worst_fit(Process* process, Pending_Processes_List* L, Memory_List* memory){
+Memory_List_Node* worst_fit(Process* process, Pending_Processes_List* L, Memory_List* memory, bool pending){
     if(process->get_size() >= memory->get_listSize()){
         return NULL;
     }
@@ -211,6 +214,9 @@ Memory_List_Node* worst_fit(Process* process, Pending_Processes_List* L, Memory_
         }
         if((biggest_empty_block < process->get_size()) && ((memory->get_tail()->get_end() + process->get_size()) >=memory->get_listSize())){
             cout << "There is not available space in the memory. Pushing process in the Pending Processes List..." << endl;
+            if(pending==true){
+                return NULL;
+            }
             L->append_process(process);
             return NULL;
         }
@@ -229,18 +235,26 @@ Memory_List_Node* worst_fit(Process* process, Pending_Processes_List* L, Memory_
 
 
 int add_pending_process(Memory_List* memory, Pending_Processes_List* L, int algorithm){
-    Process* current = L->pop_process();
+    Process* current = L->get_head();
     while(current!=NULL){
+        current = L->get_head();
         if(algorithm==BEST_FIT){
-            if(memory->insert_to_memory(current, best_fit(current, L, memory))==0){   
+            if((memory->insert_to_memory(current, best_fit(current, L, memory, true)))==0){   
                 current = L->pop_process();
             }
+/*            else{
+                L->append_process(current);
+            }*/
         }
         else if(algorithm==WORST_FIT){
-            if(memory->insert_to_memory(current, worst_fit(current, L, memory))==0){   
+            if((memory->insert_to_memory(current, worst_fit(current, L, memory, true)))==0){   
                 current = L->pop_process();
             }
-        }
+/*            else{
+                L->append_process(current);
+            }
+        }}
+        */}
     }
     return 0;
 }

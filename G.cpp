@@ -14,21 +14,16 @@ int main(){
     Process* proc , *proc1, *proc2, *proc3= NULL;
     int life = 2;
     proc = new Process(size, life);
-    memory->insert_to_memory(proc, best_fit(proc, L, memory));
- /*   tree->insert_process(proc, buddy_algorithm(proc, tree), L);
+    memory->insert_to_memory(proc, best_fit(proc, L, memory, false));
 
-    tree->printPreorder(tree->get_root());
-    tree->remove_process(proc);
-*/
     cout <<"^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" << endl;
 
-    //tree->printPreorder(tree->get_root());
     for(int i = 0; i<10; i++){
         life++;
         size+=20;
         proc1 = new Process(size, life);
         //tree->insert_process(proc1, buddy_algorithm(proc1, tree), L);
-        memory->insert_to_memory(proc1, best_fit(proc1, L, memory));
+        memory->insert_to_memory(proc1, best_fit(proc1, L, memory, false));
         cout << endl;
        
     }
@@ -49,24 +44,18 @@ int main(){
     memory->delete_node_by_position(200);*/
     memory->display();
 
-/*    cout << endl;
-    memory->delete_node_by_position(400);
-    memory->display();
-
-   
-*/
     memory->delete_node_by_position(250);
     memory->display();
     //add_pending_process(memory, L, BEST_FIT);
- cout << endl;
+    cout << endl;
     memory->delete_node_by_position(360);
     memory->display();
     cout << endl;
     L->printList();
+    cout << endl;
     add_pending_process(memory, L, BEST_FIT);
     memory->display();
     cout << endl;
-  
 
     cout << endl;
 
