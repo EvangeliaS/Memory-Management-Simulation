@@ -15,9 +15,16 @@ int main(){
     int life = 2;
     proc = new Process(size, life);
     tree->insert_process(proc, buddy_algorithm(proc, tree), L);
-    for(int i = 0; i<10; i++){
+
+    tree->printPreorder(tree->get_root());
+    tree->remove_process(proc);
+
+    cout <<"^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" << endl;
+
+    tree->printPreorder(tree->get_root());
+/*    for(int i = 0; i<10; i++){
         life++;
-         size+=20;
+        size+=20;
         proc1 = new Process(size, life);
         tree->insert_process(proc1, buddy_algorithm(proc1, tree), L);
         cout << endl;
@@ -40,8 +47,7 @@ int main(){
     tree->insert_process(proc3, buddy_algorithm(proc3, tree), L);
    
     tree->printPreorder(tree->get_root());
-
-    tree->remove_process(proc);
+*/
 
 /*
     cout << endl;
@@ -65,17 +71,14 @@ int main(){
     memory->display();
 */    
 
-    cout <<"^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" << endl;
-
-    tree->printPreorder(tree->get_root());
-    tree->remove_process(proc2);
+/*    tree->remove_process(proc2);
     tree->printPreorder(tree->get_root());
 
     proc3 = new Process(31, life);
     tree->insert_process(proc3, buddy_algorithm(proc3, tree), L);
 
     tree->printPreorder(tree->get_root());
-   
+   */
    // tree->remove_process(proc1);
     //tree->remove_process(proc2);
 

@@ -59,7 +59,12 @@ Memory_Tree::Memory_Tree(int size){
 }
 
 Memory_Tree::~Memory_Tree(){
-    destroy_node(this->root);
+    if(this->root->is_leaf()){
+        delete this->root;
+    }
+    else{
+        destroy_node(this->root);
+    }
     this->root = NULL;
 }
 
@@ -79,11 +84,16 @@ int Memory_Tree::remove_process(Process* process){
     }
     else{
         cout << node->get_process()->get_size() << endl;
-        Memory_Tree_Node* temp = this->destroy_specific_node(this->root->left,this->root, node);
+        this->destroy_specific_node(this->root->left,this->root, node);
+        if(this->root->left->is_leaf() && this->root->right->is_leaf()){
+            delete this->root->left;
+            delete this->root->right;
+            this->root->left = NULL;
+            this->root->right = NULL;
+        }
         return 0;
     }
 }
-
 
 Memory_Tree_Node* Memory_Tree::search_process(Process* process, Memory_Tree_Node* node){
     Memory_Tree_Node* left = NULL,  *right = NULL;
@@ -104,8 +114,6 @@ Memory_Tree_Node* Memory_Tree::search_process(Process* process, Memory_Tree_Node
     }
 }
 
-
-
 Memory_Tree_Node* Memory_Tree::find_tree_node(int size, Memory_Tree_Node* node){
     Memory_Tree_Node* left = NULL,  *right = NULL;
     if(node==NULL){
@@ -122,6 +130,9 @@ Memory_Tree_Node* Memory_Tree::find_tree_node(int size, Memory_Tree_Node* node){
     }
     else if((right = find_tree_node(size, node->right))!=NULL){
         return right;
+    }
+    else{
+        return NULL;
     }
 }
 
@@ -149,7 +160,7 @@ Memory_Tree_Node* Memory_Tree::destroy_specific_node(Memory_Tree_Node* child,Mem
         return NULL;
     }   
     if ((child==node) && (child->left == NULL) && (child->right == NULL)) {
-        if (parent->left == node && parent->right->stores_process()==false){
+        if (parent->left == node && parent->right->stores_process()==false && parent->right->is_leaf()==true){
             delete parent->left; 
             delete parent->right; 
             parent->left = NULL;
@@ -158,7 +169,7 @@ Memory_Tree_Node* Memory_Tree::destroy_specific_node(Memory_Tree_Node* child,Mem
         else if(parent->left == node &&  parent->right->stores_process()==true){
             parent->left->remove_process();
         }
-        else if(parent->right == node && parent->left->stores_process()==false){
+        else if(parent->right == node && parent->left->stores_process()==false && parent->left->is_leaf()==true){
             delete parent->left; 
             delete parent->right; 
             parent->left = NULL;
@@ -168,10 +179,18 @@ Memory_Tree_Node* Memory_Tree::destroy_specific_node(Memory_Tree_Node* child,Mem
             parent->right->remove_process();
         }
     }
-    else{
-        destroy_specific_node(child->right,child, node);
-        destroy_specific_node(child->left,child, node);
+    else if(parent->left->stores_process()==false && parent->left->is_leaf()==true && parent->right->stores_process()==false && parent->right->is_leaf()==true){
+        delete parent->left; 
+        delete parent->right; 
+        parent->left = NULL;
+        parent->right = NULL;
     }
+    else{
+        destroy_specific_node(child->left,child, node);
+        destroy_specific_node(child->right,child, node);
+    }
+    return NULL;
+
 }
 
 void Memory_Tree::printPreorder(Memory_Tree_Node* node){
