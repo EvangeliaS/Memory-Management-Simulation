@@ -24,23 +24,7 @@ int main(){
         memory->insert_to_memory(proc1, best_fit(proc1, L, memory, false));
         cout << endl;
     }
-/*
-    proc2 = new Process(16, life);  
-    //tree->insert_process(proc2, buddy_algorithm(proc2, tree), L);
-    memory->insert_to_memory(proc2, best_fit(proc2, L, memory));
-   
-    proc3 = new Process(100, life);
-    memory->insert_to_memory(proc3, best_fit(proc3, L, memory));
-   
-    //tree->insert_process(proc3, buddy_algorithm(proc3, tree), L);
-    
-    proc3 = new Process(200, life);   
-    memory->insert_to_memory(proc3, best_fit(proc3, L, memory));
-   
-    memory->delete_node_by_position(200);*/
 
-
-    memory->display();
     memory->delete_node_by_position(250);
     memory->display();
     cout << endl;
