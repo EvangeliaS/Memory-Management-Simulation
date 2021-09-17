@@ -1,5 +1,15 @@
-#include <iostream>
+#ifndef __PROCESS__
+#define __PROCESS__
 
+#include <iostream>
+#include <cstdlib>
+#include <sys/types.h>
+#include <sys/sem.h>
+#include <sys/ipc.h>
+#include <sys/shm.h>
+#include <sys/wait.h>
+
+#include <unistd.h>
 using namespace std;
 
 static int ID = 45672;
@@ -55,3 +65,5 @@ class Pending_Processes_List{   //aka L singly linked list
         }
 
 };
+
+#endif
