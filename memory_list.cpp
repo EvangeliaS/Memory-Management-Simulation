@@ -17,6 +17,9 @@ Memory_List_Node::Memory_List_Node(int s, int x, int ptime, Process* proc){
 }
 
 Memory_List_Node::~Memory_List_Node(){
+    cout << "Delete node with process: ";
+    this->process->print();
+    cout << endl;
     delete this->process;
     this->process = NULL;
     this->next = NULL;
@@ -235,26 +238,22 @@ Memory_List_Node* worst_fit(Process* process, Pending_Processes_List* L, Memory_
 
 
 int add_pending_process(Memory_List* memory, Pending_Processes_List* L, int algorithm){
-    Process* current = L->get_head();
-    while(current!=NULL){
-        current = L->get_head();
-        if(algorithm==BEST_FIT){
-            if((memory->insert_to_memory(current, best_fit(current, L, memory, true)))==0){   
-                current = L->pop_process();
-            }
-/*            else{
-                L->append_process(current);
-            }*/
+    Process* process = L->get_head();
+    if(process == NULL){
+        return -1;
+    }
+    if(algorithm==BEST_FIT){
+        if((memory->insert_to_memory(process, best_fit(process, L, memory, true)))==0){   
+            process = L->pop_process();
         }
-        else if(algorithm==WORST_FIT){
-            if((memory->insert_to_memory(current, worst_fit(current, L, memory, true)))==0){   
-                current = L->pop_process();
-            }
-/*            else{
-                L->append_process(current);
-            }
-        }}
-        */}
+    }
+    else if(algorithm==WORST_FIT){
+        if((memory->insert_to_memory(process, worst_fit(process, L, memory, true)))==0){   
+            process = L->pop_process();
+        }
+    }
+    else{
+        return -1;
     }
     return 0;
 }
