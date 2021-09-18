@@ -31,7 +31,7 @@ string Process::copy_details(){
     data+= to_string(this->size);
     data+= "-";
     data+= to_string(this->lifetime);
-    data+= "-";
+    //data+= "-";
     return data;
 }
 
@@ -139,7 +139,7 @@ int read_line(string line, char memory[]){
     //string line;
     //getline(cin, line);
     strcpy(memory, line.c_str());
-    cout <<  "readline " <<memory << endl;
+    //cout <<  "readline " <<memory << endl;
     return 1;
 }
 
@@ -162,36 +162,32 @@ void pass_string(char *string, char dest[]){
 }
 
 Process* create_process(char* process){
-    //const char* line1 = process.c_str();
     char* line1 = {0};
-    strcpy(line1, process);
-    char * token1 = strtok((char *)line1,"-");
-    cout << token1 << endl;
+    Process* proc = NULL;
+    char * token1 = strtok(process,"-");
     int count1 = 0;
     string id, size, lifetime;
     while(token1){
-        cout << "hello" << endl;
         if(count1==0){
             string line(token1);
             id.assign(line);
-            cout << "id " << id << endl;
+            //cout << "id " << id << endl;
         }
         else if(count1==1){
             string line(token1);
             size.assign(line);
 
-            cout << "size " << size << endl;
+            //cout << "size " << size << endl;
         }
         else if(count1==2){
             string line(token1);
             lifetime.assign(line);
 
-            cout << "lifetime " << lifetime << endl;
+            //cout << "lifetime " << lifetime << endl;
         }
         count1++;
         token1 = strtok(NULL,"-");
     }
-    cout << "finish " << endl;
-    //Process* proc = new Process(stoi(size), stoi(lifetime), stoi(id));
-    //return proc;
+    proc = new Process(stoi(size), stoi(lifetime), stoi(id));
+    return proc;
 }

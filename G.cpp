@@ -54,24 +54,32 @@ int main(int argc, char* argv[]){
     }
     Process* proc = new Process(100, 3, set_id());
     proc->print();
+    int flag = 0;
     while(1){
+        
         sem_wait(semid, G_to_M_SEM_SEND);   
+        if(flag==10){
+            break;
+        }
         //sem_wait(semid, mutex);
-
-
         //G create_process
         //G send process
 
-        cout << "write from g: " ;
-        cout << read_line(proc->copy_details(), mem) << endl;
-        cout << "lol g wtf" << mem << endl;
+        //cout << "write from g: " ;
+        read_line(proc->copy_details(), mem);
+        //char* lol = "djhfjkdhjks";
+        //strcpy(mem, (char*)lol);
+        //cout << "lol g wtf" << mem << endl;
 
         //sem_signal(semid, mutex);    
         sem_signal(semid, M_to_G_SEM_RECV);
-
-        
-
+        flag++;
+ /*       if(flag==10){
+            return 0;
+        }*/
         //sem_wait(semid, M_to_G_SEM_SEND);
     }
+
+    cout << "BYE G" << endl;
     return 0;
 }

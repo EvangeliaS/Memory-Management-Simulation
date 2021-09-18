@@ -44,9 +44,8 @@ int main(int argc, char* argv[]){
     else{
         cout << "Program vol2" << endl;
     }
-    while(1){
-        
-    }
+    
+    //while(1){}
 
     return 0;
 }

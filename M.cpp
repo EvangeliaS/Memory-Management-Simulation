@@ -46,27 +46,37 @@ int main(int argc, char* argv[]){
         perror("Shmat");
         exit(1);
     }
+    int flag = 0;
     char temp[128];
+    Process* new_proc = NULL;
     while(1){
         //cout << "hello from m" << endl;
+        
         sem_wait(semid, M_to_G_SEM_RECV);
+       
         //sem_wait(semid, mutex);
 
         //sem_signal(semid, M_to_G_SEM_SEND);
-        cout << "recv from m: " ;
-
+        //cout << "recv from m: " ;
+        memset(temp, 0, 128);
         pass_string(mem, temp);
-        cout << mem << "pppppppppppp" << endl;
-/*        cout << "llllllllllllll " << temp << endl;
+    
+        if(flag){
+            new_proc = create_process(temp);
+            cout << new_proc << endl;
+            cout << "HELLO " << flag;
+            new_proc->print();
+        }
+        
 
-        if(temp!=" "){
-            cout << "lol" <<endl;
-        Process* new_proc = create_process(temp);
-        //new_proc->print();
-        }*/
-        cout << "lol m wtf" << endl;
+        //cout << "lol m wtf" << endl;
+        
         sem_signal(semid, G_to_M_SEM_SEND);
-
+        flag++;
+      if(flag==10){
+            break;
+        }
     }
+    cout << "BYE M" << endl;
     return 0;
 }
