@@ -94,7 +94,7 @@ int main(int argc, char* argv[]){
     cout << endl;
     L->printList();
     
-
+    cout << endl;
     delete memory;
     delete L;
     return 0;

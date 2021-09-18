@@ -67,12 +67,13 @@ int main(int argc, char* argv[]){
             memset(mem, 0, 128);
             read_line(proc->copy_details(), mem);
             //cout << mem << " BY G " << endl;
-            sem_signal(semid, M_to_G_SEM_RECV);
             size+=20;
+            sem_signal(semid, M_to_G_SEM_RECV);
+            
             delete proc;
 
         }
-        //break;
+        break;
 
        
  /*       if(flag==10){
