@@ -79,7 +79,7 @@ int main(int argc, char* argv[]){
         }*/
         //sem_wait(semid, M_to_G_SEM_SEND);
     }
-
+    delete proc;
     cout << "BYE G" << endl;
     return 0;
 }

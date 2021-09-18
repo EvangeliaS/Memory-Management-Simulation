@@ -49,6 +49,33 @@ int main(int argc, char* argv[]){
     int flag = 0;
     char temp[128];
     Process* new_proc = NULL;
+
+    Memory_List* memory = new Memory_List(S);
+   // Memory_Tree* tree = new Memory_Tree(list_size);
+    Pending_Processes_List* L = new Pending_Processes_List();
+    int size = 10;
+    Process* proc , *proc1, *proc2, *proc3, *proc4 = NULL;
+    int life = 2;
+    //proc = new Process(size, life);
+    //memory->insert_to_memory(proc, best_fit(proc, L, memory, false));
+
+    for(int i = 0; i<10; i++){
+        life++;
+        size+=20;
+        proc1 = new Process(size, life);
+        //tree->insert_process(proc1, buddy_algorithm(proc1, tree), L);
+        memory->insert_to_memory(proc1, best_fit(proc1, L, memory, false));
+        cout << endl;
+    }
+
+    memory->delete_node_by_position(250);
+    memory->display();
+    cout << endl;
+    memory->delete_node_by_position(360);
+
+    memory->display();
+    L->printList();
+    cout << endl;
     while(1){
         //cout << "hello from m" << endl;
         
@@ -68,9 +95,6 @@ int main(int argc, char* argv[]){
             new_proc->print();
         }
         
-
-        //cout << "lol m wtf" << endl;
-        
         sem_signal(semid, G_to_M_SEM_SEND);
         flag++;
       if(flag==10){
@@ -78,5 +102,7 @@ int main(int argc, char* argv[]){
         }
     }
     cout << "BYE M" << endl;
+    delete memory;
+    delete L;
     return 0;
 }
