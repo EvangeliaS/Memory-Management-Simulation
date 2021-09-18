@@ -52,7 +52,7 @@ int main(int argc, char* argv[]){
         perror("Shmat");
         exit(1);
     }
-    Process* proc = new Process(100, 3);
+    Process* proc = new Process(100, 3, set_id());
     proc->print();
     while(1){
         sem_wait(semid, G_to_M_SEM_SEND);   
@@ -61,17 +61,17 @@ int main(int argc, char* argv[]){
 
         //G create_process
         //G send process
-        
-    
-        cout << "write from g: " ;
-        cout << read_line(proc->copy_details(), mem) << endl;;
 
+        cout << "write from g: " ;
+        cout << read_line(proc->copy_details(), mem) << endl;
+        cout << "lol g wtf" << mem << endl;
 
         //sem_signal(semid, mutex);    
         sem_signal(semid, M_to_G_SEM_RECV);
-        cout << "lol g wtf" << endl;
 
-        sem_wait(semid, M_to_G_SEM_SEND);
+        
+
+        //sem_wait(semid, M_to_G_SEM_SEND);
     }
     return 0;
 }

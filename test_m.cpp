@@ -4,7 +4,7 @@
 using namespace std;
 
 int main(){
-    int D = 100;
+/*    int D = 100;
     int d = D;
     int list_size = 1024;
     Memory_List* memory = new Memory_List(list_size);
@@ -72,6 +72,6 @@ int main(){
 
     delete L;
     //delete tree;
-    delete memory;
+    delete memory;*/
     
 }

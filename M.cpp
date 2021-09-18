@@ -52,12 +52,18 @@ int main(int argc, char* argv[]){
         sem_wait(semid, M_to_G_SEM_RECV);
         //sem_wait(semid, mutex);
 
+        //sem_signal(semid, M_to_G_SEM_SEND);
         cout << "recv from m: " ;
+
         pass_string(mem, temp);
-        cout << "llllllllllllll " << temp << endl;
+        cout << mem << "pppppppppppp" << endl;
+/*        cout << "llllllllllllll " << temp << endl;
 
-        sem_signal(semid, M_to_G_SEM_SEND);
-
+        if(temp!=" "){
+            cout << "lol" <<endl;
+        Process* new_proc = create_process(temp);
+        //new_proc->print();
+        }*/
         cout << "lol m wtf" << endl;
         sem_signal(semid, G_to_M_SEM_SEND);
 

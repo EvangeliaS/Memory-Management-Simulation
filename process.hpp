@@ -23,6 +23,8 @@ using namespace std;
 
 static int ID = 45672;
 
+int set_id();
+
 class Process{
      private:
         int id;
@@ -33,16 +35,13 @@ class Process{
         bool pending; //if the process is pending in the l list the variable is 1, if 0 the process is in the memory
     public:
         Process* next; //for the pending processes list
-        Process(int size, int lifetime);
+        Process(int size, int lifetime, int id);
         ~Process();
         void print();
         string copy_details();
         inline void start_process(int time){
             this->start_time = time;
             this->pending = false;
-        }
-        inline void set_id(){
-            this->id = ID++;
         }
         inline int get_process_id(){
             return this->id;
@@ -85,5 +84,8 @@ void sem_wait(int semid, int index);    //P semaphore operation
 int read_line(string line, char mem[]);  //reads message, and copies it in the memory segment
 void free_resources(int  shmid , int  semid); //deletes the memory segment and the semaphores
 void pass_string(char*string, char dest[]); //the program can pass messages like "RETRY" in the memory, 
+
+
+Process* create_process(char* process);
 
 #endif

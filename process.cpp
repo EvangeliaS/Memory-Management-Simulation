@@ -3,8 +3,12 @@
 
 using namespace std;
 
-Process::Process(int s, int life){
-    this->set_id();
+int set_id(){
+    return ID++;
+}
+
+Process::Process(int s, int life,int id){
+    this->id = id;
     this->lifetime = life;
     this->size = s;
     this->pending = true;
@@ -21,13 +25,13 @@ void Process::print(){
 
 string Process::copy_details(){
     string data;
-    data = "id: ";
+    data = "id- ";
     data = to_string(this->id);
-    data+= "( ";
+    data+= "-";
     data+= to_string(this->size);
-    data+= " )";
+    data+= "-";
     data+= to_string(this->lifetime);
-    data+= ".";
+    data+= "-";
     return data;
 }
 
@@ -155,4 +159,39 @@ void free_resources(int  shmid , int  semid) {
 
 void pass_string(char *string, char dest[]){
     strcpy(dest, string);
+}
+
+Process* create_process(char* process){
+    //const char* line1 = process.c_str();
+    char* line1 = {0};
+    strcpy(line1, process);
+    char * token1 = strtok((char *)line1,"-");
+    cout << token1 << endl;
+    int count1 = 0;
+    string id, size, lifetime;
+    while(token1){
+        cout << "hello" << endl;
+        if(count1==0){
+            string line(token1);
+            id.assign(line);
+            cout << "id " << id << endl;
+        }
+        else if(count1==1){
+            string line(token1);
+            size.assign(line);
+
+            cout << "size " << size << endl;
+        }
+        else if(count1==2){
+            string line(token1);
+            lifetime.assign(line);
+
+            cout << "lifetime " << lifetime << endl;
+        }
+        count1++;
+        token1 = strtok(NULL,"-");
+    }
+    cout << "finish " << endl;
+    //Process* proc = new Process(stoi(size), stoi(lifetime), stoi(id));
+    //return proc;
 }
