@@ -33,6 +33,7 @@ Memory_List::Memory_List(int size){
     this->list_size = size;
     this->head = NULL;
     this->tail = NULL;
+    cout << "Memory List constructed" << endl;
 }
 
 Memory_List::~Memory_List(){
@@ -70,7 +71,7 @@ int Memory_List::insert_to_memory(Process* proc, Memory_List_Node* algorithm_nod
     }
     else{
         //there was no space in memory
-        cout << "No space available or item already in list . " << endl;
+        //cout << "No space available or item already in list . " << endl;
         return -1;
     }
 }
@@ -164,7 +165,7 @@ Memory_List_Node* best_fit(Process* process, Pending_Processes_List* L, Memory_L
             temp = temp->next;
         }
         if((best_fit_empty_block < process->get_size()) && (memory->get_tail()->get_end() + process->get_size() >= memory->get_listSize())){
-            cout << "There is not available space in the memory. Pushing process in the Pending Processes List..." << endl;
+            //cout << "There is not available space in the memory. Pushing process in the Pending Processes List..." << endl;
             if(pending==true){
                 return NULL;
             }

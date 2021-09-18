@@ -46,62 +46,56 @@ int main(int argc, char* argv[]){
         perror("Shmat");
         exit(1);
     }
+
     int flag = 0;
     char temp[128];
     Process* new_proc = NULL;
 
     Memory_List* memory = new Memory_List(S);
-   // Memory_Tree* tree = new Memory_Tree(list_size);
     Pending_Processes_List* L = new Pending_Processes_List();
-    int size = 10;
-    Process* proc , *proc1, *proc2, *proc3, *proc4 = NULL;
-    int life = 2;
-    //proc = new Process(size, life);
-    //memory->insert_to_memory(proc, best_fit(proc, L, memory, false));
 
-    for(int i = 0; i<10; i++){
-        life++;
-        size+=20;
-        proc1 = new Process(size, life);
-        //tree->insert_process(proc1, buddy_algorithm(proc1, tree), L);
-        memory->insert_to_memory(proc1, best_fit(proc1, L, memory, false));
-        cout << endl;
-    }
+   // Memory_Tree* tree = new Memory_Tree(list_size);
 
-    memory->delete_node_by_position(250);
+/*    memory->delete_node_by_position(250);
     memory->display();
     cout << endl;
     memory->delete_node_by_position(360);
 
-    memory->display();
-    L->printList();
-    cout << endl;
+    cout << endl;*/
     while(1){
         //cout << "hello from m" << endl;
         
         sem_wait(semid, M_to_G_SEM_RECV);
        
-        //sem_wait(semid, mutex);
-
-        //sem_signal(semid, M_to_G_SEM_SEND);
-        //cout << "recv from m: " ;
         memset(temp, 0, 128);
         pass_string(mem, temp);
     
         if(flag){
             new_proc = create_process(temp);
-            cout << new_proc << endl;
-            cout << "HELLO " << flag;
-            new_proc->print();
+            //cout << new_proc << endl;
+            //new_proc->print();
+            memory->insert_to_memory(new_proc, best_fit(new_proc, L, memory, false));
+            //cout << "HELLO " << flag;
+            
         }
         
         sem_signal(semid, G_to_M_SEM_SEND);
-        flag++;
-      if(flag==10){
-            break;
+
+       
+        if(flag==10){
+                break;
         }
+
+        flag++;
     }
+
     cout << "BYE M" << endl;
+    
+    memory->display();
+    cout << endl;
+    L->printList();
+    
+
     delete memory;
     delete L;
     return 0;
