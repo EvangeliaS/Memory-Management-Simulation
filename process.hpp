@@ -36,6 +36,7 @@ class Process{
         Process(int size, int lifetime);
         ~Process();
         void print();
+        string copy_details();
         inline void start_process(int time){
             this->start_time = time;
             this->pending = false;
@@ -81,7 +82,7 @@ void sem_init(int semid, int index, int value); //initializes the semaphores
 void sem_signal(int semid, int index);  //V semaphore operation 
 void sem_wait(int semid, int index);    //P semaphore operation
 
-int read_line(char mem[]);  //reads the message the user types, and copies it in the memory segment
+int read_line(string line, char mem[]);  //reads message, and copies it in the memory segment
 void free_resources(int  shmid , int  semid); //deletes the memory segment and the semaphores
 void pass_string(char*string, char dest[]); //the program can pass messages like "RETRY" in the memory, 
 

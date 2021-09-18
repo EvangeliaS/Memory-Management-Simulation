@@ -16,8 +16,21 @@ Process::~Process(){
 }
 
 void Process::print(){
-    cout << "ID: " << this->id << " ( " << this->size << " ) ";
+    cout << "ID: " << this->id << " ( " << this->size << " ) " << this->lifetime;
 }
+
+string Process::copy_details(){
+    string data;
+    data = "id: ";
+    data = to_string(this->id);
+    data+= "( ";
+    data+= to_string(this->size);
+    data+= " )";
+    data+= to_string(this->lifetime);
+    data+= ".";
+    return data;
+}
+
 
 Pending_Processes_List::Pending_Processes_List(){
     this->head = NULL;
@@ -118,19 +131,14 @@ void sem_wait(int semid, int index){    // procedure to perform a P or wait oper
     }
 }
 
-int read_line(char memory[]){
-    string line;
-    cout << "WRITE: ";
-    getline(cin, line);
-/*    if(line !=NULL){    
-        line[strcspn(line, "\n")] = '\0';
-        memcpy(memory, line, sizeof(line));
-        return 1;
-    }*/
-/*    else{
-        exit(1);
-    }*/
+int read_line(string line, char memory[]){
+    //string line;
+    //getline(cin, line);
+    strcpy(memory, line.c_str());
+    cout <<  "readline " <<memory << endl;
+    return 1;
 }
+
 void free_resources(int  shmid , int  semid) {
     if(shmctl(shmid ,IPC_RMID ,NULL)<0){    //  Destroy  the  shared  memory  segment
         perror("shmctl"); 
@@ -146,5 +154,5 @@ void free_resources(int  shmid , int  semid) {
 }
 
 void pass_string(char *string, char dest[]){
-    memcpy(dest, string, strlen(string)+1);
+    strcpy(dest, string);
 }

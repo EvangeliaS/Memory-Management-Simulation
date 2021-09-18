@@ -46,19 +46,21 @@ int main(int argc, char* argv[]){
         perror("Shmat");
         exit(1);
     }
+    char temp[128];
     while(1){
-       // cout << "hello from m" << endl;
-        //sem_wait(semid, M_to_G_SEM_RECV);
+        //cout << "hello from m" << endl;
+        sem_wait(semid, M_to_G_SEM_RECV);
         //sem_wait(semid, mutex);
 
-//        read_line(mem);
-  
-        //sem_signal(semid, M_to_G_SEM_SEND);
+        cout << "recv from m: " ;
+        pass_string(mem, temp);
+        cout << "llllllllllllll " << temp << endl;
 
-        //sem_signal(semid, G_to_M_SEM_SEND);
+        sem_signal(semid, M_to_G_SEM_SEND);
 
-
-       // cout << "lol m wtf" << endl;
+        cout << "lol m wtf" << endl;
+        sem_signal(semid, G_to_M_SEM_SEND);
 
     }
+    return 0;
 }

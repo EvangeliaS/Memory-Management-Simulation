@@ -52,29 +52,26 @@ int main(int argc, char* argv[]){
         perror("Shmat");
         exit(1);
     }
-     //read_line(mem);
-/*    string line;
-    cout << "input line: " << endl;
-    getline(cin, line);
-    cin.ignore();*/
+    Process* proc = new Process(100, 3);
+    proc->print();
     while(1){
-        //cout << "hello from g" << endl;
-        //sem_wait(semid, G_to_M_SEM_SEND);   
+        sem_wait(semid, G_to_M_SEM_SEND);   
         //sem_wait(semid, mutex);
 
 
         //G create_process
         //G send process
         
-        //strcpy(mem, "hello from g");
-        
-      //  read_line(mem);
+    
+        cout << "write from g: " ;
+        cout << read_line(proc->copy_details(), mem) << endl;;
 
 
         //sem_signal(semid, mutex);    
-        //sem_signal(semid, M_to_G_SEM_RECV);
-       // cout << "lol g wtf" << endl;
+        sem_signal(semid, M_to_G_SEM_RECV);
+        cout << "lol g wtf" << endl;
 
-        //sem_wait(semid, M_to_G_SEM_SEND);
+        sem_wait(semid, M_to_G_SEM_SEND);
     }
+    return 0;
 }
