@@ -3,10 +3,10 @@
 using namespace std;
 
 int main(int argc, char* argv[]){
-    cout << "Welcome " << endl;
     if(argc!=7){
         return -1;
     }
+    cout << "Welcome " << endl;
     cout << endl;
 
     const char* argv_for_exec[8];
@@ -43,6 +43,9 @@ int main(int argc, char* argv[]){
     }
     else{
         cout << "Program vol2" << endl;
+    }
+    while(1){
+        
     }
 
     return 0;
