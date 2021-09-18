@@ -28,6 +28,7 @@ Memory_List_Node::~Memory_List_Node(){
 void Memory_List_Node::print(){
     //print process
     cout << "( " << this->start << " , " << this->end << " )";
+    this->process->print();
 } 
 Memory_List::Memory_List(int size){
     this->list_size = size;

@@ -64,6 +64,10 @@ int main(int argc, char* argv[]){
     cout << endl;*/
     while(1){
         //cout << "hello from m" << endl;
+
+        if(flag==10){
+                break;
+        }
         
         sem_wait(semid, M_to_G_SEM_RECV);
        
@@ -80,11 +84,6 @@ int main(int argc, char* argv[]){
         }
         
         sem_signal(semid, G_to_M_SEM_SEND);
-
-       
-        if(flag==10){
-                break;
-        }
 
         flag++;
     }

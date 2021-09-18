@@ -29,7 +29,7 @@ int main(int argc, char* argv[]){
         execvp("./G", (char* const*)argv_for_exec);   
     }
     else{
-        cout << "Program" << endl;
+        //cout << "Program" << endl;
     }
 
     //starting M
@@ -42,7 +42,7 @@ int main(int argc, char* argv[]){
         execvp(argv_for_exec[0], (char* const*)argv_for_exec);   
     }
     else{
-        cout << "Program vol2" << endl;
+        //cout << "Program vol2" << endl;
     }
     
     //while(1){}
