@@ -53,15 +53,12 @@ int main(int argc, char* argv[]){
         exit(1);
     }
     Process* proc = NULL;
-    //int flag = 0;
-    int life = 5;
-    int size = 10;
     cout << "POISSON " << Poisson_distribution(T) << endl;
     cout << "EXPONENTIAL "<<Exponential_distribution(t) << endl;
     cout << "UNIFORM " << Uniform_distribution(lo,hi) << endl;
     while(D--){
         sem_wait(semid, G_to_M_SEM_SEND);   
-        cout << "D of g " << D << endl;
+        //cout << "D of g " << D << endl;
         int time = Poisson_distribution(t);
         proc = process_generator(t,T,lo,hi);
         read_line(proc->copy_details(), mem);

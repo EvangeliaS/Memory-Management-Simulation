@@ -73,18 +73,18 @@ int Pending_Processes_List::append_process(Process* new_node){
     if(head==NULL){
         head = new_node;
         tail = head;
-        cout << "Process: " << new_node->get_process_id()  << " added in Pending Processes as head. "<< endl; 
+        //cout << "Process: " << new_node->get_process_id()  << " added in Pending Processes as head. "<< endl; 
         return 0;
     }
     if(head->next==NULL){
         head->next = new_node;
         tail = new_node;
-        cout << "Process: " << new_node->get_process_id()  << " added in Pending Processes. "<< endl; 
+        //cout << "Process: " << new_node->get_process_id()  << " added in Pending Processes. "<< endl; 
         return 0;
     }
     tail->next = new_node;
     tail = new_node;
-    cout << "Process: " << new_node->get_process_id()  << " added in Pending Processes. "<< endl; 
+    //cout << "Process: " << new_node->get_process_id()  << " added in Pending Processes. "<< endl; 
     return 0;
 
 }

@@ -64,17 +64,13 @@ int main(int argc, char* argv[]){
     cout << endl;*/
     while(D--){
         sem_wait(semid, M_to_G_SEM_RECV);
-        cout << "D of M " << D << endl;
+        //cout << "D of M " << D << endl;
         memset(temp, 0, 128);
         pass_string(mem, temp);
     
         if(flag){
             new_proc = create_process(temp);
-            //cout << "new_proc " << endl;
-            //new_proc->print();
-            memory->insert_to_memory(new_proc, best_fit(new_proc, L, memory, false));
-            //cout << "HELLO " << flag;
-            
+            memory->insert_to_memory(new_proc, worst_fit(new_proc, L, memory, false));           
         }
         
         sem_signal(semid, G_to_M_SEM_SEND);
@@ -82,11 +78,9 @@ int main(int argc, char* argv[]){
         flag++;
     }
 
-    //cout << "BYE M" << endl;
-    
-    memory->display();
-    cout << endl;
-    L->printList();
+    //memory->display();
+    //cout << endl;
+    //L->printList();
 
     //create log_file.xxx
     pid_t pid = getpid();
@@ -96,17 +90,36 @@ int main(int argc, char* argv[]){
     ofstream filename(log_file);
     filename << "Best Fit: " << endl;
     Memory_List_Node* current = memory->get_head();
+    int i = 0;
+    filename << "Processes currenty in the memory: " << endl;
     while(current!=NULL){
+        i++;
         filename << endl;
+        filename << i << ") ";
         filename << current->print_to_filename();
         current = current->next;
     }
-    //filename << "Total Travel Requests: " << total_requests << endl;
-    //filename << "Accepted Requests: " << accepted_requests << endl;
-    //filename << "Rejected Requests: " << rejected_requests << endl;
+
+    filename << endl;
+    filename << "Pending Processes: " << endl;
     
+    Process* process = L->get_head();
+    while(process!=NULL){
+        //i++;
+        filename << endl;
+        //filename << i << ") ";
+        filename << process->print_to_filename();
+        process = process->next;
+    }
+
     filename.close();
+
     delete memory;
     delete L;
+/*
+    if(new_proc!=NULL){
+        delete new_proc;
+    }*/
+
     return 0;
 }
