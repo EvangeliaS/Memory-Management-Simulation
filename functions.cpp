@@ -12,7 +12,7 @@ int sem_create(int num_of_semaphores){
 }
 
 void sem_init(int semid, int index, int value){  // procedure to initialize specified semaphore to given value
-   if (semctl (semid, index, SETVAL, value) < 0){  
+   if ((semctl (semid, index, SETVAL, value)) < 0){  
         perror ("Error in initializing semaphore");
         exit (1);
     }

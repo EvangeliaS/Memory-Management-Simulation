@@ -135,7 +135,6 @@ Process* create_process(char* process){
         else if(count1==3){
             string line(token1);
             birth.assign(line);
-            cout << "birth " << birth << endl;
         }
         count1++;
         token1 = strtok(NULL,"-");

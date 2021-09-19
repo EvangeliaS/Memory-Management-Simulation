@@ -17,8 +17,8 @@
 #include <random>
 
 #define MEM_SIZE    (128*sizeof(char)) // 128 bytes for the string
-#define SHMKEY      (key_t)9876       // key value of shared memory segment
-#define SEMKEY      (key_t)5432      //key value of semaphore set
+#define SHMKEY      (key_t)9817       // key value of shared memory segment
+#define SEMKEY      (key_t)5423      //key value of semaphore set
 
 using namespace std;
 

@@ -1,9 +1,9 @@
 #include <iostream>
 #include "memory_tree.hpp"
-#define G_to_M_SEM_SEND     1
+#define G_to_M_SEM_SEND     0
 //#define G_to_M_SEM_RECV     2
 //#define M_to_G_SEM_SEND     3
-#define M_to_G_SEM_RECV     4
+#define M_to_G_SEM_RECV     1
 
 using namespace std;
 
@@ -37,8 +37,6 @@ int main(int argc, char* argv[]){
     printf("Semaphore id is: %d\n", semid);
 
     sem_init(semid, G_to_M_SEM_SEND, 1);
-    //sem_init(semid, G_to_M_SEM_RECV, 0);
-    //sem_init(semid, M_to_G_SEM_SEND, 0);
     sem_init(semid, M_to_G_SEM_RECV, 0);
 
     mem = (char *)shmat(shmid ,NULL ,0);   //Attach  the  shared  memory  segment
@@ -56,13 +54,16 @@ int main(int argc, char* argv[]){
         int time = Poisson_distribution(t);
         proc = process_generator(t,T,lo,hi,d);
         read_line(proc->copy_details(), mem);
-        cout << mem << endl;
+        //cout << mem << endl;
         sem_signal(semid, M_to_G_SEM_RECV);
-        while(time--){
+        
+/*        while(time--){
             d++;
-        }
+        }*/
         delete proc;
         d++;
     }
+
+    //free_resources(shmid, semid);
     return 0;
 }
