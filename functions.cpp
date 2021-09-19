@@ -69,3 +69,24 @@ void free_resources(int  shmid , int  semid) {
 void pass_string(char *string, char dest[]){
     strcpy(dest, string);
 }
+
+int Poisson_distribution(int t){
+    random_device rd;
+    mt19937 gen(rd());
+    std::poisson_distribution<> d(t);
+    return d(gen);
+}
+
+int Exponential_distribution(int T){
+    random_device rd;
+    mt19937 gen(rd());
+    std::exponential_distribution<> d(1.0/T);
+    return d(gen);
+}
+
+int Uniform_distribution(int lo, int hi){
+    random_device rd;  // Will be used to obtain a seed for the random number engine
+    mt19937 gen(rd()); // Standard mersenne_twister_engine seeded with rd()
+    std::uniform_int_distribution<> dis(lo, hi);
+    return dis(gen);
+}

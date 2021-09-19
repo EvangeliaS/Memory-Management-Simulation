@@ -14,6 +14,7 @@
 #include <mutex>
 #include <unistd.h>
 #include <fstream>
+#include <random>
 
 #define MEM_SIZE    (128*sizeof(char)) // 128 bytes for the string
 #define SHMKEY      (key_t)9876       // key value of shared memory segment
@@ -28,6 +29,10 @@ void sem_wait(int semid, int index);    //P semaphore operation
 
 int read_line(string line, char mem[]);  //reads message, and copies it in the memory segment
 void free_resources(int  shmid , int  semid); //deletes the memory segment and the semaphores
-void pass_string(char*string, char dest[]); //the program can pass messages like "RETRY" in the memory, 
+void pass_string(char*string, char dest[]); //the program can pass messages like "RETRY" in the memory
+
+int Poisson_distribution(int t);
+int Exponential_distribution(int T);
+int Uniform_distribution(int lo, int hi);
 
 #endif

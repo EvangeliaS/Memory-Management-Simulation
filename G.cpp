@@ -56,11 +56,14 @@ int main(int argc, char* argv[]){
     int flag = 0;
     int life = 5;
     int size = 10;
-    while(1){
+    cout << "POISSON " << Poisson_distribution(T) << endl;
+    cout << "EXPONENTIAL "<<Exponential_distribution(t) << endl;
+    cout << "UNIFORM " << Uniform_distribution(lo,hi) << endl;
+    while(D--){
  /*       if(flag==10){
             break;
         }*/
-        for(int i = 0; i<10; i++){
+        for(int i = 0; i<100; i++){
             sem_wait(semid, G_to_M_SEM_SEND);   
             //cout << "SIZE IS " << size << endl;
             proc = new Process(size, life, set_id());
