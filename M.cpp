@@ -14,10 +14,10 @@ int main(int argc, char* argv[]){
     }
     cout << "Hello from M" << endl;
     int D  = stoi(argv[1]);
-    int lo = stoi(argv[2]);
-    int hi = stoi(argv[3]);
-    int t  = stoi(argv[4]);
-    int T  = stoi(argv[5]);
+//  int lo = stoi(argv[2]);
+//  int hi = stoi(argv[3]);
+//  int t  = stoi(argv[4]);
+//  int T  = stoi(argv[5]);
     int S  = stoi(argv[6]);
 
     int semid;      //identifier for a semaphore set
@@ -62,13 +62,13 @@ int main(int argc, char* argv[]){
     memory->delete_node_by_position(360);
 
     cout << endl;*/
-    while(1){
+    while(D--){
         //cout << "hello from m" << endl;
 
-        if(flag==10){
+ /*       if(flag==10){
                 break;
         }
-        
+        */
         sem_wait(semid, M_to_G_SEM_RECV);
        
         memset(temp, 0, 128);

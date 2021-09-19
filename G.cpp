@@ -19,7 +19,7 @@ int main(int argc, char* argv[]){
     int hi = stoi(argv[3]);
     int t  = stoi(argv[4]);
     int T  = stoi(argv[5]);
-    int S  = stoi(argv[6]);
+//  int S  = stoi(argv[6]);
 
     int semid;      //identifier for a semaphore set
     int shmid;      // shared memory segment id
@@ -53,7 +53,7 @@ int main(int argc, char* argv[]){
         exit(1);
     }
     Process* proc = NULL;
-    int flag = 0;
+    //int flag = 0;
     int life = 5;
     int size = 10;
     cout << "POISSON " << Poisson_distribution(T) << endl;

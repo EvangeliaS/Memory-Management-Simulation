@@ -3,6 +3,8 @@
 
 using namespace std;
 
+static int ID = 45672;
+
 int set_id(){
     return ID++;
 }
@@ -91,7 +93,7 @@ void Pending_Processes_List::printList(){
 }
 
 Process* create_process(char* process){
-    char* line1 = {0};
+    ///char* line1 = {0};
     Process* proc = NULL;
     char * token1 = strtok(process,"-");
     int count1 = 0;

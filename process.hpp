@@ -5,8 +5,6 @@
 
 using namespace std;
 
-static int ID = 45672;
-
 int set_id();
 
 class Process{
