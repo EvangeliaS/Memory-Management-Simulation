@@ -63,14 +63,8 @@ int main(int argc, char* argv[]){
 
     cout << endl;*/
     while(D--){
-        //cout << "hello from m" << endl;
-
- /*       if(flag==10){
-                break;
-        }
-        */
         sem_wait(semid, M_to_G_SEM_RECV);
-       
+        cout << "D of M " << D << endl;
         memset(temp, 0, 128);
         pass_string(mem, temp);
     
@@ -93,18 +87,23 @@ int main(int argc, char* argv[]){
     memory->display();
     cout << endl;
     L->printList();
+
     //create log_file.xxx
     pid_t pid = getpid();
     string log_file = "log_file.";
     log_file+= to_string(pid);
 
     ofstream filename(log_file);
-    for(int i = 0; i<num_country_paths; i++){
-        filename << countries[i] << endl;
+    filename << "Best Fit: " << endl;
+    Memory_List_Node* current = memory->get_head();
+    while(current!=NULL){
+        filename << endl;
+        filename << current->print_to_filename();
+        current = current->next;
     }
-    filename << "Total Travel Requests: " << total_requests << endl;
-    filename << "Accepted Requests: " << accepted_requests << endl;
-    filename << "Rejected Requests: " << rejected_requests << endl;
+    //filename << "Total Travel Requests: " << total_requests << endl;
+    //filename << "Accepted Requests: " << accepted_requests << endl;
+    //filename << "Rejected Requests: " << rejected_requests << endl;
     
     filename.close();
     delete memory;

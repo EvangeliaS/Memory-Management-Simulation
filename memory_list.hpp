@@ -18,6 +18,7 @@ class Memory_List_Node{
         Memory_List_Node(int size, int start, int time, Process*);
         ~Memory_List_Node();
         void print();
+        string print_to_filename();
         
         inline int get_start(){
             return this->start;

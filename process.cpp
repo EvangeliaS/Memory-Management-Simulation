@@ -25,6 +25,17 @@ void Process::print(){
     cout << this->id << " ( " << this->size << " ) " << this->lifetime;
 }
 
+string Process::print_to_filename(){
+    string data;
+    data = " id: ";
+    data = to_string(this->id);
+    data+= " size: ";
+    data+= to_string(this->size);
+    data+= " lifetime: ";
+    data+= to_string(this->lifetime);
+    return data;
+}
+
 string Process::copy_details(){
     string data;
     data = "id- ";

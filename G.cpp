@@ -61,6 +61,7 @@ int main(int argc, char* argv[]){
     cout << "UNIFORM " << Uniform_distribution(lo,hi) << endl;
     while(D--){
         sem_wait(semid, G_to_M_SEM_SEND);   
+        cout << "D of g " << D << endl;
         int time = Poisson_distribution(t);
         proc = process_generator(t,T,lo,hi);
         read_line(proc->copy_details(), mem);
@@ -69,6 +70,6 @@ int main(int argc, char* argv[]){
         delete proc;
         //sem_wait(semid, M_to_G_SEM_SEND);
     }
-    cout << "BYE G" << endl;
+    //cout << "BYE G" << endl;
     return 0;
 }

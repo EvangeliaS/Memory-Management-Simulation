@@ -20,6 +20,7 @@ class Process{
         Process(int size, int lifetime, int id);
         ~Process();
         void print();
+        string print_to_filename();
         string copy_details();
         inline void start_process(int time){
             this->start_time = time;

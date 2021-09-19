@@ -30,6 +30,20 @@ void Memory_List_Node::print(){
     cout << "( " << this->start << " , " << this->end << " )";
     this->process->print();
 } 
+string Memory_List_Node::print_to_filename(){
+    string data;
+    data+= "(";
+    data = to_string(this->start);
+    data+= ",";
+    data+= to_string(this->end);
+    data+= ")";
+    data+= " Block size: ";
+    data+= to_string(this->size);
+    data+= " Process details: ";
+    data+= this->process->print_to_filename();
+    data+= '\n';
+    return data;
+} 
 Memory_List::Memory_List(int size){
     this->list_size = size;
     this->head = NULL;
