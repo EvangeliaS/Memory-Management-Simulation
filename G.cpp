@@ -62,7 +62,7 @@ int main(int argc, char* argv[]){
         }*/
         for(int i = 0; i<10; i++){
             sem_wait(semid, G_to_M_SEM_SEND);   
-            cout << "SIZE IS " << size << endl;
+            //cout << "SIZE IS " << size << endl;
             proc = new Process(size, life, set_id());
             memset(mem, 0, 128);
             read_line(proc->copy_details(), mem);

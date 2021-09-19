@@ -3,28 +3,28 @@ CXXFLAGS = -Wall -g -std=c++11
 
 all: G M test_m program
 
-program: program.o process.o memory_tree.o memory_list.o
-	$(CXX) $(CXXFLAGS) -o program program.o process.o memory_tree.o memory_list.o
+program: program.o process.o memory_tree.o memory_list.o functions.o
+	$(CXX) $(CXXFLAGS) -o program program.o process.o memory_tree.o memory_list.o functions.o
 
-test_m: test_m.o process.o memory_tree.o memory_list.o
-	$(CXX) $(CXXFLAGS) -o test_m test_m.o process.o memory_tree.o memory_list.o
+test_m: test_m.o process.o memory_tree.o memory_list.o functions.o
+	$(CXX) $(CXXFLAGS) -o test_m test_m.o process.o memory_tree.o memory_list.o functions.o
 	
-G: G.o process.o memory_tree.o memory_list.o
-	$(CXX) $(CXXFLAGS) -o G G.o process.o memory_tree.o memory_list.o
+G: G.o process.o memory_tree.o memory_list.o functions.o
+	$(CXX) $(CXXFLAGS) -o G G.o process.o memory_tree.o memory_list.o functions.o
 	
-M: M.o process.o memory_tree.o memory_list.o
-	$(CXX) $(CXXFLAGS) -o M M.o process.o memory_tree.o memory_list.o
+M: M.o process.o memory_tree.o memory_list.o functions.o
+	$(CXX) $(CXXFLAGS) -o M M.o process.o memory_tree.o memory_list.o functions.o
 
-program.o: program.cpp process.hpp memory_tree.hpp memory_list.hpp
+program.o: program.cpp process.hpp memory_tree.hpp memory_list.hpp functions.hpp
 	$(CXX) $(CXXFLAGS) -c program.cpp
 
-test_m.o: test_m.cpp process.hpp memory_tree.hpp memory_list.hpp
+test_m.o: test_m.cpp process.hpp memory_tree.hpp memory_list.hpp functions.hpp
 	$(CXX) $(CXXFLAGS) -c test_m.cpp
 
-G.o: G.cpp process.hpp memory_tree.hpp memory_list.hpp
+G.o: G.cpp process.hpp memory_tree.hpp memory_list.hpp functions.hpp
 	$(CXX) $(CXXFLAGS) -c G.cpp
 
-M.o: M.cpp process.hpp memory_tree.hpp memory_list.hpp
+M.o: M.cpp process.hpp memory_tree.hpp memory_list.hpp functions.hpp
 	$(CXX) $(CXXFLAGS) -c M.cpp
 
 process.o: process.cpp process.hpp
@@ -35,6 +35,9 @@ memory_tree.o: memory_tree.cpp  memory_tree.hpp
 
 memory_list.o: memory_list.cpp  memory_list.hpp
 	$(CXX) $(CXXFLAGS) -c memory_list.cpp
+
+functions.o: functions.cpp functions.hpp
+	$(CXX) $(CXXFLAGS) -c functions.cpp
 
 clean:
 	rm -f G M test_m program *o
