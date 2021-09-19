@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -Wall -g -std=c++11
 
-all: G M test_m program
+all: G M program
 
 program: program.o process.o memory_tree.o memory_list.o functions.o
 	$(CXX) $(CXXFLAGS) -o program program.o process.o memory_tree.o memory_list.o functions.o
@@ -34,4 +34,4 @@ functions.o: functions.cpp functions.hpp
 	$(CXX) $(CXXFLAGS) -c functions.cpp
 
 clean:
-	rm -f G M test_m program *o
+	rm -f G M program *o

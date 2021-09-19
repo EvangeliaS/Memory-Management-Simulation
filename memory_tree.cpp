@@ -198,15 +198,15 @@ void Memory_Tree::printPreorder(Memory_Tree_Node* node){
         return;
 
     if(node->stores_process()){
-        cout << node->get_node_size() << " ";
+        cout << "Node size: "<< node->get_node_size() << " ";
         cout << " id: " << node->get_process()->get_process_id() << " size: " << node->get_process()->get_size()  << " start_time: " << node->get_process()->get_start_time() << endl;
     }
     else if(!node->is_leaf()){
-        cout << node->get_node_size() << " ";
+        cout << "Node size: "<< node->get_node_size() << " ";
         cout << " Not available " << endl;
     }
     else{
-        cout << node->get_node_size() << " ";
+        cout << "Node size: "<< node->get_node_size() << " ";
         cout << " Available " << endl;
     }
     cout << endl; 
