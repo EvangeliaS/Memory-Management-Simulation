@@ -78,10 +78,6 @@ int main(int argc, char* argv[]){
         }
         break;
 
-       
- /*       if(flag==10){
-            return 0;
-        }*/
         //sem_wait(semid, M_to_G_SEM_SEND);
     }
 
