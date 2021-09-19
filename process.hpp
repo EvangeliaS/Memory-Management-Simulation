@@ -59,5 +59,6 @@ class Pending_Processes_List{   //aka L singly linked list
 };
 
 Process* create_process(char* process);
+Process* process_generator(int t,int T, int lo, int hi);
 
 #endif

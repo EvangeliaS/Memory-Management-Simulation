@@ -76,7 +76,7 @@ int main(int argc, char* argv[]){
     
         if(flag){
             new_proc = create_process(temp);
-            //cout << new_proc << endl;
+            //cout << "new_proc " << endl;
             //new_proc->print();
             memory->insert_to_memory(new_proc, best_fit(new_proc, L, memory, false));
             //cout << "HELLO " << flag;
@@ -88,13 +88,25 @@ int main(int argc, char* argv[]){
         flag++;
     }
 
-    cout << "BYE M" << endl;
+    //cout << "BYE M" << endl;
     
     memory->display();
     cout << endl;
     L->printList();
+    //create log_file.xxx
+    pid_t pid = getpid();
+    string log_file = "log_file.";
+    log_file+= to_string(pid);
+
+    ofstream filename(log_file);
+    for(int i = 0; i<num_country_paths; i++){
+        filename << countries[i] << endl;
+    }
+    filename << "Total Travel Requests: " << total_requests << endl;
+    filename << "Accepted Requests: " << accepted_requests << endl;
+    filename << "Rejected Requests: " << rejected_requests << endl;
     
-    cout << endl;
+    filename.close();
     delete memory;
     delete L;
     return 0;

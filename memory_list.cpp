@@ -13,13 +13,13 @@ Memory_List_Node::Memory_List_Node(int s, int x, int ptime, Process* proc){
     this->process->start_process(ptime);
     this->next = NULL;
     this->prev = NULL;
-    cout << "Memory node constructed: ( " << this->start << " , " << this->end << " )" << endl; 
+    //cout << "Memory node constructed: ( " << this->start << " , " << this->end << " )" << endl; 
 }
 
 Memory_List_Node::~Memory_List_Node(){
-    cout << "Delete node with process: ";
-    this->process->print();
-    cout << endl;
+    //cout << "Delete node with process: ";
+    //this->process->print();
+    //cout << endl;
     delete this->process;
     this->process = NULL;
     this->next = NULL;

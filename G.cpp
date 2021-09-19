@@ -60,27 +60,15 @@ int main(int argc, char* argv[]){
     cout << "EXPONENTIAL "<<Exponential_distribution(t) << endl;
     cout << "UNIFORM " << Uniform_distribution(lo,hi) << endl;
     while(D--){
- /*       if(flag==10){
-            break;
-        }*/
-        for(int i = 0; i<100; i++){
-            sem_wait(semid, G_to_M_SEM_SEND);   
-            //cout << "SIZE IS " << size << endl;
-            proc = new Process(size, life, set_id());
-            memset(mem, 0, 128);
-            read_line(proc->copy_details(), mem);
-            //cout << mem << " BY G " << endl;
-            size+=20;
-            sem_signal(semid, M_to_G_SEM_RECV);
-            
-            delete proc;
-
-        }
-        break;
-
+        sem_wait(semid, G_to_M_SEM_SEND);   
+        int time = Poisson_distribution(t);
+        proc = process_generator(t,T,lo,hi);
+        read_line(proc->copy_details(), mem);
+        sem_signal(semid, M_to_G_SEM_RECV);
+        while(time--){}
+        delete proc;
         //sem_wait(semid, M_to_G_SEM_SEND);
     }
-
     cout << "BYE G" << endl;
     return 0;
 }

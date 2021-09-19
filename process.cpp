@@ -22,7 +22,7 @@ Process::~Process(){
 }
 
 void Process::print(){
-    cout << "ID: " << this->id << " ( " << this->size << " ) " << this->lifetime;
+    cout << this->id << " ( " << this->size << " ) " << this->lifetime;
 }
 
 string Process::copy_details(){
@@ -121,4 +121,13 @@ Process* create_process(char* process){
     }
     proc = new Process(stoi(size), stoi(lifetime), stoi(id));
     return proc;
+}
+
+Process* process_generator(int t,int T, int lo, int hi){
+    int lifetime = Exponential_distribution(T);
+    int size = Uniform_distribution(lo, hi);
+    if(lifetime>0 && size>0)
+        return new Process(size,lifetime, set_id());
+    else
+        return new Process(size+2,lifetime+1, set_id());
 }
