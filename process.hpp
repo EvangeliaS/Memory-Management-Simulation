@@ -12,8 +12,9 @@ class Process{
         int id;
         int size;
         int lifetime;
+        int birth_time;
         int start_time;
-        int execution_time; //counter 
+        int stop_time;
         bool pending; //if the process is pending in the l list the variable is 1, if 0 the process is in the memory
     public:
         Process* next; //for the pending processes list
@@ -24,6 +25,7 @@ class Process{
         string copy_details();
         inline void start_process(int time){
             this->start_time = time;
+            this->stop_time = time + this->lifetime;
             this->pending = false;
         }
         inline int get_process_id(){
@@ -40,6 +42,12 @@ class Process{
         }
         inline int get_start_time(){
             return this->start_time;
+        }
+        inline int get_stop_time(){
+            return this->stop_time;
+        }
+        inline void set_birth_time(int btime){
+            this->birth_time = btime;
         }
 };
 
@@ -63,6 +71,6 @@ class Pending_Processes_List{   //aka L singly linked list
 };
 
 Process* create_process(char* process);
-Process* process_generator(int t,int T, int lo, int hi);
+Process* process_generator(int t,int T, int lo, int hi, int birth);
 
 #endif

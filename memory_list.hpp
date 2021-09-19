@@ -48,15 +48,16 @@ class Memory_List{
         int insert_to_memory(Process* process, Memory_List_Node* algorithm, int ptime);
         int delete_node(Process* proc);
         int delete_node_by_position(int x);
+        int delete_node_by_process_stop_time(int stop);
         Memory_List_Node* search_node_by_position(int position);
         Memory_List_Node* search_node_by_process(Process* process);
+        Memory_List_Node* search_node_by_process_stop_time(int stop);
         void display();
 
         inline void init_head(Memory_List_Node* node){
             this->head = node;
             this->tail = this->head;
         }
-        
         inline Memory_List_Node* get_head(){
             return this->head;
         }

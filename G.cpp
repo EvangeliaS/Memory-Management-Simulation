@@ -49,14 +49,20 @@ int main(int argc, char* argv[]){
         exit(1);
     }
     Process* proc = NULL;
-    while(D--){
+    int d = 1;
+    int flag = 0;
+    while(d<=D){
         sem_wait(semid, G_to_M_SEM_SEND);   
         int time = Poisson_distribution(t);
-        proc = process_generator(t,T,lo,hi);
+        proc = process_generator(t,T,lo,hi,d);
         read_line(proc->copy_details(), mem);
+        cout << mem << endl;
         sem_signal(semid, M_to_G_SEM_RECV);
-        while(time--){}
+        while(time--){
+            d++;
+        }
         delete proc;
+        d++;
     }
     return 0;
 }

@@ -51,7 +51,7 @@ int main(int argc, char* argv[]){
     Pending_Processes_List* L = new Pending_Processes_List();
     int d = 1;
 
-/*
+
 /// EKTELESI ME BEST FIT ALGORITHM
     Memory_List* memory = new Memory_List(S);
     
@@ -62,7 +62,8 @@ int main(int argc, char* argv[]){
     
         if(flag){
             new_proc = create_process(temp);
-            memory->insert_to_memory(new_proc, best_fit(new_proc, L, memory, false, d), d);     
+            memory->insert_to_memory(new_proc, best_fit(new_proc, L, memory, false, d), d);   
+            //memory->delete_node_by_process_stop_time(d);  
         }
         
         sem_signal(semid, G_to_M_SEM_SEND);
@@ -93,9 +94,7 @@ int main(int argc, char* argv[]){
     
     Process* process = L->get_head();
     while(process!=NULL){
-        //i++;
         filename << endl;
-        //filename << i << ") ";
         filename << process->print_to_filename();
         process = process->next;
     }
@@ -104,9 +103,7 @@ int main(int argc, char* argv[]){
 
     delete memory;
     delete L;
-
-*/
-
+/*
     //EKTELESI ME WORST FIT
     Memory_List* memory = new Memory_List(S);
     while(d<=D){
@@ -156,7 +153,7 @@ int main(int argc, char* argv[]){
 
     delete memory;
     delete L;
-
+*/
 
 
 /*

@@ -16,7 +16,8 @@ Process::Process(int s, int life,int id){
     this->pending = true;
     this->next = NULL;
     this->start_time = 0;
-    this->execution_time = 0;
+    this->stop_time = 0;
+    this->birth_time = 0;
 }
 
 Process::~Process(){
@@ -48,7 +49,8 @@ string Process::copy_details(){
     data+= to_string(this->size);
     data+= "-";
     data+= to_string(this->lifetime);
-    //data+= "-";
+    data+= "-";
+    data+= to_string(this->birth_time);
     return data;
 }
 
@@ -108,11 +110,10 @@ void Pending_Processes_List::printList(){
 }
 
 Process* create_process(char* process){
-    ///char* line1 = {0};
     Process* proc = NULL;
     char * token1 = strtok(process,"-");
     int count1 = 0;
-    string id, size, lifetime;
+    string id, size, lifetime, birth;
     while(token1){
         if(count1==0){
             string line(token1);
@@ -131,18 +132,31 @@ Process* create_process(char* process){
 
             //cout << "lifetime " << lifetime << endl;
         }
+        else if(count1==3){
+            string line(token1);
+            birth.assign(line);
+            cout << "birth " << birth << endl;
+        }
         count1++;
         token1 = strtok(NULL,"-");
     }
     proc = new Process(stoi(size), stoi(lifetime), stoi(id));
+    proc->set_birth_time(stoi(birth));
     return proc;
 }
 
-Process* process_generator(int t,int T, int lo, int hi){
+Process* process_generator(int t,int T, int lo, int hi, int birth){
     int lifetime = Exponential_distribution(T);
     int size = Uniform_distribution(lo, hi);
-    if(lifetime>0 && size>0)
-        return new Process(size,lifetime, set_id());
-    else
-        return new Process(size+2,lifetime+1, set_id());
+    if(lifetime>0 && size>0){
+        Process* process = new Process(size,lifetime, set_id());
+        process->set_birth_time(birth);
+        return process;
+    }
+        
+    else{
+        Process* process = new Process(size +2 ,lifetime +1 , set_id());
+        process->set_birth_time(birth);
+        return process;
+    }
 }

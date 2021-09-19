@@ -119,6 +119,20 @@ int Memory_List::delete_node_by_position(int x){
     return 0;
 }
 
+int Memory_List::delete_node_by_process_stop_time(int stop){
+    Memory_List_Node* current = NULL; 
+    if((current = search_node_by_process_stop_time(stop))==NULL){
+        return -1;
+    }
+    current->prev->next = current->next;
+    if(current->next->prev!=NULL){
+        current->next->prev = current->prev;
+    }
+    cout << " Process: " << current->get_process()->get_process_id() << endl;
+    delete current;
+    return 0;
+}
+
 Memory_List_Node* Memory_List::search_node_by_process(Process* process){
     Memory_List_Node* current = this->head;
     while(current!=NULL){
@@ -140,6 +154,18 @@ Memory_List_Node* Memory_List::search_node_by_position(int position){
     }
     return NULL;
 }
+Memory_List_Node* Memory_List::search_node_by_process_stop_time(int stop){
+    Memory_List_Node* current = this->head;
+    while(current!=NULL){
+        if(current->get_process()->get_stop_time()==stop){
+            return current;
+        }
+        current = current->next;
+    }
+    return NULL;
+}
+
+
 
 void Memory_List::display(){
     Memory_List_Node* current = this->head;
@@ -254,7 +280,6 @@ Memory_List_Node* worst_fit(Process* process, Pending_Processes_List* L, Memory_
         return temp;
     } 
 }
-
 
 int add_pending_process(Memory_List* memory, Pending_Processes_List* L, int algorithm, int ptime){
     Process* process = L->get_head();
