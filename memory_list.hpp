@@ -45,7 +45,7 @@ class Memory_List{
         ~Memory_List();
         bool check_empty_block();
         bool spot_empty_block();
-        int insert_to_memory(Process* process, Memory_List_Node* algorithm);
+        int insert_to_memory(Process* process, Memory_List_Node* algorithm, int ptime);
         int delete_node(Process* proc);
         int delete_node_by_position(int x);
         Memory_List_Node* search_node_by_position(int position);
@@ -77,6 +77,6 @@ class Memory_List{
 };
 
 
-Memory_List_Node* best_fit(Process* process, Pending_Processes_List* L, Memory_List* memory, bool FROM_PENDING_LIST);
-Memory_List_Node* worst_fit(Process* process, Pending_Processes_List* L, Memory_List* memory, bool FROM_PENDING_LIST);
-int add_pending_process(Memory_List* memory, Pending_Processes_List* L, int algorithm);
+Memory_List_Node* best_fit(Process* process, Pending_Processes_List* L, Memory_List* memory, bool FROM_PENDING_LIST, int ptime);
+Memory_List_Node* worst_fit(Process* process, Pending_Processes_List* L, Memory_List* memory, bool FROM_PENDING_LIST, int ptime);
+int add_pending_process(Memory_List* memory, Pending_Processes_List* L, int algorithm, int ptime);

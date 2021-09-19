@@ -15,6 +15,8 @@ Process::Process(int s, int life,int id){
     this->size = s;
     this->pending = true;
     this->next = NULL;
+    this->start_time = 0;
+    this->execution_time = 0;
 }
 
 Process::~Process(){
@@ -22,7 +24,7 @@ Process::~Process(){
 }
 
 void Process::print(){
-    cout << this->id << " ( " << this->size << " ) " << this->lifetime;
+    cout << this->id << " ( " << this->size << " ) " << this->lifetime << " start_time: " << this->start_time;
 }
 
 string Process::print_to_filename(){
@@ -33,6 +35,8 @@ string Process::print_to_filename(){
     data+= to_string(this->size);
     data+= " lifetime: ";
     data+= to_string(this->lifetime);
+    data+= " Start time: ";
+    data+=to_string(this->start_time);
     return data;
 }
 

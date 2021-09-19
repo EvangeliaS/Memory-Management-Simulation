@@ -68,9 +68,9 @@ Memory_Tree::~Memory_Tree(){
     this->root = NULL;
 }
 
-int Memory_Tree::insert_process(Process* process, Memory_Tree_Node* buddy, Pending_Processes_List* L){
+int Memory_Tree::insert_process(Process* process, Memory_Tree_Node* buddy, Pending_Processes_List* L, int start_time){
     if(buddy!=NULL){
-        buddy->set_process(process);
+        buddy->set_process(process, start_time);
         return 0;
     }   
     L->append_process(process);
@@ -199,7 +199,7 @@ void Memory_Tree::printPreorder(Memory_Tree_Node* node){
 
     if(node->stores_process()){
         cout << node->get_node_size() << " ";
-        cout << " id: " << node->get_process()->get_process_id() << " size: " << node->get_process()->get_size() << endl;
+        cout << " id: " << node->get_process()->get_process_id() << " size: " << node->get_process()->get_size()  << " start_time: " << node->get_process()->get_start_time() << endl;
     }
     else if(!node->is_leaf()){
         cout << node->get_node_size() << " ";

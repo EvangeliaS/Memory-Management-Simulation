@@ -38,6 +38,9 @@ class Process{
         inline bool get_pending(){
             return this->pending;
         }
+        inline int get_start_time(){
+            return this->start_time;
+        }
 };
 
 class Pending_Processes_List{   //aka L singly linked list

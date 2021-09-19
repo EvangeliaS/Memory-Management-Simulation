@@ -5,9 +5,6 @@ all: G M test_m program
 
 program: program.o process.o memory_tree.o memory_list.o functions.o
 	$(CXX) $(CXXFLAGS) -o program program.o process.o memory_tree.o memory_list.o functions.o
-
-test_m: test_m.o process.o memory_tree.o memory_list.o functions.o
-	$(CXX) $(CXXFLAGS) -o test_m test_m.o process.o memory_tree.o memory_list.o functions.o
 	
 G: G.o process.o memory_tree.o memory_list.o functions.o
 	$(CXX) $(CXXFLAGS) -o G G.o process.o memory_tree.o memory_list.o functions.o
@@ -17,9 +14,6 @@ M: M.o process.o memory_tree.o memory_list.o functions.o
 
 program.o: program.cpp process.hpp memory_tree.hpp memory_list.hpp functions.hpp
 	$(CXX) $(CXXFLAGS) -c program.cpp
-
-test_m.o: test_m.cpp process.hpp memory_tree.hpp memory_list.hpp functions.hpp
-	$(CXX) $(CXXFLAGS) -c test_m.cpp
 
 G.o: G.cpp process.hpp memory_tree.hpp memory_list.hpp functions.hpp
 	$(CXX) $(CXXFLAGS) -c G.cpp

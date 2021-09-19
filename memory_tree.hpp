@@ -25,8 +25,9 @@ class Memory_Tree_Node{
         inline void set_size(int size){
             this->node_size = size;
         }
-        inline void set_process(Process* proc){
+        inline void set_process(Process* proc, int start_time){
             this->process = proc;
+            this->process->start_process(start_time);
         }
         inline Process* get_process(){
             return this->process;
@@ -40,7 +41,7 @@ class Memory_Tree{ //binary tree used for the buddy algorithm
     public:
         Memory_Tree(int size);
         ~Memory_Tree();
-        int insert_process(Process* process, Memory_Tree_Node* buddy, Pending_Processes_List* L);
+        int insert_process(Process* process, Memory_Tree_Node* buddy, Pending_Processes_List* L, int start_time);
         int remove_process(Process* process);
         Memory_Tree_Node* search_process(Process* process, Memory_Tree_Node* node);
         void destroy_node(Memory_Tree_Node* node);

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-static int ptime = 0; //will fix
+//static int ptime = 0; //will fix
 
 Memory_List_Node::Memory_List_Node(int s, int x, int ptime, Process* proc){
     this->size  = s;
@@ -65,7 +65,7 @@ Memory_List::~Memory_List(){
     this->tail = NULL;
 }
 
-int Memory_List::insert_to_memory(Process* proc, Memory_List_Node* algorithm_node){
+int Memory_List::insert_to_memory(Process* proc, Memory_List_Node* algorithm_node, int ptime){
     if(algorithm_node!=NULL){
         Memory_List_Node* prev = algorithm_node;
         if((algorithm_node->get_end()+1+proc->get_size())>=this->list_size){  //checks if the end of the node is bigger or equal to the end of the memory
@@ -150,7 +150,7 @@ void Memory_List::display(){
     }
 }
 
-Memory_List_Node* best_fit(Process* process, Pending_Processes_List* L, Memory_List* memory, bool pending){
+Memory_List_Node* best_fit(Process* process, Pending_Processes_List* L, Memory_List* memory, bool pending, int ptime){
     if(process->get_size() >= memory->get_listSize()){
         cout << "Process size is bigger than the memory. Process rejected." << endl;
         delete process;
@@ -203,7 +203,7 @@ Memory_List_Node* best_fit(Process* process, Pending_Processes_List* L, Memory_L
     
 }
 
-Memory_List_Node* worst_fit(Process* process, Pending_Processes_List* L, Memory_List* memory, bool pending){
+Memory_List_Node* worst_fit(Process* process, Pending_Processes_List* L, Memory_List* memory, bool pending, int ptime){
     if(process->get_size() >= memory->get_listSize()){
         cout << "Process size is bigger than the memory. Process rejected." << endl;
         delete process;
@@ -256,18 +256,18 @@ Memory_List_Node* worst_fit(Process* process, Pending_Processes_List* L, Memory_
 }
 
 
-int add_pending_process(Memory_List* memory, Pending_Processes_List* L, int algorithm){
+int add_pending_process(Memory_List* memory, Pending_Processes_List* L, int algorithm, int ptime){
     Process* process = L->get_head();
     if(process == NULL){
         return -1;
     }
     if(algorithm==BEST_FIT){
-        if((memory->insert_to_memory(process, best_fit(process, L, memory, true)))==0){   
+        if((memory->insert_to_memory(process, best_fit(process, L, memory, true, ptime), ptime))==0){   
             process = L->pop_process();
         }
     }
     else if(algorithm==WORST_FIT){
-        if((memory->insert_to_memory(process, worst_fit(process, L, memory, true)))==0){   
+        if((memory->insert_to_memory(process, worst_fit(process, L, memory, true, ptime), ptime))==0){   
             process = L->pop_process();
         }
     }
