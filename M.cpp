@@ -72,7 +72,7 @@ int main(int argc, char* argv[]){
     }
     //create log_file.xxx
     pid_t pid = getpid();
-    string log_file = "log_file.";
+    string log_file = "log_file_best.";
     log_file+= to_string(pid);
 
     ofstream filename(log_file);
@@ -106,7 +106,7 @@ int main(int argc, char* argv[]){
     delete L;
 
 */
-/*
+
     //EKTELESI ME WORST FIT
     Memory_List* memory = new Memory_List(S);
     while(d<=D){
@@ -126,7 +126,7 @@ int main(int argc, char* argv[]){
     }
     //create log_file.xxx
     pid_t pid = getpid();
-    string log_file = "log_file.";
+    string log_file = "log_file_worst.";
     log_file+= to_string(pid);
 
     ofstream filename(log_file);
@@ -157,9 +157,9 @@ int main(int argc, char* argv[]){
     delete memory;
     delete L;
 
-*/
 
 
+/*
     //EKTELESI ME BUDDY ALGORITHM
     Memory_Tree* tree = new Memory_Tree(S);
     while(d<=D){
@@ -179,7 +179,7 @@ int main(int argc, char* argv[]){
     }
     //create log_file.xxx
     pid_t pid = getpid();
-    string log_file = "log_file.";
+    string log_file = "log_file_buddy.";
     log_file+= to_string(pid);
 
     ofstream filename(log_file);
@@ -203,6 +203,6 @@ int main(int argc, char* argv[]){
     delete tree;
     delete L;
 
-
+*/
     return 0;
 }
