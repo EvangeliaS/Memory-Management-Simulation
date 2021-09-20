@@ -87,7 +87,7 @@ int main(int argc, char* argv[]){
                     filename << details; 
                     filename.flush();
                 }
-            //add_pending_process(memory, L, BEST_FIT, d);
+            add_pending_process(memory, L, BEST_FIT, d);
             finished_processes++;
             }
         }
@@ -127,8 +127,8 @@ int main(int argc, char* argv[]){
 
     delete memory;
     delete L;
-
 */
+
     //EKTELESI ME WORST FIT
 
     //create log_file.xxx
@@ -159,11 +159,11 @@ int main(int argc, char* argv[]){
         if(strcmp("", temp)!=0){
         	if((details = memory->delete_node_by_process_stop_time(d))!=""){
                 if (filename.is_open()){
-                    filename << "Removed process: ";  
+                    filename << "Finished process: ";  
                     filename << details; 
                     filename.flush();
                 }
-            //add_pending_process(memory, L, BEST_FIT, d);
+            add_pending_process(memory, L, WORST_FIT, d);
             finished_processes++;
             }
         }
@@ -234,7 +234,7 @@ int main(int argc, char* argv[]){
 /*        if(strcmp("", temp)!=0){
         	if((details = memory->delete_node_by_process_stop_time(d))!=""){
                 if (filename.is_open()){
-                    filename << "Removed process: ";  
+                    filename << "Finished process: ";  
                     filename << details; 
                     filename.flush();
                 }
