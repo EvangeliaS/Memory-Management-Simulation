@@ -50,15 +50,18 @@ int main(int argc, char* argv[]){
     int d = 0;
     int time = 0;
     while(d<D){
+        d+=time;
         sem_wait(semid, G_to_M_SEM_SEND);   
         time = Poisson_distribution(t);
         proc = process_generator(t,T,lo,hi,d);
-        d+=time;
         read_line(proc->copy_details(), mem);
-        delete proc;
+        
         sem_signal(semid, M_to_G_SEM_RECV); 
-       
+        delete proc;
     }
+    sem_wait(semid, G_to_M_SEM_SEND); 
+    read_line("$", mem);
+    sem_signal(semid, M_to_G_SEM_RECV);  
 
     return 0;
 }

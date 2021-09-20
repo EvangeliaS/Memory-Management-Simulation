@@ -49,6 +49,7 @@ int main(int argc, char* argv[]){
     Process* new_proc = NULL;
     Pending_Processes_List* L = new Pending_Processes_List();
     int d = 0;
+    string details;
 
 /// EKTELESI ME BEST FIT ALGORITHM
 /*
@@ -56,7 +57,7 @@ int main(int argc, char* argv[]){
 
     //create log_file.xxx
     
-    string details;
+   
 
     while(d<D){
         sem_wait(semid, M_to_G_SEM_RECV);
@@ -118,21 +119,38 @@ int main(int argc, char* argv[]){
 
     //EKTELESI ME WORST FIT
     Memory_List* memory = new Memory_List(S);
-    while(d<=D){
+    while(1){
         sem_wait(semid, M_to_G_SEM_RECV);
+
         memset(temp, 0, 128);
         pass_string(mem, temp);
+        if(strcmp("$", temp)==0){
+            //cout << "OUT";
+            break;
+        }
     
-        if(flag){
+        if(strcmp("", temp)!=0 && strcmp("$", temp)!=0){
             new_proc = create_process(temp);
+            d = new_proc->get_birth_time(); 
             memory->insert_to_memory(new_proc, best_fit(new_proc, L, memory, false, d),d);           
         }
+        if(strcmp("", temp)!=0){
+        	if((details = memory->delete_node_by_process_stop_time(d))!=""){
+                //filename << "Removed process: ";  
+                //filename << details; 
+                cout << details << endl;
+            }
+            //add_pending_process(memory, L, BEST_FIT, d);
+      
+        }
+        
         
         sem_signal(semid, G_to_M_SEM_SEND);
 
         flag++;
-        d++;
+        //d++;
     }
+
     //create log_file.xxx
     pid_t pid = getpid();
     string log_file = "log_file_worst.";
