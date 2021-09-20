@@ -1,8 +1,6 @@
 #include <iostream>
 #include "memory_tree.hpp"
 #define G_to_M_SEM_SEND     0
-//#define G_to_M_SEM_RECV     2
-//#define M_to_G_SEM_SEND     3
 #define M_to_G_SEM_RECV     1
 
 using namespace std;
@@ -46,24 +44,22 @@ int main(int argc, char* argv[]){
         perror("Shmat");
         exit(1);
     }
+
     Process* proc = NULL;
-    int d = 1;
     int flag = 0;
-    while(d<=D){
+    int d = 0;
+
+    while(d<D){
+        d++;
         sem_wait(semid, G_to_M_SEM_SEND);   
+        //cout << "FROM G d = " << d << endl;
         int time = Poisson_distribution(t);
         proc = process_generator(t,T,lo,hi,d);
         read_line(proc->copy_details(), mem);
-        //cout << mem << endl;
-        sem_signal(semid, M_to_G_SEM_RECV);
-        
-/*        while(time--){
-            d++;
-        }*/
         delete proc;
-        d++;
+        sem_signal(semid, M_to_G_SEM_RECV); 
+       
     }
 
-    //free_resources(shmid, semid);
     return 0;
 }

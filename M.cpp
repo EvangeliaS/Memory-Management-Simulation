@@ -1,11 +1,10 @@
 #include <iostream>
 #include "memory_tree.hpp"
 #define G_to_M_SEM_SEND     0
-//#define G_to_M_SEM_RECV     2
-//#define M_to_G_SEM_SEND     3
 #define M_to_G_SEM_RECV     1
 
 using namespace std;
+
 
 int main(int argc, char* argv[]){ 
     if(argc!=7){
@@ -49,26 +48,26 @@ int main(int argc, char* argv[]){
     char temp[128];
     Process* new_proc = NULL;
     Pending_Processes_List* L = new Pending_Processes_List();
-    int d = 1;
+    int d = 0;
 
 /// EKTELESI ME BEST FIT ALGORITHM
     Memory_List* memory = new Memory_List(S);
-    
-    while(d<=D){
+
+    while(d<D){
+        d++;
         sem_wait(semid, M_to_G_SEM_RECV);
+        //cout << "FROM M d = " << d << endl;
         memset(temp, 0, 128);
         pass_string(mem, temp);
     
-        //if(flag){
+        if(flag){
             new_proc = create_process(temp);
             memory->insert_to_memory(new_proc, best_fit(new_proc, L, memory, false, d), d);   
             //memory->delete_node_by_process_stop_time(d);  
-        //}
+        }
         
         sem_signal(semid, G_to_M_SEM_SEND);
-
         flag++;
-        d++;
     }
 
     //create log_file.xxx
@@ -103,6 +102,7 @@ int main(int argc, char* argv[]){
 
     delete memory;
     delete L;
+
 /*
     //EKTELESI ME WORST FIT
     Memory_List* memory = new Memory_List(S);
@@ -201,5 +201,7 @@ int main(int argc, char* argv[]){
     delete L;
 
 */
+
+    //free_resources(shmid, semid);
     return 0;
 }

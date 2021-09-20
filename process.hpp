@@ -49,6 +49,9 @@ class Process{
         inline void set_birth_time(int btime){
             this->birth_time = btime;
         }
+        inline int get_birth_time(){
+            return this->birth_time;
+        }
 };
 
 class Pending_Processes_List{   //aka L singly linked list
