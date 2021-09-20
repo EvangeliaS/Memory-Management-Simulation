@@ -7,7 +7,7 @@ using namespace std;
 
 
 int main(int argc, char* argv[]){ 
-    if(argc!=7){
+    if(argc!=8){
         return -1;
     }
 //  int D  = stoi(argv[1]);
@@ -16,6 +16,7 @@ int main(int argc, char* argv[]){
 //  int t  = stoi(argv[4]);
 //  int T  = stoi(argv[5]);
     int S  = stoi(argv[6]);
+    int algorithm = stoi(argv[7]);
 
     int semid;      //identifier for a semaphore set
     int shmid;      // shared memory segment id
@@ -52,220 +53,220 @@ int main(int argc, char* argv[]){
     string details;
     int finished_processes = 0;
 
-/// EKTELESI ME BEST FIT ALGORITHM
+    if(algorithm==1){    /// EKTELESI ME BEST FIT ALGORITHM
+        //create log_file.xxx
+        cout << "Running Best fit: " << endl;
+        pid_t pid = getpid();
+        string log_file = "log_file_best";
+        log_file+= to_string(pid);
+        log_file+=".txt";
 
-    //create log_file.xxx
-    /*
-    pid_t pid = getpid();
-    string log_file = "log_file_best";
-    log_file+= to_string(pid);
-    log_file+=".txt";
+        ofstream filename(log_file);
+        filename << "Best Fit: " << endl << endl;
+        filename << "Finished processes: " << endl;
+        Memory_List* memory = new Memory_List(S);
 
-    ofstream filename(log_file);
-    filename << "Best Fit: " << endl << endl;
-    filename << "Finished processes: " << endl;
-    Memory_List* memory = new Memory_List(S);
-
-    while(1){
-        sem_wait(semid, M_to_G_SEM_RECV);
-        memset(temp, 0, 128);
-        pass_string(mem, temp);
-    
-         if(strcmp("$", temp)==0){
-            break;
-        }
-    
-        if(strcmp("", temp)!=0 && strcmp("$", temp)!=0){
-            new_proc = create_process(temp);
-            d = new_proc->get_birth_time(); 
-            memory->insert_to_memory(new_proc, best_fit(new_proc, L, memory, false, d),d);           
-        }
-        if(strcmp("", temp)!=0){
-        	if((details = memory->delete_node_by_process_stop_time(d))!=""){
-                if (filename.is_open()){
-                    filename << "Removed process: ";  
-                    filename << details; 
-                    filename.flush();
+        while(1){
+            sem_wait(semid, M_to_G_SEM_RECV);
+            memset(temp, 0, 128);
+            pass_string(mem, temp);
+        
+            if(strcmp("$", temp)==0){
+                break;
+            }
+        
+            if(strcmp("", temp)!=0 && strcmp("$", temp)!=0){
+                new_proc = create_process(temp);
+                d = new_proc->get_birth_time(); 
+                memory->insert_to_memory(new_proc, best_fit(new_proc, L, memory, false, d),d);           
+            }
+            if(strcmp("", temp)!=0){
+                if((details = memory->delete_node_by_process_stop_time(d))!=""){
+                    if (filename.is_open()){
+                        filename << "Removed process: ";  
+                        filename << details; 
+                        filename.flush();
+                    }
+                add_pending_process(memory, L, BEST_FIT, d);
+                finished_processes++;
                 }
-            add_pending_process(memory, L, BEST_FIT, d);
-            finished_processes++;
+            }
+            sem_signal(semid, G_to_M_SEM_SEND);
+        }
+
+        sem_signal(semid, G_to_M_SEM_SEND);
+
+        Memory_List_Node* current = memory->get_head();
+
+        int i = 0;
+        if (filename.is_open()){
+            filename.flush();
+            filename << "Finished processes: " << finished_processes << endl;
+            filename << endl;
+            filename << "Processes currenty in the memory: " << endl;
+            while(current!=NULL){
+                i++;
+                filename << endl;
+                filename << i << ") ";
+                filename << current->print_to_filename();
+                current = current->next;
+                filename.flush();
+            }
+        
+            filename << endl;
+            filename << "Pending Processes: " << endl;
+            
+            Process* process = L->get_head();
+            while(process!=NULL){
+                filename << endl;
+                filename << process->print_to_filename();
+                process = process->next;
+                filename.flush();
             }
         }
-        sem_signal(semid, G_to_M_SEM_SEND);
+        filename.close();
+
+        delete memory;
+        delete L;
     }
 
-    sem_signal(semid, G_to_M_SEM_SEND);
 
-    Memory_List_Node* current = memory->get_head();
-    int i = 0;
-    if (filename.is_open()){
-        filename.flush();
-        filename << "Finished processes: " << finished_processes << endl;
-        filename << endl;
-        filename << "Processes currenty in the memory: " << endl;
-        while(current!=NULL){
-            i++;
-            filename << endl;
-            filename << i << ") ";
-            filename << current->print_to_filename();
-            current = current->next;
-            filename.flush();
-        }
+    else if(algorithm==2){    //EKTELESI ME WORST FIT
+
+        cout << "Running Worst fit: " << endl;
+        //create log_file.xxx
     
-        filename << endl;
-        filename << "Pending Processes: " << endl;
+        pid_t pid = getpid();
+        string log_file = "log_file_worst";
+        log_file+= to_string(pid);
+        log_file+=".txt";
+
+        ofstream filename(log_file);
+        filename << "Worst Fit: " << endl << endl;
+        filename << "Finished processes: " << endl;
+        Memory_List* memory = new Memory_List(S);
+        while(1){
+            sem_wait(semid, M_to_G_SEM_RECV);
+
+            memset(temp, 0, 128);
+            pass_string(mem, temp);
+            if(strcmp("$", temp)==0){
+                break;
+            }
         
+            if(strcmp("", temp)!=0 && strcmp("$", temp)!=0){
+                new_proc = create_process(temp);
+                d = new_proc->get_birth_time(); 
+                memory->insert_to_memory(new_proc, worst_fit(new_proc, L, memory, false, d),d);           
+            }
+            if(strcmp("", temp)!=0){
+                if((details = memory->delete_node_by_process_stop_time(d))!=""){
+                    if (filename.is_open()){
+                        filename << "Finished process: ";  
+                        filename << details; 
+                        filename.flush();
+                    }
+                    add_pending_process(memory, L, WORST_FIT, d);
+                    finished_processes++;
+                }
+            }
+            sem_signal(semid, G_to_M_SEM_SEND);
+        }
+
+        sem_signal(semid, G_to_M_SEM_SEND);
+        Memory_List_Node* current = memory->get_head();
+        int i = 0;
+        if (filename.is_open()){
+            filename.flush();
+            filename << endl;
+            filename << "Finished processes: " << finished_processes << endl;
+            filename << endl;
+            filename << "Processes currenty in the memory: " << endl;
+            while(current!=NULL){
+                i++;
+                filename << endl;
+                filename << i << ") ";
+                filename << current->print_to_filename();
+                current = current->next;
+                filename.flush();
+            }
+        
+            filename << endl;
+            filename << "Pending Processes: " << endl;
+            
+            Process* process = L->get_head();
+            while(process!=NULL){
+                filename << endl;
+                filename << process->print_to_filename();
+                process = process->next;
+                filename.flush();
+            }
+        }
+        filename.close();
+
+        delete memory;
+        delete L;
+    }
+
+    else if(algorithm==3){  //EKTELESI ME BUDDY ALGORITHM
+
+        cout << "Running Buddy Algorithm: " << endl;
+        Memory_Tree* tree = new Memory_Tree(S);
+
+        while(1){
+            sem_wait(semid, M_to_G_SEM_RECV);
+
+            memset(temp, 0, 128);
+            pass_string(mem, temp);
+            if(strcmp("$", temp)==0){
+                break;
+            }
+        
+            if(strcmp("", temp)!=0 && strcmp("$", temp)!=0){
+                new_proc = create_process(temp);
+                d = new_proc->get_birth_time(); 
+                tree->insert_process(new_proc, buddy_algorithm(new_proc, tree), L, d, false);  
+                        
+            }
+    /*      if(strcmp("", temp)!=0 && flag==1){
+                if(tree->remove_process(tree->search_process_by_stop_time(d,tree->get_root())->get_process())==0){
+                    finished_processes++;
+                }*/
+                add_pending_process(tree, L, d);
+                    
+            sem_signal(semid, G_to_M_SEM_SEND);
+        }
+
+        sem_signal(semid, G_to_M_SEM_SEND);
+        
+        //i could not print the tree in file so I print it as output
+        tree->printPreorder(tree->get_root());
+        
+        //create log_file.xxx
+        pid_t pid = getpid();
+        string log_file = "log_file_buddy";
+        log_file+= to_string(pid);
+        log_file+=".txt";
+
+        ofstream filename(log_file);
+        filename << "Buddy Algorithm : " << endl;
+
+        filename << "Pending Processes: " << endl;
         Process* process = L->get_head();
         while(process!=NULL){
             filename << endl;
             filename << process->print_to_filename();
             process = process->next;
-            filename.flush();
         }
+
+        filename.close();
+
+        delete tree;
+        delete L;
     }
-    filename.close();
-
-    delete memory;
-    delete L;
-*/
-
-    //EKTELESI ME WORST FIT
-
-    //create log_file.xxx
-   
-    pid_t pid = getpid();
-    string log_file = "log_file_worst";
-    log_file+= to_string(pid);
-    log_file+=".txt";
-
-    ofstream filename(log_file);
-    filename << "Worst Fit: " << endl << endl;
-    filename << "Finished processes: " << endl;
-    Memory_List* memory = new Memory_List(S);
-    while(1){
-        sem_wait(semid, M_to_G_SEM_RECV);
-
-        memset(temp, 0, 128);
-        pass_string(mem, temp);
-        if(strcmp("$", temp)==0){
-            break;
-        }
-    
-        if(strcmp("", temp)!=0 && strcmp("$", temp)!=0){
-            new_proc = create_process(temp);
-            d = new_proc->get_birth_time(); 
-            memory->insert_to_memory(new_proc, worst_fit(new_proc, L, memory, false, d),d);           
-        }
-        if(strcmp("", temp)!=0){
-        	if((details = memory->delete_node_by_process_stop_time(d))!=""){
-                if (filename.is_open()){
-                    filename << "Finished process: ";  
-                    filename << details; 
-                    filename.flush();
-                }
-            add_pending_process(memory, L, WORST_FIT, d);
-            finished_processes++;
-            }
-        }
-        sem_signal(semid, G_to_M_SEM_SEND);
+    else{
+        cout << "Please input 1,2,3 for algorithm choise(last parameter)" << endl;
     }
 
-    sem_signal(semid, G_to_M_SEM_SEND);
-    Memory_List_Node* current = memory->get_head();
-    int i = 0;
-    if (filename.is_open()){
-        filename.flush();
-        filename << "Finished processes: " << finished_processes << endl;
-        filename << endl;
-        filename << "Processes currenty in the memory: " << endl;
-        while(current!=NULL){
-            i++;
-            filename << endl;
-            filename << i << ") ";
-            filename << current->print_to_filename();
-            current = current->next;
-            filename.flush();
-        }
-    
-        filename << endl;
-        filename << "Pending Processes: " << endl;
-        
-        Process* process = L->get_head();
-        while(process!=NULL){
-            filename << endl;
-            filename << process->print_to_filename();
-            process = process->next;
-            filename.flush();
-        }
-    }
-    filename.close();
-
-    delete memory;
-    delete L;
-
-
-/*
-    //EKTELESI ME BUDDY ALGORITHM
-    Memory_Tree* tree = new Memory_Tree(S);
-
-    //create log_file.xxx
-    pid_t pid = getpid();
-    string log_file = "log_file_buddy";
-    log_file+= to_string(pid);
-    log_file+=".txt";
-
-    ofstream filename(log_file);
-    filename << "Buddy Algorithm : " << endl;
-
-    while(1){
-        sem_wait(semid, M_to_G_SEM_RECV);
-
-        memset(temp, 0, 128);
-        pass_string(mem, temp);
-        if(strcmp("$", temp)==0){
-            break;
-        }
-    
-        if(strcmp("", temp)!=0 && strcmp("$", temp)!=0){
-            new_proc = create_process(temp);
-            d = new_proc->get_birth_time(); 
-            tree->insert_process(new_proc, buddy_algorithm(new_proc, tree), L, d);           
-        }
-/*        if(strcmp("", temp)!=0){
-        	if((details = memory->delete_node_by_process_stop_time(d))!=""){
-                if (filename.is_open()){
-                    filename << "Finished process: ";  
-                    filename << details; 
-                    filename.flush();
-                }
-            //add_pending_process(memory, L, BEST_FIT, d);
-            finished_processes++;
-            }
-        }
-        sem_signal(semid, G_to_M_SEM_SEND);
-    }
-/*
-    sem_signal(semid, G_to_M_SEM_SEND);
-   
-    //Memory_Tree_Node* current = tree->get_root();
-    filename << "Processes currenty in the memory: " << endl;
-    //i could not print the tree in file so I print it as output
-    tree->printPreorder(tree->get_root());
-
-    filename << endl;
-    filename << "Pending Processes: " << endl;
-    Process* process = L->get_head();
-    while(process!=NULL){
-        filename << endl;
-        filename << process->print_to_filename();
-        process = process->next;
-    }
-
-    filename.close();
-
-    delete tree;
-    delete L;
-*/
-    //free_resources(shmid, semid);
     return 0;
 }

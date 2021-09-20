@@ -1,0 +1,1196 @@
+Worst Fit: 
+
+Finished processes: 
+Finished process: (6,8) Block size: 3, Process details: 45673 size: 3 lifetime: 13 Creation time: 7 Start time: 7 Stop time: 20
+Finished process: (116,117) Block size: 2, Process details: 45689 size: 2 lifetime: 42 Creation time: 153 Start time: 153 Stop time: 195
+Finished process: (131,140) Block size: 10, Process details: 45695 size: 10 lifetime: 7 Creation time: 220 Start time: 220 Stop time: 227
+Finished process: (397,402) Block size: 6, Process details: 45742 size: 6 lifetime: 18 Creation time: 669 Start time: 669 Stop time: 687
+Finished process: (491,499) Block size: 9, Process details: 45766 size: 9 lifetime: 21 Creation time: 907 Start time: 907 Stop time: 928
+Finished process: (569,576) Block size: 8, Process details: 45782 size: 8 lifetime: 10 Creation time: 1061 Start time: 1061 Stop time: 1071
+Finished process: (569,575) Block size: 7, Process details: 45784 size: 7 lifetime: 13 Creation time: 1079 Start time: 1079 Stop time: 1092
+Finished process: (1012,1018) Block size: 7, Process details: 45870 size: 7 lifetime: 8 Creation time: 1944 Start time: 1944 Stop time: 1952
+
+Finished processes: 8
+
+Processes currenty in the memory: 
+
+1) (0,5) Block size: 6, Process details: 45672 size: 6 lifetime: 5 Creation time: 0 Start time: 0 Stop time: 5
+
+2) (6,7) Block size: 2, Process details: 45676 size: 2 lifetime: 26 Creation time: 41 Start time: 41 Stop time: 67
+
+3) (8,8) Block size: 1, Process details: 45691 size: 1 lifetime: 18 Creation time: 176 Start time: 176 Stop time: 194
+
+4) (9,14) Block size: 6, Process details: 45674 size: 6 lifetime: 23 Creation time: 20 Start time: 20 Stop time: 43
+
+5) (15,23) Block size: 9, Process details: 45675 size: 9 lifetime: 23 Creation time: 30 Start time: 30 Stop time: 53
+
+6) (24,31) Block size: 8, Process details: 45677 size: 8 lifetime: 40 Creation time: 47 Start time: 47 Stop time: 87
+
+7) (32,43) Block size: 12, Process details: 45678 size: 12 lifetime: 1 Creation time: 58 Start time: 58 Stop time: 59
+
+8) (44,53) Block size: 10, Process details: 45679 size: 10 lifetime: 7 Creation time: 65 Start time: 65 Stop time: 72
+
+9) (54,57) Block size: 4, Process details: 45680 size: 4 lifetime: 1 Creation time: 77 Start time: 77 Stop time: 78
+
+10) (58,65) Block size: 8, Process details: 45681 size: 8 lifetime: 11 Creation time: 86 Start time: 86 Stop time: 97
+
+11) (66,76) Block size: 11, Process details: 45682 size: 11 lifetime: 1 Creation time: 93 Start time: 93 Stop time: 94
+
+12) (77,84) Block size: 8, Process details: 45683 size: 8 lifetime: 17 Creation time: 101 Start time: 101 Stop time: 118
+
+13) (85,92) Block size: 8, Process details: 45684 size: 8 lifetime: 6 Creation time: 108 Start time: 108 Stop time: 114
+
+14) (93,97) Block size: 5, Process details: 45685 size: 5 lifetime: 11 Creation time: 115 Start time: 115 Stop time: 126
+
+15) (98,99) Block size: 2, Process details: 45686 size: 2 lifetime: 1 Creation time: 127 Start time: 127 Stop time: 128
+
+16) (100,106) Block size: 7, Process details: 45687 size: 7 lifetime: 42 Creation time: 137 Start time: 137 Stop time: 179
+
+17) (107,115) Block size: 9, Process details: 45688 size: 9 lifetime: 5 Creation time: 147 Start time: 147 Stop time: 152
+
+18) (116,117) Block size: 2, Process details: 45710 size: 2 lifetime: 1 Creation time: 360 Start time: 360 Stop time: 361
+
+19) (118,119) Block size: 2, Process details: 45690 size: 2 lifetime: 1 Creation time: 164 Start time: 164 Stop time: 165
+
+20) (120,120) Block size: 1, Process details: 45692 size: 1 lifetime: 13 Creation time: 185 Start time: 185 Stop time: 198
+
+21) (121,124) Block size: 4, Process details: 45693 size: 4 lifetime: 6 Creation time: 195 Start time: 195 Stop time: 201
+
+22) (125,130) Block size: 6, Process details: 45694 size: 6 lifetime: 24 Creation time: 208 Start time: 208 Stop time: 232
+
+23) (131,135) Block size: 5, Process details: 45697 size: 5 lifetime: 6 Creation time: 236 Start time: 236 Stop time: 242
+
+24) (136,140) Block size: 5, Process details: 45700 size: 5 lifetime: 6 Creation time: 256 Start time: 256 Stop time: 262
+
+25) (141,147) Block size: 7, Process details: 45696 size: 7 lifetime: 4 Creation time: 227 Start time: 227 Stop time: 231
+
+26) (148,156) Block size: 9, Process details: 45698 size: 9 lifetime: 45 Creation time: 248 Start time: 248 Stop time: 293
+
+27) (157,165) Block size: 9, Process details: 45699 size: 9 lifetime: 12 Creation time: 252 Start time: 252 Stop time: 264
+
+28) (166,173) Block size: 8, Process details: 45701 size: 8 lifetime: 5 Creation time: 274 Start time: 274 Stop time: 279
+
+29) (174,181) Block size: 8, Process details: 45702 size: 8 lifetime: 5 Creation time: 281 Start time: 281 Stop time: 286
+
+30) (182,191) Block size: 10, Process details: 45703 size: 10 lifetime: 22 Creation time: 300 Start time: 300 Stop time: 322
+
+31) (192,195) Block size: 4, Process details: 45704 size: 4 lifetime: 3 Creation time: 308 Start time: 308 Stop time: 311
+
+32) (196,200) Block size: 5, Process details: 45705 size: 5 lifetime: 1 Creation time: 316 Start time: 316 Stop time: 317
+
+33) (201,205) Block size: 5, Process details: 45706 size: 5 lifetime: 30 Creation time: 325 Start time: 325 Stop time: 355
+
+34) (206,212) Block size: 7, Process details: 45707 size: 7 lifetime: 2 Creation time: 331 Start time: 331 Stop time: 333
+
+35) (213,221) Block size: 9, Process details: 45708 size: 9 lifetime: 11 Creation time: 341 Start time: 341 Stop time: 352
+
+36) (222,229) Block size: 8, Process details: 45709 size: 8 lifetime: 12 Creation time: 351 Start time: 351 Stop time: 363
+
+37) (230,238) Block size: 9, Process details: 45711 size: 9 lifetime: 9 Creation time: 369 Start time: 369 Stop time: 378
+
+38) (239,247) Block size: 9, Process details: 45712 size: 9 lifetime: 4 Creation time: 384 Start time: 384 Stop time: 388
+
+39) (248,248) Block size: 1, Process details: 45713 size: 1 lifetime: 14 Creation time: 389 Start time: 389 Stop time: 403
+
+40) (249,255) Block size: 7, Process details: 45714 size: 7 lifetime: 10 Creation time: 398 Start time: 398 Stop time: 408
+
+41) (256,262) Block size: 7, Process details: 45715 size: 7 lifetime: 20 Creation time: 404 Start time: 404 Stop time: 424
+
+42) (263,270) Block size: 8, Process details: 45716 size: 8 lifetime: 14 Creation time: 417 Start time: 417 Stop time: 431
+
+43) (271,271) Block size: 1, Process details: 45717 size: 1 lifetime: 5 Creation time: 428 Start time: 428 Stop time: 433
+
+44) (272,275) Block size: 4, Process details: 45718 size: 4 lifetime: 17 Creation time: 437 Start time: 437 Stop time: 454
+
+45) (276,282) Block size: 7, Process details: 45719 size: 7 lifetime: 4 Creation time: 446 Start time: 446 Stop time: 450
+
+46) (283,284) Block size: 2, Process details: 45720 size: 2 lifetime: 2 Creation time: 458 Start time: 458 Stop time: 460
+
+47) (285,286) Block size: 2, Process details: 45721 size: 2 lifetime: 3 Creation time: 465 Start time: 465 Stop time: 468
+
+48) (287,288) Block size: 2, Process details: 45722 size: 2 lifetime: 5 Creation time: 479 Start time: 479 Stop time: 484
+
+49) (289,297) Block size: 9, Process details: 45723 size: 9 lifetime: 5 Creation time: 495 Start time: 495 Stop time: 500
+
+50) (298,302) Block size: 5, Process details: 45724 size: 5 lifetime: 15 Creation time: 507 Start time: 507 Stop time: 522
+
+51) (303,307) Block size: 5, Process details: 45725 size: 5 lifetime: 11 Creation time: 518 Start time: 518 Stop time: 529
+
+52) (308,308) Block size: 1, Process details: 45726 size: 1 lifetime: 8 Creation time: 523 Start time: 523 Stop time: 531
+
+53) (309,312) Block size: 4, Process details: 45727 size: 4 lifetime: 8 Creation time: 534 Start time: 534 Stop time: 542
+
+54) (313,321) Block size: 9, Process details: 45728 size: 9 lifetime: 10 Creation time: 547 Start time: 547 Stop time: 557
+
+55) (322,332) Block size: 11, Process details: 45729 size: 11 lifetime: 1 Creation time: 552 Start time: 552 Stop time: 553
+
+56) (333,341) Block size: 9, Process details: 45730 size: 9 lifetime: 35 Creation time: 556 Start time: 556 Stop time: 591
+
+57) (342,350) Block size: 9, Process details: 45731 size: 9 lifetime: 6 Creation time: 564 Start time: 564 Stop time: 570
+
+58) (351,352) Block size: 2, Process details: 45732 size: 2 lifetime: 8 Creation time: 579 Start time: 579 Stop time: 587
+
+59) (353,356) Block size: 4, Process details: 45733 size: 4 lifetime: 18 Creation time: 586 Start time: 586 Stop time: 604
+
+60) (357,358) Block size: 2, Process details: 45734 size: 2 lifetime: 9 Creation time: 592 Start time: 592 Stop time: 601
+
+61) (359,360) Block size: 2, Process details: 45735 size: 2 lifetime: 7 Creation time: 603 Start time: 603 Stop time: 610
+
+62) (361,364) Block size: 4, Process details: 45736 size: 4 lifetime: 5 Creation time: 611 Start time: 611 Stop time: 616
+
+63) (365,366) Block size: 2, Process details: 45737 size: 2 lifetime: 5 Creation time: 624 Start time: 624 Stop time: 629
+
+64) (367,374) Block size: 8, Process details: 45738 size: 8 lifetime: 6 Creation time: 634 Start time: 634 Stop time: 640
+
+65) (375,381) Block size: 7, Process details: 45739 size: 7 lifetime: 2 Creation time: 636 Start time: 636 Stop time: 638
+
+66) (382,391) Block size: 10, Process details: 45740 size: 10 lifetime: 12 Creation time: 647 Start time: 647 Stop time: 659
+
+67) (392,396) Block size: 5, Process details: 45741 size: 5 lifetime: 7 Creation time: 660 Start time: 660 Stop time: 667
+
+68) (397,398) Block size: 2, Process details: 45744 size: 2 lifetime: 12 Creation time: 696 Start time: 696 Stop time: 708
+
+69) (399,401) Block size: 3, Process details: 45746 size: 3 lifetime: 5 Creation time: 712 Start time: 712 Stop time: 717
+
+70) (402,402) Block size: 1, Process details: 45752 size: 1 lifetime: 9 Creation time: 787 Start time: 787 Stop time: 796
+
+71) (403,412) Block size: 10, Process details: 45743 size: 10 lifetime: 6 Creation time: 687 Start time: 687 Stop time: 693
+
+72) (413,417) Block size: 5, Process details: 45745 size: 5 lifetime: 24 Creation time: 704 Start time: 704 Stop time: 728
+
+73) (418,420) Block size: 3, Process details: 45747 size: 3 lifetime: 2 Creation time: 719 Start time: 719 Stop time: 721
+
+74) (421,427) Block size: 7, Process details: 45748 size: 7 lifetime: 4 Creation time: 729 Start time: 729 Stop time: 733
+
+75) (428,434) Block size: 7, Process details: 45749 size: 7 lifetime: 24 Creation time: 744 Start time: 744 Stop time: 768
+
+76) (435,437) Block size: 3, Process details: 45750 size: 3 lifetime: 6 Creation time: 755 Start time: 755 Stop time: 761
+
+77) (438,445) Block size: 8, Process details: 45751 size: 8 lifetime: 2 Creation time: 771 Start time: 771 Stop time: 773
+
+78) (446,451) Block size: 6, Process details: 45753 size: 6 lifetime: 1 Creation time: 793 Start time: 793 Stop time: 794
+
+79) (452,453) Block size: 2, Process details: 45754 size: 2 lifetime: 13 Creation time: 802 Start time: 802 Stop time: 815
+
+80) (454,460) Block size: 7, Process details: 45755 size: 7 lifetime: 2 Creation time: 806 Start time: 806 Stop time: 808
+
+81) (461,462) Block size: 2, Process details: 45756 size: 2 lifetime: 7 Creation time: 814 Start time: 814 Stop time: 821
+
+82) (463,468) Block size: 6, Process details: 45757 size: 6 lifetime: 2 Creation time: 825 Start time: 825 Stop time: 827
+
+83) (469,470) Block size: 2, Process details: 45758 size: 2 lifetime: 1 Creation time: 833 Start time: 833 Stop time: 834
+
+84) (471,473) Block size: 3, Process details: 45759 size: 3 lifetime: 2 Creation time: 840 Start time: 840 Stop time: 842
+
+85) (474,474) Block size: 1, Process details: 45760 size: 1 lifetime: 16 Creation time: 845 Start time: 845 Stop time: 861
+
+86) (475,479) Block size: 5, Process details: 45761 size: 5 lifetime: 1 Creation time: 852 Start time: 852 Stop time: 853
+
+87) (480,482) Block size: 3, Process details: 45762 size: 3 lifetime: 2 Creation time: 864 Start time: 864 Stop time: 866
+
+88) (483,483) Block size: 1, Process details: 45763 size: 1 lifetime: 7 Creation time: 875 Start time: 875 Stop time: 882
+
+89) (484,484) Block size: 1, Process details: 45764 size: 1 lifetime: 16 Creation time: 892 Start time: 892 Stop time: 908
+
+90) (485,490) Block size: 6, Process details: 45765 size: 6 lifetime: 8 Creation time: 901 Start time: 901 Stop time: 909
+
+91) (491,498) Block size: 8, Process details: 45769 size: 8 lifetime: 22 Creation time: 940 Start time: 940 Stop time: 962
+
+92) (499,499) Block size: 1, Process details: 45797 size: 1 lifetime: 3 Creation time: 1238 Start time: 1238 Stop time: 1241
+
+93) (500,510) Block size: 11, Process details: 45767 size: 11 lifetime: 1 Creation time: 917 Start time: 917 Stop time: 918
+
+94) (511,519) Block size: 9, Process details: 45768 size: 9 lifetime: 22 Creation time: 928 Start time: 928 Stop time: 950
+
+95) (520,521) Block size: 2, Process details: 45770 size: 2 lifetime: 5 Creation time: 949 Start time: 949 Stop time: 954
+
+96) (522,523) Block size: 2, Process details: 45771 size: 2 lifetime: 8 Creation time: 960 Start time: 960 Stop time: 968
+
+97) (524,526) Block size: 3, Process details: 45772 size: 3 lifetime: 12 Creation time: 970 Start time: 970 Stop time: 982
+
+98) (527,528) Block size: 2, Process details: 45773 size: 2 lifetime: 3 Creation time: 976 Start time: 976 Stop time: 979
+
+99) (529,538) Block size: 10, Process details: 45774 size: 10 lifetime: 10 Creation time: 981 Start time: 981 Stop time: 991
+
+100) (539,544) Block size: 6, Process details: 45775 size: 6 lifetime: 1 Creation time: 988 Start time: 988 Stop time: 989
+
+101) (545,546) Block size: 2, Process details: 45776 size: 2 lifetime: 2 Creation time: 996 Start time: 996 Stop time: 998
+
+102) (547,548) Block size: 2, Process details: 45777 size: 2 lifetime: 18 Creation time: 1005 Start time: 1005 Stop time: 1023
+
+103) (549,558) Block size: 10, Process details: 45778 size: 10 lifetime: 1 Creation time: 1020 Start time: 1020 Stop time: 1021
+
+104) (559,560) Block size: 2, Process details: 45779 size: 2 lifetime: 20 Creation time: 1033 Start time: 1033 Stop time: 1053
+
+105) (561,566) Block size: 6, Process details: 45780 size: 6 lifetime: 29 Creation time: 1040 Start time: 1040 Stop time: 1069
+
+106) (567,568) Block size: 2, Process details: 45781 size: 2 lifetime: 16 Creation time: 1052 Start time: 1052 Stop time: 1068
+
+107) (569,570) Block size: 2, Process details: 45786 size: 2 lifetime: 2 Creation time: 1102 Start time: 1102 Stop time: 1104
+
+108) (571,573) Block size: 3, Process details: 45787 size: 3 lifetime: 16 Creation time: 1118 Start time: 1118 Stop time: 1134
+
+109) (574,574) Block size: 1, Process details: 45791 size: 1 lifetime: 4 Creation time: 1166 Start time: 1166 Stop time: 1170
+
+110) (575,576) Block size: 2, Process details: 45794 size: 2 lifetime: 1 Creation time: 1205 Start time: 1205 Stop time: 1206
+
+111) (577,580) Block size: 4, Process details: 45783 size: 4 lifetime: 36 Creation time: 1071 Start time: 1071 Stop time: 1107
+
+112) (581,583) Block size: 3, Process details: 45785 size: 3 lifetime: 46 Creation time: 1092 Start time: 1092 Stop time: 1138
+
+113) (584,589) Block size: 6, Process details: 45788 size: 6 lifetime: 15 Creation time: 1133 Start time: 1133 Stop time: 1148
+
+114) (590,599) Block size: 10, Process details: 45789 size: 10 lifetime: 3 Creation time: 1143 Start time: 1143 Stop time: 1146
+
+115) (600,604) Block size: 5, Process details: 45790 size: 5 lifetime: 5 Creation time: 1157 Start time: 1157 Stop time: 1162
+
+116) (605,608) Block size: 4, Process details: 45792 size: 4 lifetime: 14 Creation time: 1178 Start time: 1178 Stop time: 1192
+
+117) (609,612) Block size: 4, Process details: 45793 size: 4 lifetime: 3 Creation time: 1194 Start time: 1194 Stop time: 1197
+
+118) (613,614) Block size: 2, Process details: 45795 size: 2 lifetime: 6 Creation time: 1216 Start time: 1216 Stop time: 1222
+
+119) (615,620) Block size: 6, Process details: 45796 size: 6 lifetime: 6 Creation time: 1226 Start time: 1226 Stop time: 1232
+
+120) (621,626) Block size: 6, Process details: 45798 size: 6 lifetime: 28 Creation time: 1247 Start time: 1247 Stop time: 1275
+
+121) (627,630) Block size: 4, Process details: 45799 size: 4 lifetime: 1 Creation time: 1254 Start time: 1254 Stop time: 1255
+
+122) (631,633) Block size: 3, Process details: 45800 size: 3 lifetime: 4 Creation time: 1264 Start time: 1264 Stop time: 1268
+
+123) (634,641) Block size: 8, Process details: 45801 size: 8 lifetime: 35 Creation time: 1271 Start time: 1271 Stop time: 1306
+
+124) (642,645) Block size: 4, Process details: 45802 size: 4 lifetime: 13 Creation time: 1284 Start time: 1284 Stop time: 1297
+
+125) (646,647) Block size: 2, Process details: 45803 size: 2 lifetime: 9 Creation time: 1290 Start time: 1290 Stop time: 1299
+
+126) (648,657) Block size: 10, Process details: 45804 size: 10 lifetime: 7 Creation time: 1296 Start time: 1296 Stop time: 1303
+
+127) (658,658) Block size: 1, Process details: 45805 size: 1 lifetime: 2 Creation time: 1308 Start time: 1308 Stop time: 1310
+
+128) (659,663) Block size: 5, Process details: 45806 size: 5 lifetime: 1 Creation time: 1316 Start time: 1316 Stop time: 1317
+
+129) (664,671) Block size: 8, Process details: 45807 size: 8 lifetime: 5 Creation time: 1323 Start time: 1323 Stop time: 1328
+
+130) (672,675) Block size: 4, Process details: 45808 size: 4 lifetime: 9 Creation time: 1335 Start time: 1335 Stop time: 1344
+
+131) (676,677) Block size: 2, Process details: 45809 size: 2 lifetime: 6 Creation time: 1338 Start time: 1338 Stop time: 1344
+
+132) (678,679) Block size: 2, Process details: 45810 size: 2 lifetime: 54 Creation time: 1348 Start time: 1348 Stop time: 1402
+
+133) (680,683) Block size: 4, Process details: 45811 size: 4 lifetime: 5 Creation time: 1360 Start time: 1360 Stop time: 1365
+
+134) (684,685) Block size: 2, Process details: 45812 size: 2 lifetime: 9 Creation time: 1368 Start time: 1368 Stop time: 1377
+
+135) (686,687) Block size: 2, Process details: 45813 size: 2 lifetime: 3 Creation time: 1376 Start time: 1376 Stop time: 1379
+
+136) (688,694) Block size: 7, Process details: 45814 size: 7 lifetime: 1 Creation time: 1383 Start time: 1383 Stop time: 1384
+
+137) (695,702) Block size: 8, Process details: 45815 size: 8 lifetime: 12 Creation time: 1390 Start time: 1390 Stop time: 1402
+
+138) (703,711) Block size: 9, Process details: 45816 size: 9 lifetime: 12 Creation time: 1399 Start time: 1399 Stop time: 1411
+
+139) (712,712) Block size: 1, Process details: 45817 size: 1 lifetime: 13 Creation time: 1412 Start time: 1412 Stop time: 1425
+
+140) (713,713) Block size: 1, Process details: 45818 size: 1 lifetime: 21 Creation time: 1420 Start time: 1420 Stop time: 1441
+
+141) (714,715) Block size: 2, Process details: 45819 size: 2 lifetime: 2 Creation time: 1429 Start time: 1429 Stop time: 1431
+
+142) (716,724) Block size: 9, Process details: 45820 size: 9 lifetime: 4 Creation time: 1437 Start time: 1437 Stop time: 1441
+
+143) (725,726) Block size: 2, Process details: 45821 size: 2 lifetime: 22 Creation time: 1446 Start time: 1446 Stop time: 1468
+
+144) (727,733) Block size: 7, Process details: 45822 size: 7 lifetime: 7 Creation time: 1454 Start time: 1454 Stop time: 1461
+
+145) (734,742) Block size: 9, Process details: 45823 size: 9 lifetime: 10 Creation time: 1464 Start time: 1464 Stop time: 1474
+
+146) (743,749) Block size: 7, Process details: 45824 size: 7 lifetime: 4 Creation time: 1480 Start time: 1480 Stop time: 1484
+
+147) (750,759) Block size: 10, Process details: 45825 size: 10 lifetime: 6 Creation time: 1493 Start time: 1493 Stop time: 1499
+
+148) (760,768) Block size: 9, Process details: 45826 size: 9 lifetime: 1 Creation time: 1502 Start time: 1502 Stop time: 1503
+
+149) (769,775) Block size: 7, Process details: 45827 size: 7 lifetime: 17 Creation time: 1513 Start time: 1513 Stop time: 1530
+
+150) (776,778) Block size: 3, Process details: 45828 size: 3 lifetime: 1 Creation time: 1527 Start time: 1527 Stop time: 1528
+
+151) (779,783) Block size: 5, Process details: 45829 size: 5 lifetime: 29 Creation time: 1538 Start time: 1538 Stop time: 1567
+
+152) (784,786) Block size: 3, Process details: 45830 size: 3 lifetime: 19 Creation time: 1547 Start time: 1547 Stop time: 1566
+
+153) (787,788) Block size: 2, Process details: 45831 size: 2 lifetime: 12 Creation time: 1558 Start time: 1558 Stop time: 1570
+
+154) (789,790) Block size: 2, Process details: 45832 size: 2 lifetime: 11 Creation time: 1565 Start time: 1565 Stop time: 1576
+
+155) (791,798) Block size: 8, Process details: 45833 size: 8 lifetime: 22 Creation time: 1575 Start time: 1575 Stop time: 1597
+
+156) (799,807) Block size: 9, Process details: 45834 size: 9 lifetime: 7 Creation time: 1588 Start time: 1588 Stop time: 1595
+
+157) (808,813) Block size: 6, Process details: 45835 size: 6 lifetime: 22 Creation time: 1599 Start time: 1599 Stop time: 1621
+
+158) (814,819) Block size: 6, Process details: 45836 size: 6 lifetime: 1 Creation time: 1610 Start time: 1610 Stop time: 1611
+
+159) (820,824) Block size: 5, Process details: 45837 size: 5 lifetime: 6 Creation time: 1626 Start time: 1626 Stop time: 1632
+
+160) (825,826) Block size: 2, Process details: 45838 size: 2 lifetime: 2 Creation time: 1638 Start time: 1638 Stop time: 1640
+
+161) (827,834) Block size: 8, Process details: 45839 size: 8 lifetime: 1 Creation time: 1651 Start time: 1651 Stop time: 1652
+
+162) (835,843) Block size: 9, Process details: 45840 size: 9 lifetime: 31 Creation time: 1659 Start time: 1659 Stop time: 1690
+
+163) (844,853) Block size: 10, Process details: 45841 size: 10 lifetime: 13 Creation time: 1672 Start time: 1672 Stop time: 1685
+
+164) (854,859) Block size: 6, Process details: 45842 size: 6 lifetime: 1 Creation time: 1680 Start time: 1680 Stop time: 1681
+
+165) (860,866) Block size: 7, Process details: 45843 size: 7 lifetime: 4 Creation time: 1688 Start time: 1688 Stop time: 1692
+
+166) (867,875) Block size: 9, Process details: 45844 size: 9 lifetime: 1 Creation time: 1699 Start time: 1699 Stop time: 1700
+
+167) (876,884) Block size: 9, Process details: 45845 size: 9 lifetime: 1 Creation time: 1708 Start time: 1708 Stop time: 1709
+
+168) (885,885) Block size: 1, Process details: 45846 size: 1 lifetime: 13 Creation time: 1712 Start time: 1712 Stop time: 1725
+
+169) (886,894) Block size: 9, Process details: 45847 size: 9 lifetime: 22 Creation time: 1719 Start time: 1719 Stop time: 1741
+
+170) (895,898) Block size: 4, Process details: 45848 size: 4 lifetime: 9 Creation time: 1729 Start time: 1729 Stop time: 1738
+
+171) (899,906) Block size: 8, Process details: 45849 size: 8 lifetime: 5 Creation time: 1732 Start time: 1732 Stop time: 1737
+
+172) (907,911) Block size: 5, Process details: 45850 size: 5 lifetime: 6 Creation time: 1740 Start time: 1740 Stop time: 1746
+
+173) (912,915) Block size: 4, Process details: 45851 size: 4 lifetime: 1 Creation time: 1748 Start time: 1748 Stop time: 1749
+
+174) (916,916) Block size: 1, Process details: 45852 size: 1 lifetime: 6 Creation time: 1758 Start time: 1758 Stop time: 1764
+
+175) (917,918) Block size: 2, Process details: 45853 size: 2 lifetime: 22 Creation time: 1769 Start time: 1769 Stop time: 1791
+
+176) (919,926) Block size: 8, Process details: 45854 size: 8 lifetime: 8 Creation time: 1783 Start time: 1783 Stop time: 1791
+
+177) (927,931) Block size: 5, Process details: 45855 size: 5 lifetime: 1 Creation time: 1792 Start time: 1792 Stop time: 1793
+
+178) (932,933) Block size: 2, Process details: 45856 size: 2 lifetime: 4 Creation time: 1804 Start time: 1804 Stop time: 1808
+
+179) (934,935) Block size: 2, Process details: 45857 size: 2 lifetime: 21 Creation time: 1815 Start time: 1815 Stop time: 1836
+
+180) (936,941) Block size: 6, Process details: 45858 size: 6 lifetime: 21 Creation time: 1825 Start time: 1825 Stop time: 1846
+
+181) (942,951) Block size: 10, Process details: 45859 size: 10 lifetime: 4 Creation time: 1835 Start time: 1835 Stop time: 1839
+
+182) (952,957) Block size: 6, Process details: 45860 size: 6 lifetime: 14 Creation time: 1847 Start time: 1847 Stop time: 1861
+
+183) (958,966) Block size: 9, Process details: 45861 size: 9 lifetime: 15 Creation time: 1857 Start time: 1857 Stop time: 1872
+
+184) (967,967) Block size: 1, Process details: 45862 size: 1 lifetime: 45 Creation time: 1865 Start time: 1865 Stop time: 1910
+
+185) (968,979) Block size: 12, Process details: 45863 size: 12 lifetime: 1 Creation time: 1877 Start time: 1877 Stop time: 1878
+
+186) (980,982) Block size: 3, Process details: 45864 size: 3 lifetime: 5 Creation time: 1884 Start time: 1884 Stop time: 1889
+
+187) (983,984) Block size: 2, Process details: 45865 size: 2 lifetime: 29 Creation time: 1891 Start time: 1891 Stop time: 1920
+
+188) (985,994) Block size: 10, Process details: 45866 size: 10 lifetime: 3 Creation time: 1901 Start time: 1901 Stop time: 1904
+
+189) (995,1001) Block size: 7, Process details: 45867 size: 7 lifetime: 1 Creation time: 1908 Start time: 1908 Stop time: 1909
+
+190) (1002,1008) Block size: 7, Process details: 45868 size: 7 lifetime: 2 Creation time: 1919 Start time: 1919 Stop time: 1921
+
+191) (1009,1011) Block size: 3, Process details: 45869 size: 3 lifetime: 2 Creation time: 1933 Start time: 1933 Stop time: 1935
+
+192) (1012,1018) Block size: 7, Process details: 45872 size: 7 lifetime: 4 Creation time: 1959 Start time: 1959 Stop time: 1963
+
+193) (1019,1020) Block size: 2, Process details: 45871 size: 2 lifetime: 4 Creation time: 1952 Start time: 1952 Stop time: 1956
+
+194) (1021,1022) Block size: 2, Process details: 45878 size: 2 lifetime: 16 Creation time: 2022 Start time: 2022 Stop time: 2038
+
+Pending Processes: 
+
+45873 size: 12 lifetime: 1 Creation time: 1976 Start time: 0 Stop time: 0
+45874 size: 9 lifetime: 17 Creation time: 1991 Start time: 0 Stop time: 0
+45875 size: 9 lifetime: 10 Creation time: 1997 Start time: 0 Stop time: 0
+45876 size: 6 lifetime: 23 Creation time: 2004 Start time: 0 Stop time: 0
+45877 size: 9 lifetime: 3 Creation time: 2013 Start time: 0 Stop time: 0
+45879 size: 7 lifetime: 1 Creation time: 2030 Start time: 0 Stop time: 0
+45880 size: 4 lifetime: 4 Creation time: 2034 Start time: 0 Stop time: 0
+45881 size: 6 lifetime: 4 Creation time: 2044 Start time: 0 Stop time: 0
+45882 size: 8 lifetime: 2 Creation time: 2056 Start time: 0 Stop time: 0
+45883 size: 1 lifetime: 9 Creation time: 2064 Start time: 0 Stop time: 0
+45884 size: 4 lifetime: 31 Creation time: 2071 Start time: 0 Stop time: 0
+45885 size: 9 lifetime: 7 Creation time: 2083 Start time: 0 Stop time: 0
+45886 size: 6 lifetime: 1 Creation time: 2095 Start time: 0 Stop time: 0
+45887 size: 2 lifetime: 6 Creation time: 2104 Start time: 0 Stop time: 0
+45888 size: 1 lifetime: 8 Creation time: 2112 Start time: 0 Stop time: 0
+45889 size: 3 lifetime: 1 Creation time: 2125 Start time: 0 Stop time: 0
+45890 size: 9 lifetime: 1 Creation time: 2134 Start time: 0 Stop time: 0
+45891 size: 8 lifetime: 1 Creation time: 2143 Start time: 0 Stop time: 0
+45892 size: 3 lifetime: 3 Creation time: 2149 Start time: 0 Stop time: 0
+45893 size: 7 lifetime: 9 Creation time: 2159 Start time: 0 Stop time: 0
+45894 size: 4 lifetime: 1 Creation time: 2167 Start time: 0 Stop time: 0
+45895 size: 4 lifetime: 17 Creation time: 2175 Start time: 0 Stop time: 0
+45896 size: 7 lifetime: 19 Creation time: 2186 Start time: 0 Stop time: 0
+45897 size: 7 lifetime: 1 Creation time: 2201 Start time: 0 Stop time: 0
+45898 size: 6 lifetime: 1 Creation time: 2217 Start time: 0 Stop time: 0
+45899 size: 2 lifetime: 12 Creation time: 2228 Start time: 0 Stop time: 0
+45900 size: 1 lifetime: 1 Creation time: 2239 Start time: 0 Stop time: 0
+45901 size: 6 lifetime: 25 Creation time: 2247 Start time: 0 Stop time: 0
+45902 size: 5 lifetime: 15 Creation time: 2260 Start time: 0 Stop time: 0
+45903 size: 6 lifetime: 9 Creation time: 2267 Start time: 0 Stop time: 0
+45904 size: 2 lifetime: 4 Creation time: 2275 Start time: 0 Stop time: 0
+45905 size: 4 lifetime: 7 Creation time: 2284 Start time: 0 Stop time: 0
+45906 size: 2 lifetime: 4 Creation time: 2293 Start time: 0 Stop time: 0
+45907 size: 2 lifetime: 29 Creation time: 2302 Start time: 0 Stop time: 0
+45908 size: 1 lifetime: 4 Creation time: 2312 Start time: 0 Stop time: 0
+45909 size: 5 lifetime: 17 Creation time: 2324 Start time: 0 Stop time: 0
+45910 size: 7 lifetime: 18 Creation time: 2335 Start time: 0 Stop time: 0
+45911 size: 1 lifetime: 1 Creation time: 2347 Start time: 0 Stop time: 0
+45912 size: 5 lifetime: 5 Creation time: 2356 Start time: 0 Stop time: 0
+45913 size: 6 lifetime: 14 Creation time: 2366 Start time: 0 Stop time: 0
+45914 size: 2 lifetime: 17 Creation time: 2376 Start time: 0 Stop time: 0
+45915 size: 2 lifetime: 10 Creation time: 2383 Start time: 0 Stop time: 0
+45916 size: 4 lifetime: 3 Creation time: 2391 Start time: 0 Stop time: 0
+45917 size: 7 lifetime: 7 Creation time: 2398 Start time: 0 Stop time: 0
+45918 size: 9 lifetime: 15 Creation time: 2406 Start time: 0 Stop time: 0
+45919 size: 1 lifetime: 10 Creation time: 2419 Start time: 0 Stop time: 0
+45920 size: 9 lifetime: 6 Creation time: 2428 Start time: 0 Stop time: 0
+45921 size: 10 lifetime: 1 Creation time: 2435 Start time: 0 Stop time: 0
+45922 size: 2 lifetime: 4 Creation time: 2445 Start time: 0 Stop time: 0
+45923 size: 9 lifetime: 3 Creation time: 2455 Start time: 0 Stop time: 0
+45924 size: 2 lifetime: 31 Creation time: 2466 Start time: 0 Stop time: 0
+45925 size: 9 lifetime: 26 Creation time: 2473 Start time: 0 Stop time: 0
+45926 size: 1 lifetime: 19 Creation time: 2480 Start time: 0 Stop time: 0
+45927 size: 4 lifetime: 5 Creation time: 2494 Start time: 0 Stop time: 0
+45928 size: 6 lifetime: 6 Creation time: 2500 Start time: 0 Stop time: 0
+45929 size: 2 lifetime: 19 Creation time: 2513 Start time: 0 Stop time: 0
+45930 size: 2 lifetime: 10 Creation time: 2523 Start time: 0 Stop time: 0
+45931 size: 2 lifetime: 7 Creation time: 2536 Start time: 0 Stop time: 0
+45932 size: 9 lifetime: 35 Creation time: 2550 Start time: 0 Stop time: 0
+45933 size: 8 lifetime: 11 Creation time: 2564 Start time: 0 Stop time: 0
+45934 size: 4 lifetime: 28 Creation time: 2578 Start time: 0 Stop time: 0
+45935 size: 4 lifetime: 19 Creation time: 2584 Start time: 0 Stop time: 0
+45936 size: 6 lifetime: 12 Creation time: 2594 Start time: 0 Stop time: 0
+45937 size: 8 lifetime: 4 Creation time: 2603 Start time: 0 Stop time: 0
+45938 size: 10 lifetime: 16 Creation time: 2610 Start time: 0 Stop time: 0
+45939 size: 8 lifetime: 9 Creation time: 2622 Start time: 0 Stop time: 0
+45940 size: 1 lifetime: 13 Creation time: 2633 Start time: 0 Stop time: 0
+45941 size: 1 lifetime: 9 Creation time: 2642 Start time: 0 Stop time: 0
+45942 size: 6 lifetime: 3 Creation time: 2646 Start time: 0 Stop time: 0
+45943 size: 8 lifetime: 10 Creation time: 2651 Start time: 0 Stop time: 0
+45944 size: 2 lifetime: 22 Creation time: 2660 Start time: 0 Stop time: 0
+45945 size: 10 lifetime: 2 Creation time: 2671 Start time: 0 Stop time: 0
+45946 size: 10 lifetime: 12 Creation time: 2686 Start time: 0 Stop time: 0
+45947 size: 2 lifetime: 11 Creation time: 2700 Start time: 0 Stop time: 0
+45948 size: 6 lifetime: 6 Creation time: 2716 Start time: 0 Stop time: 0
+45949 size: 8 lifetime: 20 Creation time: 2731 Start time: 0 Stop time: 0
+45950 size: 5 lifetime: 51 Creation time: 2738 Start time: 0 Stop time: 0
+45951 size: 11 lifetime: 1 Creation time: 2750 Start time: 0 Stop time: 0
+45952 size: 9 lifetime: 1 Creation time: 2759 Start time: 0 Stop time: 0
+45953 size: 2 lifetime: 10 Creation time: 2765 Start time: 0 Stop time: 0
+45954 size: 10 lifetime: 1 Creation time: 2770 Start time: 0 Stop time: 0
+45955 size: 2 lifetime: 24 Creation time: 2776 Start time: 0 Stop time: 0
+45956 size: 10 lifetime: 1 Creation time: 2783 Start time: 0 Stop time: 0
+45957 size: 8 lifetime: 1 Creation time: 2793 Start time: 0 Stop time: 0
+45958 size: 5 lifetime: 20 Creation time: 2799 Start time: 0 Stop time: 0
+45959 size: 2 lifetime: 2 Creation time: 2813 Start time: 0 Stop time: 0
+45960 size: 9 lifetime: 4 Creation time: 2819 Start time: 0 Stop time: 0
+45961 size: 5 lifetime: 8 Creation time: 2825 Start time: 0 Stop time: 0
+45962 size: 2 lifetime: 4 Creation time: 2837 Start time: 0 Stop time: 0
+45963 size: 4 lifetime: 6 Creation time: 2845 Start time: 0 Stop time: 0
+45964 size: 1 lifetime: 24 Creation time: 2856 Start time: 0 Stop time: 0
+45965 size: 3 lifetime: 12 Creation time: 2867 Start time: 0 Stop time: 0
+45966 size: 3 lifetime: 3 Creation time: 2881 Start time: 0 Stop time: 0
+45967 size: 8 lifetime: 3 Creation time: 2890 Start time: 0 Stop time: 0
+45968 size: 2 lifetime: 1 Creation time: 2898 Start time: 0 Stop time: 0
+45969 size: 2 lifetime: 10 Creation time: 2905 Start time: 0 Stop time: 0
+45970 size: 3 lifetime: 1 Creation time: 2915 Start time: 0 Stop time: 0
+45971 size: 5 lifetime: 5 Creation time: 2923 Start time: 0 Stop time: 0
+45972 size: 6 lifetime: 13 Creation time: 2932 Start time: 0 Stop time: 0
+45973 size: 12 lifetime: 1 Creation time: 2939 Start time: 0 Stop time: 0
+45974 size: 6 lifetime: 30 Creation time: 2950 Start time: 0 Stop time: 0
+45975 size: 9 lifetime: 9 Creation time: 2963 Start time: 0 Stop time: 0
+45976 size: 6 lifetime: 6 Creation time: 2973 Start time: 0 Stop time: 0
+45977 size: 5 lifetime: 4 Creation time: 2983 Start time: 0 Stop time: 0
+45978 size: 2 lifetime: 6 Creation time: 2996 Start time: 0 Stop time: 0
+45979 size: 6 lifetime: 17 Creation time: 3009 Start time: 0 Stop time: 0
+45980 size: 9 lifetime: 1 Creation time: 3016 Start time: 0 Stop time: 0
+45981 size: 3 lifetime: 15 Creation time: 3022 Start time: 0 Stop time: 0
+45982 size: 9 lifetime: 1 Creation time: 3030 Start time: 0 Stop time: 0
+45983 size: 2 lifetime: 3 Creation time: 3036 Start time: 0 Stop time: 0
+45984 size: 2 lifetime: 10 Creation time: 3042 Start time: 0 Stop time: 0
+45985 size: 7 lifetime: 11 Creation time: 3052 Start time: 0 Stop time: 0
+45986 size: 9 lifetime: 18 Creation time: 3062 Start time: 0 Stop time: 0
+45987 size: 1 lifetime: 6 Creation time: 3073 Start time: 0 Stop time: 0
+45988 size: 3 lifetime: 3 Creation time: 3082 Start time: 0 Stop time: 0
+45989 size: 2 lifetime: 6 Creation time: 3091 Start time: 0 Stop time: 0
+45990 size: 5 lifetime: 14 Creation time: 3099 Start time: 0 Stop time: 0
+45991 size: 9 lifetime: 16 Creation time: 3110 Start time: 0 Stop time: 0
+45992 size: 6 lifetime: 6 Creation time: 3123 Start time: 0 Stop time: 0
+45993 size: 10 lifetime: 4 Creation time: 3135 Start time: 0 Stop time: 0
+45994 size: 4 lifetime: 24 Creation time: 3146 Start time: 0 Stop time: 0
+45995 size: 2 lifetime: 13 Creation time: 3153 Start time: 0 Stop time: 0
+45996 size: 7 lifetime: 3 Creation time: 3167 Start time: 0 Stop time: 0
+45997 size: 2 lifetime: 1 Creation time: 3175 Start time: 0 Stop time: 0
+45998 size: 6 lifetime: 14 Creation time: 3184 Start time: 0 Stop time: 0
+45999 size: 5 lifetime: 2 Creation time: 3196 Start time: 0 Stop time: 0
+46000 size: 2 lifetime: 4 Creation time: 3201 Start time: 0 Stop time: 0
+46001 size: 3 lifetime: 1 Creation time: 3214 Start time: 0 Stop time: 0
+46002 size: 2 lifetime: 10 Creation time: 3221 Start time: 0 Stop time: 0
+46003 size: 7 lifetime: 24 Creation time: 3233 Start time: 0 Stop time: 0
+46004 size: 1 lifetime: 19 Creation time: 3243 Start time: 0 Stop time: 0
+46005 size: 2 lifetime: 4 Creation time: 3255 Start time: 0 Stop time: 0
+46006 size: 9 lifetime: 5 Creation time: 3267 Start time: 0 Stop time: 0
+46007 size: 9 lifetime: 7 Creation time: 3274 Start time: 0 Stop time: 0
+46008 size: 11 lifetime: 1 Creation time: 3287 Start time: 0 Stop time: 0
+46009 size: 1 lifetime: 6 Creation time: 3294 Start time: 0 Stop time: 0
+46010 size: 3 lifetime: 20 Creation time: 3301 Start time: 0 Stop time: 0
+46011 size: 6 lifetime: 31 Creation time: 3310 Start time: 0 Stop time: 0
+46012 size: 9 lifetime: 8 Creation time: 3320 Start time: 0 Stop time: 0
+46013 size: 4 lifetime: 6 Creation time: 3326 Start time: 0 Stop time: 0
+46014 size: 2 lifetime: 2 Creation time: 3336 Start time: 0 Stop time: 0
+46015 size: 9 lifetime: 1 Creation time: 3345 Start time: 0 Stop time: 0
+46016 size: 3 lifetime: 18 Creation time: 3352 Start time: 0 Stop time: 0
+46017 size: 3 lifetime: 1 Creation time: 3362 Start time: 0 Stop time: 0
+46018 size: 5 lifetime: 5 Creation time: 3367 Start time: 0 Stop time: 0
+46019 size: 10 lifetime: 14 Creation time: 3373 Start time: 0 Stop time: 0
+46020 size: 9 lifetime: 3 Creation time: 3381 Start time: 0 Stop time: 0
+46021 size: 1 lifetime: 3 Creation time: 3396 Start time: 0 Stop time: 0
+46022 size: 6 lifetime: 3 Creation time: 3405 Start time: 0 Stop time: 0
+46023 size: 8 lifetime: 4 Creation time: 3418 Start time: 0 Stop time: 0
+46024 size: 3 lifetime: 12 Creation time: 3423 Start time: 0 Stop time: 0
+46025 size: 8 lifetime: 8 Creation time: 3439 Start time: 0 Stop time: 0
+46026 size: 4 lifetime: 1 Creation time: 3449 Start time: 0 Stop time: 0
+46027 size: 3 lifetime: 6 Creation time: 3455 Start time: 0 Stop time: 0
+46028 size: 2 lifetime: 4 Creation time: 3464 Start time: 0 Stop time: 0
+46029 size: 7 lifetime: 15 Creation time: 3472 Start time: 0 Stop time: 0
+46030 size: 10 lifetime: 3 Creation time: 3477 Start time: 0 Stop time: 0
+46031 size: 9 lifetime: 11 Creation time: 3492 Start time: 0 Stop time: 0
+46032 size: 7 lifetime: 1 Creation time: 3500 Start time: 0 Stop time: 0
+46033 size: 11 lifetime: 1 Creation time: 3511 Start time: 0 Stop time: 0
+46034 size: 2 lifetime: 7 Creation time: 3524 Start time: 0 Stop time: 0
+46035 size: 2 lifetime: 1 Creation time: 3536 Start time: 0 Stop time: 0
+46036 size: 10 lifetime: 30 Creation time: 3550 Start time: 0 Stop time: 0
+46037 size: 5 lifetime: 23 Creation time: 3560 Start time: 0 Stop time: 0
+46038 size: 2 lifetime: 6 Creation time: 3573 Start time: 0 Stop time: 0
+46039 size: 2 lifetime: 3 Creation time: 3585 Start time: 0 Stop time: 0
+46040 size: 7 lifetime: 7 Creation time: 3595 Start time: 0 Stop time: 0
+46041 size: 5 lifetime: 7 Creation time: 3603 Start time: 0 Stop time: 0
+46042 size: 2 lifetime: 4 Creation time: 3609 Start time: 0 Stop time: 0
+46043 size: 5 lifetime: 3 Creation time: 3616 Start time: 0 Stop time: 0
+46044 size: 11 lifetime: 1 Creation time: 3626 Start time: 0 Stop time: 0
+46045 size: 6 lifetime: 1 Creation time: 3636 Start time: 0 Stop time: 0
+46046 size: 8 lifetime: 11 Creation time: 3658 Start time: 0 Stop time: 0
+46047 size: 10 lifetime: 3 Creation time: 3672 Start time: 0 Stop time: 0
+46048 size: 2 lifetime: 6 Creation time: 3681 Start time: 0 Stop time: 0
+46049 size: 8 lifetime: 4 Creation time: 3695 Start time: 0 Stop time: 0
+46050 size: 10 lifetime: 28 Creation time: 3709 Start time: 0 Stop time: 0
+46051 size: 10 lifetime: 8 Creation time: 3720 Start time: 0 Stop time: 0
+46052 size: 7 lifetime: 26 Creation time: 3729 Start time: 0 Stop time: 0
+46053 size: 4 lifetime: 8 Creation time: 3742 Start time: 0 Stop time: 0
+46054 size: 7 lifetime: 1 Creation time: 3752 Start time: 0 Stop time: 0
+46055 size: 9 lifetime: 14 Creation time: 3766 Start time: 0 Stop time: 0
+46056 size: 2 lifetime: 4 Creation time: 3782 Start time: 0 Stop time: 0
+46057 size: 2 lifetime: 37 Creation time: 3798 Start time: 0 Stop time: 0
+46058 size: 10 lifetime: 10 Creation time: 3809 Start time: 0 Stop time: 0
+46059 size: 6 lifetime: 13 Creation time: 3814 Start time: 0 Stop time: 0
+46060 size: 7 lifetime: 1 Creation time: 3826 Start time: 0 Stop time: 0
+46061 size: 1 lifetime: 2 Creation time: 3837 Start time: 0 Stop time: 0
+46062 size: 10 lifetime: 5 Creation time: 3847 Start time: 0 Stop time: 0
+46063 size: 8 lifetime: 1 Creation time: 3858 Start time: 0 Stop time: 0
+46064 size: 2 lifetime: 3 Creation time: 3870 Start time: 0 Stop time: 0
+46065 size: 2 lifetime: 12 Creation time: 3876 Start time: 0 Stop time: 0
+46066 size: 5 lifetime: 4 Creation time: 3885 Start time: 0 Stop time: 0
+46067 size: 6 lifetime: 13 Creation time: 3901 Start time: 0 Stop time: 0
+46068 size: 8 lifetime: 4 Creation time: 3911 Start time: 0 Stop time: 0
+46069 size: 2 lifetime: 1 Creation time: 3925 Start time: 0 Stop time: 0
+46070 size: 6 lifetime: 4 Creation time: 3936 Start time: 0 Stop time: 0
+46071 size: 2 lifetime: 2 Creation time: 3940 Start time: 0 Stop time: 0
+46072 size: 6 lifetime: 8 Creation time: 3954 Start time: 0 Stop time: 0
+46073 size: 8 lifetime: 3 Creation time: 3963 Start time: 0 Stop time: 0
+46074 size: 3 lifetime: 25 Creation time: 3976 Start time: 0 Stop time: 0
+46075 size: 1 lifetime: 14 Creation time: 3985 Start time: 0 Stop time: 0
+46076 size: 2 lifetime: 30 Creation time: 3991 Start time: 0 Stop time: 0
+46077 size: 3 lifetime: 8 Creation time: 4001 Start time: 0 Stop time: 0
+46078 size: 4 lifetime: 14 Creation time: 4010 Start time: 0 Stop time: 0
+46079 size: 4 lifetime: 1 Creation time: 4017 Start time: 0 Stop time: 0
+46080 size: 4 lifetime: 8 Creation time: 4025 Start time: 0 Stop time: 0
+46081 size: 2 lifetime: 44 Creation time: 4031 Start time: 0 Stop time: 0
+46082 size: 10 lifetime: 1 Creation time: 4046 Start time: 0 Stop time: 0
+46083 size: 3 lifetime: 5 Creation time: 4056 Start time: 0 Stop time: 0
+46084 size: 9 lifetime: 11 Creation time: 4068 Start time: 0 Stop time: 0
+46085 size: 9 lifetime: 15 Creation time: 4077 Start time: 0 Stop time: 0
+46086 size: 9 lifetime: 5 Creation time: 4090 Start time: 0 Stop time: 0
+46087 size: 8 lifetime: 21 Creation time: 4102 Start time: 0 Stop time: 0
+46088 size: 2 lifetime: 1 Creation time: 4112 Start time: 0 Stop time: 0
+46089 size: 5 lifetime: 13 Creation time: 4122 Start time: 0 Stop time: 0
+46090 size: 2 lifetime: 42 Creation time: 4133 Start time: 0 Stop time: 0
+46091 size: 10 lifetime: 62 Creation time: 4144 Start time: 0 Stop time: 0
+46092 size: 2 lifetime: 7 Creation time: 4154 Start time: 0 Stop time: 0
+46093 size: 10 lifetime: 39 Creation time: 4161 Start time: 0 Stop time: 0
+46094 size: 3 lifetime: 23 Creation time: 4172 Start time: 0 Stop time: 0
+46095 size: 8 lifetime: 6 Creation time: 4189 Start time: 0 Stop time: 0
+46096 size: 1 lifetime: 4 Creation time: 4198 Start time: 0 Stop time: 0
+46097 size: 2 lifetime: 19 Creation time: 4211 Start time: 0 Stop time: 0
+46098 size: 7 lifetime: 32 Creation time: 4221 Start time: 0 Stop time: 0
+46099 size: 9 lifetime: 6 Creation time: 4232 Start time: 0 Stop time: 0
+46100 size: 1 lifetime: 6 Creation time: 4246 Start time: 0 Stop time: 0
+46101 size: 8 lifetime: 2 Creation time: 4264 Start time: 0 Stop time: 0
+46102 size: 3 lifetime: 1 Creation time: 4279 Start time: 0 Stop time: 0
+46103 size: 8 lifetime: 13 Creation time: 4288 Start time: 0 Stop time: 0
+46104 size: 6 lifetime: 4 Creation time: 4300 Start time: 0 Stop time: 0
+46105 size: 4 lifetime: 5 Creation time: 4317 Start time: 0 Stop time: 0
+46106 size: 2 lifetime: 4 Creation time: 4325 Start time: 0 Stop time: 0
+46107 size: 2 lifetime: 3 Creation time: 4343 Start time: 0 Stop time: 0
+46108 size: 1 lifetime: 1 Creation time: 4360 Start time: 0 Stop time: 0
+46109 size: 6 lifetime: 6 Creation time: 4372 Start time: 0 Stop time: 0
+46110 size: 7 lifetime: 4 Creation time: 4379 Start time: 0 Stop time: 0
+46111 size: 2 lifetime: 26 Creation time: 4393 Start time: 0 Stop time: 0
+46112 size: 2 lifetime: 12 Creation time: 4405 Start time: 0 Stop time: 0
+46113 size: 2 lifetime: 3 Creation time: 4412 Start time: 0 Stop time: 0
+46114 size: 3 lifetime: 10 Creation time: 4419 Start time: 0 Stop time: 0
+46115 size: 8 lifetime: 12 Creation time: 4427 Start time: 0 Stop time: 0
+46116 size: 6 lifetime: 1 Creation time: 4438 Start time: 0 Stop time: 0
+46117 size: 7 lifetime: 11 Creation time: 4449 Start time: 0 Stop time: 0
+46118 size: 6 lifetime: 1 Creation time: 4458 Start time: 0 Stop time: 0
+46119 size: 8 lifetime: 9 Creation time: 4465 Start time: 0 Stop time: 0
+46120 size: 2 lifetime: 3 Creation time: 4472 Start time: 0 Stop time: 0
+46121 size: 9 lifetime: 3 Creation time: 4483 Start time: 0 Stop time: 0
+46122 size: 9 lifetime: 5 Creation time: 4496 Start time: 0 Stop time: 0
+46123 size: 2 lifetime: 2 Creation time: 4508 Start time: 0 Stop time: 0
+46124 size: 8 lifetime: 18 Creation time: 4517 Start time: 0 Stop time: 0
+46125 size: 6 lifetime: 15 Creation time: 4521 Start time: 0 Stop time: 0
+46126 size: 5 lifetime: 14 Creation time: 4533 Start time: 0 Stop time: 0
+46127 size: 5 lifetime: 1 Creation time: 4549 Start time: 0 Stop time: 0
+46128 size: 2 lifetime: 25 Creation time: 4561 Start time: 0 Stop time: 0
+46129 size: 4 lifetime: 2 Creation time: 4568 Start time: 0 Stop time: 0
+46130 size: 2 lifetime: 1 Creation time: 4578 Start time: 0 Stop time: 0
+46131 size: 9 lifetime: 17 Creation time: 4586 Start time: 0 Stop time: 0
+46132 size: 9 lifetime: 6 Creation time: 4596 Start time: 0 Stop time: 0
+46133 size: 8 lifetime: 27 Creation time: 4602 Start time: 0 Stop time: 0
+46134 size: 7 lifetime: 1 Creation time: 4615 Start time: 0 Stop time: 0
+46135 size: 4 lifetime: 27 Creation time: 4626 Start time: 0 Stop time: 0
+46136 size: 2 lifetime: 6 Creation time: 4641 Start time: 0 Stop time: 0
+46137 size: 4 lifetime: 1 Creation time: 4651 Start time: 0 Stop time: 0
+46138 size: 1 lifetime: 14 Creation time: 4662 Start time: 0 Stop time: 0
+46139 size: 7 lifetime: 10 Creation time: 4672 Start time: 0 Stop time: 0
+46140 size: 9 lifetime: 30 Creation time: 4686 Start time: 0 Stop time: 0
+46141 size: 5 lifetime: 2 Creation time: 4699 Start time: 0 Stop time: 0
+46142 size: 8 lifetime: 3 Creation time: 4710 Start time: 0 Stop time: 0
+46143 size: 9 lifetime: 19 Creation time: 4722 Start time: 0 Stop time: 0
+46144 size: 6 lifetime: 2 Creation time: 4733 Start time: 0 Stop time: 0
+46145 size: 1 lifetime: 4 Creation time: 4743 Start time: 0 Stop time: 0
+46146 size: 1 lifetime: 7 Creation time: 4750 Start time: 0 Stop time: 0
+46147 size: 2 lifetime: 1 Creation time: 4760 Start time: 0 Stop time: 0
+46148 size: 7 lifetime: 4 Creation time: 4769 Start time: 0 Stop time: 0
+46149 size: 1 lifetime: 2 Creation time: 4781 Start time: 0 Stop time: 0
+46150 size: 7 lifetime: 18 Creation time: 4796 Start time: 0 Stop time: 0
+46151 size: 8 lifetime: 6 Creation time: 4803 Start time: 0 Stop time: 0
+46152 size: 4 lifetime: 21 Creation time: 4815 Start time: 0 Stop time: 0
+46153 size: 3 lifetime: 10 Creation time: 4823 Start time: 0 Stop time: 0
+46154 size: 2 lifetime: 33 Creation time: 4832 Start time: 0 Stop time: 0
+46155 size: 4 lifetime: 12 Creation time: 4848 Start time: 0 Stop time: 0
+46156 size: 2 lifetime: 5 Creation time: 4856 Start time: 0 Stop time: 0
+46157 size: 9 lifetime: 9 Creation time: 4866 Start time: 0 Stop time: 0
+46158 size: 10 lifetime: 11 Creation time: 4872 Start time: 0 Stop time: 0
+46159 size: 3 lifetime: 2 Creation time: 4879 Start time: 0 Stop time: 0
+46160 size: 7 lifetime: 1 Creation time: 4892 Start time: 0 Stop time: 0
+46161 size: 10 lifetime: 1 Creation time: 4896 Start time: 0 Stop time: 0
+46162 size: 5 lifetime: 1 Creation time: 4912 Start time: 0 Stop time: 0
+46163 size: 4 lifetime: 6 Creation time: 4916 Start time: 0 Stop time: 0
+46164 size: 3 lifetime: 2 Creation time: 4926 Start time: 0 Stop time: 0
+46165 size: 9 lifetime: 1 Creation time: 4933 Start time: 0 Stop time: 0
+46166 size: 5 lifetime: 10 Creation time: 4943 Start time: 0 Stop time: 0
+46167 size: 9 lifetime: 1 Creation time: 4946 Start time: 0 Stop time: 0
+46168 size: 6 lifetime: 2 Creation time: 4953 Start time: 0 Stop time: 0
+46169 size: 10 lifetime: 2 Creation time: 4963 Start time: 0 Stop time: 0
+46170 size: 6 lifetime: 5 Creation time: 4971 Start time: 0 Stop time: 0
+46171 size: 3 lifetime: 4 Creation time: 4978 Start time: 0 Stop time: 0
+46172 size: 9 lifetime: 7 Creation time: 4988 Start time: 0 Stop time: 0
+46173 size: 3 lifetime: 12 Creation time: 5002 Start time: 0 Stop time: 0
+46174 size: 4 lifetime: 12 Creation time: 5018 Start time: 0 Stop time: 0
+46175 size: 1 lifetime: 2 Creation time: 5028 Start time: 0 Stop time: 0
+46176 size: 1 lifetime: 1 Creation time: 5035 Start time: 0 Stop time: 0
+46177 size: 3 lifetime: 3 Creation time: 5046 Start time: 0 Stop time: 0
+46178 size: 10 lifetime: 1 Creation time: 5053 Start time: 0 Stop time: 0
+46179 size: 6 lifetime: 18 Creation time: 5062 Start time: 0 Stop time: 0
+46180 size: 9 lifetime: 6 Creation time: 5076 Start time: 0 Stop time: 0
+46181 size: 8 lifetime: 4 Creation time: 5080 Start time: 0 Stop time: 0
+46182 size: 7 lifetime: 5 Creation time: 5089 Start time: 0 Stop time: 0
+46183 size: 4 lifetime: 11 Creation time: 5096 Start time: 0 Stop time: 0
+46184 size: 10 lifetime: 1 Creation time: 5104 Start time: 0 Stop time: 0
+46185 size: 8 lifetime: 7 Creation time: 5109 Start time: 0 Stop time: 0
+46186 size: 3 lifetime: 2 Creation time: 5122 Start time: 0 Stop time: 0
+46187 size: 2 lifetime: 25 Creation time: 5129 Start time: 0 Stop time: 0
+46188 size: 1 lifetime: 35 Creation time: 5136 Start time: 0 Stop time: 0
+46189 size: 10 lifetime: 6 Creation time: 5146 Start time: 0 Stop time: 0
+46190 size: 8 lifetime: 4 Creation time: 5157 Start time: 0 Stop time: 0
+46191 size: 4 lifetime: 4 Creation time: 5163 Start time: 0 Stop time: 0
+46192 size: 9 lifetime: 5 Creation time: 5174 Start time: 0 Stop time: 0
+46193 size: 7 lifetime: 1 Creation time: 5183 Start time: 0 Stop time: 0
+46194 size: 10 lifetime: 4 Creation time: 5195 Start time: 0 Stop time: 0
+46195 size: 3 lifetime: 7 Creation time: 5206 Start time: 0 Stop time: 0
+46196 size: 1 lifetime: 16 Creation time: 5216 Start time: 0 Stop time: 0
+46197 size: 5 lifetime: 10 Creation time: 5224 Start time: 0 Stop time: 0
+46198 size: 1 lifetime: 21 Creation time: 5237 Start time: 0 Stop time: 0
+46199 size: 2 lifetime: 19 Creation time: 5249 Start time: 0 Stop time: 0
+46200 size: 3 lifetime: 10 Creation time: 5257 Start time: 0 Stop time: 0
+46201 size: 2 lifetime: 2 Creation time: 5270 Start time: 0 Stop time: 0
+46202 size: 1 lifetime: 5 Creation time: 5278 Start time: 0 Stop time: 0
+46203 size: 10 lifetime: 3 Creation time: 5283 Start time: 0 Stop time: 0
+46204 size: 1 lifetime: 14 Creation time: 5289 Start time: 0 Stop time: 0
+46205 size: 5 lifetime: 46 Creation time: 5299 Start time: 0 Stop time: 0
+46206 size: 3 lifetime: 8 Creation time: 5311 Start time: 0 Stop time: 0
+46207 size: 2 lifetime: 19 Creation time: 5320 Start time: 0 Stop time: 0
+46208 size: 8 lifetime: 1 Creation time: 5333 Start time: 0 Stop time: 0
+46209 size: 4 lifetime: 27 Creation time: 5338 Start time: 0 Stop time: 0
+46210 size: 12 lifetime: 1 Creation time: 5348 Start time: 0 Stop time: 0
+46211 size: 5 lifetime: 14 Creation time: 5357 Start time: 0 Stop time: 0
+46212 size: 8 lifetime: 8 Creation time: 5366 Start time: 0 Stop time: 0
+46213 size: 1 lifetime: 3 Creation time: 5374 Start time: 0 Stop time: 0
+46214 size: 3 lifetime: 2 Creation time: 5381 Start time: 0 Stop time: 0
+46215 size: 2 lifetime: 18 Creation time: 5392 Start time: 0 Stop time: 0
+46216 size: 8 lifetime: 1 Creation time: 5404 Start time: 0 Stop time: 0
+46217 size: 6 lifetime: 4 Creation time: 5421 Start time: 0 Stop time: 0
+46218 size: 2 lifetime: 20 Creation time: 5430 Start time: 0 Stop time: 0
+46219 size: 7 lifetime: 5 Creation time: 5437 Start time: 0 Stop time: 0
+46220 size: 7 lifetime: 2 Creation time: 5443 Start time: 0 Stop time: 0
+46221 size: 4 lifetime: 19 Creation time: 5451 Start time: 0 Stop time: 0
+46222 size: 6 lifetime: 1 Creation time: 5465 Start time: 0 Stop time: 0
+46223 size: 9 lifetime: 4 Creation time: 5477 Start time: 0 Stop time: 0
+46224 size: 9 lifetime: 11 Creation time: 5486 Start time: 0 Stop time: 0
+46225 size: 2 lifetime: 7 Creation time: 5498 Start time: 0 Stop time: 0
+46226 size: 8 lifetime: 8 Creation time: 5507 Start time: 0 Stop time: 0
+46227 size: 5 lifetime: 8 Creation time: 5520 Start time: 0 Stop time: 0
+46228 size: 2 lifetime: 11 Creation time: 5528 Start time: 0 Stop time: 0
+46229 size: 10 lifetime: 1 Creation time: 5540 Start time: 0 Stop time: 0
+46230 size: 8 lifetime: 25 Creation time: 5548 Start time: 0 Stop time: 0
+46231 size: 3 lifetime: 37 Creation time: 5560 Start time: 0 Stop time: 0
+46232 size: 2 lifetime: 4 Creation time: 5567 Start time: 0 Stop time: 0
+46233 size: 7 lifetime: 3 Creation time: 5576 Start time: 0 Stop time: 0
+46234 size: 3 lifetime: 4 Creation time: 5586 Start time: 0 Stop time: 0
+46235 size: 6 lifetime: 1 Creation time: 5595 Start time: 0 Stop time: 0
+46236 size: 7 lifetime: 1 Creation time: 5608 Start time: 0 Stop time: 0
+46237 size: 8 lifetime: 7 Creation time: 5616 Start time: 0 Stop time: 0
+46238 size: 8 lifetime: 1 Creation time: 5625 Start time: 0 Stop time: 0
+46239 size: 6 lifetime: 21 Creation time: 5636 Start time: 0 Stop time: 0
+46240 size: 3 lifetime: 3 Creation time: 5648 Start time: 0 Stop time: 0
+46241 size: 9 lifetime: 8 Creation time: 5656 Start time: 0 Stop time: 0
+46242 size: 1 lifetime: 23 Creation time: 5667 Start time: 0 Stop time: 0
+46243 size: 2 lifetime: 12 Creation time: 5674 Start time: 0 Stop time: 0
+46244 size: 9 lifetime: 6 Creation time: 5684 Start time: 0 Stop time: 0
+46245 size: 2 lifetime: 8 Creation time: 5696 Start time: 0 Stop time: 0
+46246 size: 4 lifetime: 7 Creation time: 5702 Start time: 0 Stop time: 0
+46247 size: 6 lifetime: 4 Creation time: 5712 Start time: 0 Stop time: 0
+46248 size: 7 lifetime: 15 Creation time: 5727 Start time: 0 Stop time: 0
+46249 size: 2 lifetime: 22 Creation time: 5740 Start time: 0 Stop time: 0
+46250 size: 2 lifetime: 13 Creation time: 5752 Start time: 0 Stop time: 0
+46251 size: 8 lifetime: 1 Creation time: 5770 Start time: 0 Stop time: 0
+46252 size: 4 lifetime: 11 Creation time: 5781 Start time: 0 Stop time: 0
+46253 size: 1 lifetime: 12 Creation time: 5791 Start time: 0 Stop time: 0
+46254 size: 9 lifetime: 4 Creation time: 5802 Start time: 0 Stop time: 0
+46255 size: 2 lifetime: 4 Creation time: 5814 Start time: 0 Stop time: 0
+46256 size: 4 lifetime: 12 Creation time: 5822 Start time: 0 Stop time: 0
+46257 size: 3 lifetime: 1 Creation time: 5830 Start time: 0 Stop time: 0
+46258 size: 10 lifetime: 1 Creation time: 5842 Start time: 0 Stop time: 0
+46259 size: 9 lifetime: 15 Creation time: 5849 Start time: 0 Stop time: 0
+46260 size: 7 lifetime: 4 Creation time: 5862 Start time: 0 Stop time: 0
+46261 size: 5 lifetime: 31 Creation time: 5870 Start time: 0 Stop time: 0
+46262 size: 8 lifetime: 4 Creation time: 5884 Start time: 0 Stop time: 0
+46263 size: 5 lifetime: 6 Creation time: 5893 Start time: 0 Stop time: 0
+46264 size: 4 lifetime: 8 Creation time: 5903 Start time: 0 Stop time: 0
+46265 size: 12 lifetime: 1 Creation time: 5910 Start time: 0 Stop time: 0
+46266 size: 3 lifetime: 1 Creation time: 5923 Start time: 0 Stop time: 0
+46267 size: 9 lifetime: 2 Creation time: 5932 Start time: 0 Stop time: 0
+46268 size: 8 lifetime: 12 Creation time: 5948 Start time: 0 Stop time: 0
+46269 size: 4 lifetime: 5 Creation time: 5957 Start time: 0 Stop time: 0
+46270 size: 5 lifetime: 13 Creation time: 5969 Start time: 0 Stop time: 0
+46271 size: 5 lifetime: 2 Creation time: 5980 Start time: 0 Stop time: 0
+46272 size: 8 lifetime: 6 Creation time: 5990 Start time: 0 Stop time: 0
+46273 size: 8 lifetime: 24 Creation time: 5996 Start time: 0 Stop time: 0
+46274 size: 8 lifetime: 1 Creation time: 6001 Start time: 0 Stop time: 0
+46275 size: 3 lifetime: 9 Creation time: 6015 Start time: 0 Stop time: 0
+46276 size: 5 lifetime: 1 Creation time: 6023 Start time: 0 Stop time: 0
+46277 size: 5 lifetime: 30 Creation time: 6028 Start time: 0 Stop time: 0
+46278 size: 5 lifetime: 5 Creation time: 6042 Start time: 0 Stop time: 0
+46279 size: 9 lifetime: 4 Creation time: 6055 Start time: 0 Stop time: 0
+46280 size: 5 lifetime: 9 Creation time: 6063 Start time: 0 Stop time: 0
+46281 size: 5 lifetime: 1 Creation time: 6071 Start time: 0 Stop time: 0
+46282 size: 10 lifetime: 9 Creation time: 6079 Start time: 0 Stop time: 0
+46283 size: 3 lifetime: 29 Creation time: 6090 Start time: 0 Stop time: 0
+46284 size: 8 lifetime: 9 Creation time: 6102 Start time: 0 Stop time: 0
+46285 size: 7 lifetime: 2 Creation time: 6107 Start time: 0 Stop time: 0
+46286 size: 10 lifetime: 9 Creation time: 6122 Start time: 0 Stop time: 0
+46287 size: 2 lifetime: 17 Creation time: 6130 Start time: 0 Stop time: 0
+46288 size: 1 lifetime: 10 Creation time: 6141 Start time: 0 Stop time: 0
+46289 size: 2 lifetime: 18 Creation time: 6146 Start time: 0 Stop time: 0
+46290 size: 7 lifetime: 16 Creation time: 6151 Start time: 0 Stop time: 0
+46291 size: 1 lifetime: 20 Creation time: 6161 Start time: 0 Stop time: 0
+46292 size: 7 lifetime: 9 Creation time: 6172 Start time: 0 Stop time: 0
+46293 size: 3 lifetime: 76 Creation time: 6182 Start time: 0 Stop time: 0
+46294 size: 2 lifetime: 8 Creation time: 6195 Start time: 0 Stop time: 0
+46295 size: 7 lifetime: 44 Creation time: 6203 Start time: 0 Stop time: 0
+46296 size: 10 lifetime: 2 Creation time: 6210 Start time: 0 Stop time: 0
+46297 size: 5 lifetime: 8 Creation time: 6219 Start time: 0 Stop time: 0
+46298 size: 2 lifetime: 23 Creation time: 6222 Start time: 0 Stop time: 0
+46299 size: 3 lifetime: 2 Creation time: 6233 Start time: 0 Stop time: 0
+46300 size: 3 lifetime: 1 Creation time: 6242 Start time: 0 Stop time: 0
+46301 size: 8 lifetime: 1 Creation time: 6262 Start time: 0 Stop time: 0
+46302 size: 2 lifetime: 32 Creation time: 6271 Start time: 0 Stop time: 0
+46303 size: 7 lifetime: 16 Creation time: 6284 Start time: 0 Stop time: 0
+46304 size: 6 lifetime: 16 Creation time: 6296 Start time: 0 Stop time: 0
+46305 size: 4 lifetime: 14 Creation time: 6306 Start time: 0 Stop time: 0
+46306 size: 1 lifetime: 1 Creation time: 6313 Start time: 0 Stop time: 0
+46307 size: 6 lifetime: 10 Creation time: 6319 Start time: 0 Stop time: 0
+46308 size: 9 lifetime: 14 Creation time: 6326 Start time: 0 Stop time: 0
+46309 size: 1 lifetime: 21 Creation time: 6333 Start time: 0 Stop time: 0
+46310 size: 8 lifetime: 2 Creation time: 6344 Start time: 0 Stop time: 0
+46311 size: 8 lifetime: 5 Creation time: 6351 Start time: 0 Stop time: 0
+46312 size: 2 lifetime: 32 Creation time: 6360 Start time: 0 Stop time: 0
+46313 size: 8 lifetime: 8 Creation time: 6370 Start time: 0 Stop time: 0
+46314 size: 1 lifetime: 4 Creation time: 6378 Start time: 0 Stop time: 0
+46315 size: 5 lifetime: 20 Creation time: 6394 Start time: 0 Stop time: 0
+46316 size: 9 lifetime: 8 Creation time: 6402 Start time: 0 Stop time: 0
+46317 size: 6 lifetime: 3 Creation time: 6412 Start time: 0 Stop time: 0
+46318 size: 3 lifetime: 6 Creation time: 6426 Start time: 0 Stop time: 0
+46319 size: 1 lifetime: 9 Creation time: 6430 Start time: 0 Stop time: 0
+46320 size: 2 lifetime: 54 Creation time: 6442 Start time: 0 Stop time: 0
+46321 size: 8 lifetime: 16 Creation time: 6448 Start time: 0 Stop time: 0
+46322 size: 5 lifetime: 1 Creation time: 6457 Start time: 0 Stop time: 0
+46323 size: 8 lifetime: 27 Creation time: 6468 Start time: 0 Stop time: 0
+46324 size: 4 lifetime: 3 Creation time: 6478 Start time: 0 Stop time: 0
+46325 size: 8 lifetime: 1 Creation time: 6487 Start time: 0 Stop time: 0
+46326 size: 5 lifetime: 2 Creation time: 6492 Start time: 0 Stop time: 0
+46327 size: 10 lifetime: 20 Creation time: 6499 Start time: 0 Stop time: 0
+46328 size: 5 lifetime: 10 Creation time: 6513 Start time: 0 Stop time: 0
+46329 size: 4 lifetime: 1 Creation time: 6523 Start time: 0 Stop time: 0
+46330 size: 1 lifetime: 19 Creation time: 6530 Start time: 0 Stop time: 0
+46331 size: 7 lifetime: 9 Creation time: 6542 Start time: 0 Stop time: 0
+46332 size: 7 lifetime: 12 Creation time: 6549 Start time: 0 Stop time: 0
+46333 size: 3 lifetime: 4 Creation time: 6557 Start time: 0 Stop time: 0
+46334 size: 5 lifetime: 8 Creation time: 6565 Start time: 0 Stop time: 0
+46335 size: 4 lifetime: 11 Creation time: 6577 Start time: 0 Stop time: 0
+46336 size: 5 lifetime: 1 Creation time: 6594 Start time: 0 Stop time: 0
+46337 size: 3 lifetime: 2 Creation time: 6604 Start time: 0 Stop time: 0
+46338 size: 4 lifetime: 5 Creation time: 6615 Start time: 0 Stop time: 0
+46339 size: 6 lifetime: 4 Creation time: 6624 Start time: 0 Stop time: 0
+46340 size: 2 lifetime: 9 Creation time: 6631 Start time: 0 Stop time: 0
+46341 size: 2 lifetime: 5 Creation time: 6639 Start time: 0 Stop time: 0
+46342 size: 1 lifetime: 7 Creation time: 6659 Start time: 0 Stop time: 0
+46343 size: 5 lifetime: 4 Creation time: 6681 Start time: 0 Stop time: 0
+46344 size: 10 lifetime: 3 Creation time: 6694 Start time: 0 Stop time: 0
+46345 size: 5 lifetime: 9 Creation time: 6711 Start time: 0 Stop time: 0
+46346 size: 1 lifetime: 22 Creation time: 6721 Start time: 0 Stop time: 0
+46347 size: 7 lifetime: 9 Creation time: 6737 Start time: 0 Stop time: 0
+46348 size: 10 lifetime: 5 Creation time: 6749 Start time: 0 Stop time: 0
+46349 size: 7 lifetime: 3 Creation time: 6761 Start time: 0 Stop time: 0
+46350 size: 10 lifetime: 25 Creation time: 6774 Start time: 0 Stop time: 0
+46351 size: 3 lifetime: 15 Creation time: 6782 Start time: 0 Stop time: 0
+46352 size: 5 lifetime: 4 Creation time: 6792 Start time: 0 Stop time: 0
+46353 size: 6 lifetime: 7 Creation time: 6802 Start time: 0 Stop time: 0
+46354 size: 6 lifetime: 13 Creation time: 6811 Start time: 0 Stop time: 0
+46355 size: 11 lifetime: 1 Creation time: 6823 Start time: 0 Stop time: 0
+46356 size: 1 lifetime: 1 Creation time: 6832 Start time: 0 Stop time: 0
+46357 size: 2 lifetime: 1 Creation time: 6839 Start time: 0 Stop time: 0
+46358 size: 2 lifetime: 6 Creation time: 6852 Start time: 0 Stop time: 0
+46359 size: 2 lifetime: 12 Creation time: 6871 Start time: 0 Stop time: 0
+46360 size: 7 lifetime: 15 Creation time: 6881 Start time: 0 Stop time: 0
+46361 size: 9 lifetime: 11 Creation time: 6888 Start time: 0 Stop time: 0
+46362 size: 10 lifetime: 7 Creation time: 6897 Start time: 0 Stop time: 0
+46363 size: 5 lifetime: 13 Creation time: 6908 Start time: 0 Stop time: 0
+46364 size: 5 lifetime: 1 Creation time: 6918 Start time: 0 Stop time: 0
+46365 size: 5 lifetime: 8 Creation time: 6926 Start time: 0 Stop time: 0
+46366 size: 6 lifetime: 4 Creation time: 6937 Start time: 0 Stop time: 0
+46367 size: 1 lifetime: 3 Creation time: 6948 Start time: 0 Stop time: 0
+46368 size: 3 lifetime: 27 Creation time: 6969 Start time: 0 Stop time: 0
+46369 size: 7 lifetime: 14 Creation time: 6981 Start time: 0 Stop time: 0
+46370 size: 1 lifetime: 1 Creation time: 6991 Start time: 0 Stop time: 0
+46371 size: 8 lifetime: 22 Creation time: 7003 Start time: 0 Stop time: 0
+46372 size: 9 lifetime: 8 Creation time: 7010 Start time: 0 Stop time: 0
+46373 size: 2 lifetime: 13 Creation time: 7022 Start time: 0 Stop time: 0
+46374 size: 2 lifetime: 5 Creation time: 7031 Start time: 0 Stop time: 0
+46375 size: 6 lifetime: 10 Creation time: 7045 Start time: 0 Stop time: 0
+46376 size: 3 lifetime: 10 Creation time: 7054 Start time: 0 Stop time: 0
+46377 size: 4 lifetime: 1 Creation time: 7069 Start time: 0 Stop time: 0
+46378 size: 10 lifetime: 10 Creation time: 7074 Start time: 0 Stop time: 0
+46379 size: 6 lifetime: 1 Creation time: 7082 Start time: 0 Stop time: 0
+46380 size: 8 lifetime: 1 Creation time: 7087 Start time: 0 Stop time: 0
+46381 size: 3 lifetime: 1 Creation time: 7096 Start time: 0 Stop time: 0
+46382 size: 1 lifetime: 6 Creation time: 7109 Start time: 0 Stop time: 0
+46383 size: 5 lifetime: 2 Creation time: 7116 Start time: 0 Stop time: 0
+46384 size: 7 lifetime: 1 Creation time: 7127 Start time: 0 Stop time: 0
+46385 size: 2 lifetime: 12 Creation time: 7137 Start time: 0 Stop time: 0
+46386 size: 5 lifetime: 6 Creation time: 7143 Start time: 0 Stop time: 0
+46387 size: 2 lifetime: 21 Creation time: 7154 Start time: 0 Stop time: 0
+46388 size: 9 lifetime: 12 Creation time: 7161 Start time: 0 Stop time: 0
+46389 size: 6 lifetime: 16 Creation time: 7176 Start time: 0 Stop time: 0
+46390 size: 10 lifetime: 8 Creation time: 7183 Start time: 0 Stop time: 0
+46391 size: 2 lifetime: 15 Creation time: 7190 Start time: 0 Stop time: 0
+46392 size: 1 lifetime: 2 Creation time: 7204 Start time: 0 Stop time: 0
+46393 size: 12 lifetime: 1 Creation time: 7215 Start time: 0 Stop time: 0
+46394 size: 5 lifetime: 8 Creation time: 7225 Start time: 0 Stop time: 0
+46395 size: 4 lifetime: 28 Creation time: 7240 Start time: 0 Stop time: 0
+46396 size: 2 lifetime: 14 Creation time: 7251 Start time: 0 Stop time: 0
+46397 size: 10 lifetime: 2 Creation time: 7260 Start time: 0 Stop time: 0
+46398 size: 5 lifetime: 5 Creation time: 7268 Start time: 0 Stop time: 0
+46399 size: 2 lifetime: 12 Creation time: 7278 Start time: 0 Stop time: 0
+46400 size: 5 lifetime: 2 Creation time: 7289 Start time: 0 Stop time: 0
+46401 size: 1 lifetime: 17 Creation time: 7296 Start time: 0 Stop time: 0
+46402 size: 7 lifetime: 3 Creation time: 7308 Start time: 0 Stop time: 0
+46403 size: 2 lifetime: 23 Creation time: 7321 Start time: 0 Stop time: 0
+46404 size: 9 lifetime: 1 Creation time: 7330 Start time: 0 Stop time: 0
+46405 size: 7 lifetime: 12 Creation time: 7342 Start time: 0 Stop time: 0
+46406 size: 2 lifetime: 10 Creation time: 7354 Start time: 0 Stop time: 0
+46407 size: 6 lifetime: 9 Creation time: 7362 Start time: 0 Stop time: 0
+46408 size: 1 lifetime: 1 Creation time: 7371 Start time: 0 Stop time: 0
+46409 size: 8 lifetime: 1 Creation time: 7379 Start time: 0 Stop time: 0
+46410 size: 1 lifetime: 16 Creation time: 7385 Start time: 0 Stop time: 0
+46411 size: 6 lifetime: 8 Creation time: 7393 Start time: 0 Stop time: 0
+46412 size: 1 lifetime: 16 Creation time: 7410 Start time: 0 Stop time: 0
+46413 size: 8 lifetime: 9 Creation time: 7420 Start time: 0 Stop time: 0
+46414 size: 7 lifetime: 2 Creation time: 7424 Start time: 0 Stop time: 0
+46415 size: 4 lifetime: 11 Creation time: 7434 Start time: 0 Stop time: 0
+46416 size: 3 lifetime: 15 Creation time: 7446 Start time: 0 Stop time: 0
+46417 size: 1 lifetime: 15 Creation time: 7454 Start time: 0 Stop time: 0
+46418 size: 2 lifetime: 3 Creation time: 7461 Start time: 0 Stop time: 0
+46419 size: 1 lifetime: 9 Creation time: 7472 Start time: 0 Stop time: 0
+46420 size: 3 lifetime: 8 Creation time: 7486 Start time: 0 Stop time: 0
+46421 size: 2 lifetime: 8 Creation time: 7500 Start time: 0 Stop time: 0
+46422 size: 6 lifetime: 5 Creation time: 7513 Start time: 0 Stop time: 0
+46423 size: 9 lifetime: 36 Creation time: 7522 Start time: 0 Stop time: 0
+46424 size: 10 lifetime: 5 Creation time: 7532 Start time: 0 Stop time: 0
+46425 size: 8 lifetime: 15 Creation time: 7544 Start time: 0 Stop time: 0
+46426 size: 7 lifetime: 8 Creation time: 7557 Start time: 0 Stop time: 0
+46427 size: 8 lifetime: 14 Creation time: 7565 Start time: 0 Stop time: 0
+46428 size: 9 lifetime: 7 Creation time: 7581 Start time: 0 Stop time: 0
+46429 size: 2 lifetime: 8 Creation time: 7591 Start time: 0 Stop time: 0
+46430 size: 2 lifetime: 13 Creation time: 7607 Start time: 0 Stop time: 0
+46431 size: 5 lifetime: 9 Creation time: 7617 Start time: 0 Stop time: 0
+46432 size: 10 lifetime: 1 Creation time: 7624 Start time: 0 Stop time: 0
+46433 size: 3 lifetime: 25 Creation time: 7640 Start time: 0 Stop time: 0
+46434 size: 6 lifetime: 9 Creation time: 7643 Start time: 0 Stop time: 0
+46435 size: 2 lifetime: 3 Creation time: 7652 Start time: 0 Stop time: 0
+46436 size: 6 lifetime: 13 Creation time: 7664 Start time: 0 Stop time: 0
+46437 size: 4 lifetime: 1 Creation time: 7675 Start time: 0 Stop time: 0
+46438 size: 5 lifetime: 28 Creation time: 7684 Start time: 0 Stop time: 0
+46439 size: 7 lifetime: 1 Creation time: 7691 Start time: 0 Stop time: 0
+46440 size: 3 lifetime: 13 Creation time: 7708 Start time: 0 Stop time: 0
+46441 size: 6 lifetime: 1 Creation time: 7719 Start time: 0 Stop time: 0
+46442 size: 6 lifetime: 9 Creation time: 7727 Start time: 0 Stop time: 0
+46443 size: 9 lifetime: 10 Creation time: 7733 Start time: 0 Stop time: 0
+46444 size: 4 lifetime: 3 Creation time: 7743 Start time: 0 Stop time: 0
+46445 size: 7 lifetime: 31 Creation time: 7757 Start time: 0 Stop time: 0
+46446 size: 10 lifetime: 6 Creation time: 7766 Start time: 0 Stop time: 0
+46447 size: 9 lifetime: 21 Creation time: 7776 Start time: 0 Stop time: 0
+46448 size: 6 lifetime: 27 Creation time: 7786 Start time: 0 Stop time: 0
+46449 size: 8 lifetime: 8 Creation time: 7796 Start time: 0 Stop time: 0
+46450 size: 8 lifetime: 4 Creation time: 7808 Start time: 0 Stop time: 0
+46451 size: 4 lifetime: 1 Creation time: 7818 Start time: 0 Stop time: 0
+46452 size: 7 lifetime: 2 Creation time: 7828 Start time: 0 Stop time: 0
+46453 size: 2 lifetime: 6 Creation time: 7840 Start time: 0 Stop time: 0
+46454 size: 7 lifetime: 5 Creation time: 7852 Start time: 0 Stop time: 0
+46455 size: 1 lifetime: 1 Creation time: 7865 Start time: 0 Stop time: 0
+46456 size: 2 lifetime: 17 Creation time: 7872 Start time: 0 Stop time: 0
+46457 size: 3 lifetime: 1 Creation time: 7883 Start time: 0 Stop time: 0
+46458 size: 9 lifetime: 20 Creation time: 7887 Start time: 0 Stop time: 0
+46459 size: 10 lifetime: 4 Creation time: 7897 Start time: 0 Stop time: 0
+46460 size: 6 lifetime: 12 Creation time: 7910 Start time: 0 Stop time: 0
+46461 size: 10 lifetime: 16 Creation time: 7919 Start time: 0 Stop time: 0
+46462 size: 2 lifetime: 6 Creation time: 7931 Start time: 0 Stop time: 0
+46463 size: 2 lifetime: 16 Creation time: 7938 Start time: 0 Stop time: 0
+46464 size: 6 lifetime: 10 Creation time: 7952 Start time: 0 Stop time: 0
+46465 size: 7 lifetime: 6 Creation time: 7960 Start time: 0 Stop time: 0
+46466 size: 3 lifetime: 50 Creation time: 7972 Start time: 0 Stop time: 0
+46467 size: 9 lifetime: 1 Creation time: 7985 Start time: 0 Stop time: 0
+46468 size: 1 lifetime: 5 Creation time: 7995 Start time: 0 Stop time: 0
+46469 size: 3 lifetime: 7 Creation time: 8010 Start time: 0 Stop time: 0
+46470 size: 9 lifetime: 1 Creation time: 8020 Start time: 0 Stop time: 0
+46471 size: 6 lifetime: 19 Creation time: 8031 Start time: 0 Stop time: 0
+46472 size: 2 lifetime: 3 Creation time: 8037 Start time: 0 Stop time: 0
+46473 size: 2 lifetime: 27 Creation time: 8053 Start time: 0 Stop time: 0
+46474 size: 6 lifetime: 4 Creation time: 8061 Start time: 0 Stop time: 0
+46475 size: 4 lifetime: 5 Creation time: 8072 Start time: 0 Stop time: 0
+46476 size: 8 lifetime: 10 Creation time: 8083 Start time: 0 Stop time: 0
+46477 size: 8 lifetime: 4 Creation time: 8093 Start time: 0 Stop time: 0
+46478 size: 3 lifetime: 2 Creation time: 8099 Start time: 0 Stop time: 0
+46479 size: 2 lifetime: 1 Creation time: 8110 Start time: 0 Stop time: 0
+46480 size: 2 lifetime: 20 Creation time: 8123 Start time: 0 Stop time: 0
+46481 size: 5 lifetime: 2 Creation time: 8138 Start time: 0 Stop time: 0
+46482 size: 8 lifetime: 21 Creation time: 8150 Start time: 0 Stop time: 0
+46483 size: 6 lifetime: 14 Creation time: 8159 Start time: 0 Stop time: 0
+46484 size: 2 lifetime: 18 Creation time: 8167 Start time: 0 Stop time: 0
+46485 size: 8 lifetime: 5 Creation time: 8173 Start time: 0 Stop time: 0
+46486 size: 7 lifetime: 16 Creation time: 8186 Start time: 0 Stop time: 0
+46487 size: 4 lifetime: 3 Creation time: 8197 Start time: 0 Stop time: 0
+46488 size: 5 lifetime: 8 Creation time: 8205 Start time: 0 Stop time: 0
+46489 size: 6 lifetime: 1 Creation time: 8219 Start time: 0 Stop time: 0
+46490 size: 10 lifetime: 14 Creation time: 8231 Start time: 0 Stop time: 0
+46491 size: 3 lifetime: 3 Creation time: 8237 Start time: 0 Stop time: 0
+46492 size: 10 lifetime: 3 Creation time: 8247 Start time: 0 Stop time: 0
+46493 size: 9 lifetime: 6 Creation time: 8256 Start time: 0 Stop time: 0
+46494 size: 4 lifetime: 6 Creation time: 8269 Start time: 0 Stop time: 0
+46495 size: 6 lifetime: 1 Creation time: 8281 Start time: 0 Stop time: 0
+46496 size: 2 lifetime: 10 Creation time: 8291 Start time: 0 Stop time: 0
+46497 size: 9 lifetime: 24 Creation time: 8304 Start time: 0 Stop time: 0
+46498 size: 6 lifetime: 3 Creation time: 8317 Start time: 0 Stop time: 0
+46499 size: 2 lifetime: 15 Creation time: 8324 Start time: 0 Stop time: 0
+46500 size: 6 lifetime: 6 Creation time: 8341 Start time: 0 Stop time: 0
+46501 size: 2 lifetime: 36 Creation time: 8347 Start time: 0 Stop time: 0
+46502 size: 1 lifetime: 12 Creation time: 8355 Start time: 0 Stop time: 0
+46503 size: 10 lifetime: 7 Creation time: 8359 Start time: 0 Stop time: 0
+46504 size: 5 lifetime: 1 Creation time: 8376 Start time: 0 Stop time: 0
+46505 size: 5 lifetime: 2 Creation time: 8385 Start time: 0 Stop time: 0
+46506 size: 3 lifetime: 16 Creation time: 8392 Start time: 0 Stop time: 0
+46507 size: 7 lifetime: 27 Creation time: 8404 Start time: 0 Stop time: 0
+46508 size: 9 lifetime: 1 Creation time: 8414 Start time: 0 Stop time: 0
+46509 size: 2 lifetime: 2 Creation time: 8423 Start time: 0 Stop time: 0
+46510 size: 4 lifetime: 9 Creation time: 8430 Start time: 0 Stop time: 0
+46511 size: 10 lifetime: 5 Creation time: 8440 Start time: 0 Stop time: 0
+46512 size: 2 lifetime: 3 Creation time: 8451 Start time: 0 Stop time: 0
+46513 size: 9 lifetime: 9 Creation time: 8459 Start time: 0 Stop time: 0
+46514 size: 6 lifetime: 7 Creation time: 8473 Start time: 0 Stop time: 0
+46515 size: 6 lifetime: 6 Creation time: 8483 Start time: 0 Stop time: 0
+46516 size: 8 lifetime: 5 Creation time: 8495 Start time: 0 Stop time: 0
+46517 size: 1 lifetime: 10 Creation time: 8513 Start time: 0 Stop time: 0
+46518 size: 9 lifetime: 13 Creation time: 8525 Start time: 0 Stop time: 0
+46519 size: 8 lifetime: 3 Creation time: 8535 Start time: 0 Stop time: 0
+46520 size: 1 lifetime: 12 Creation time: 8542 Start time: 0 Stop time: 0
+46521 size: 8 lifetime: 1 Creation time: 8555 Start time: 0 Stop time: 0
+46522 size: 2 lifetime: 6 Creation time: 8573 Start time: 0 Stop time: 0
+46523 size: 12 lifetime: 1 Creation time: 8584 Start time: 0 Stop time: 0
+46524 size: 10 lifetime: 5 Creation time: 8593 Start time: 0 Stop time: 0
+46525 size: 8 lifetime: 7 Creation time: 8606 Start time: 0 Stop time: 0
+46526 size: 2 lifetime: 25 Creation time: 8617 Start time: 0 Stop time: 0
+46527 size: 5 lifetime: 1 Creation time: 8628 Start time: 0 Stop time: 0
+46528 size: 9 lifetime: 3 Creation time: 8643 Start time: 0 Stop time: 0
+46529 size: 5 lifetime: 7 Creation time: 8656 Start time: 0 Stop time: 0
+46530 size: 4 lifetime: 1 Creation time: 8663 Start time: 0 Stop time: 0
+46531 size: 6 lifetime: 2 Creation time: 8671 Start time: 0 Stop time: 0
+46532 size: 9 lifetime: 7 Creation time: 8677 Start time: 0 Stop time: 0
+46533 size: 10 lifetime: 2 Creation time: 8686 Start time: 0 Stop time: 0
+46534 size: 5 lifetime: 1 Creation time: 8704 Start time: 0 Stop time: 0
+46535 size: 8 lifetime: 4 Creation time: 8714 Start time: 0 Stop time: 0
+46536 size: 9 lifetime: 3 Creation time: 8727 Start time: 0 Stop time: 0
+46537 size: 2 lifetime: 15 Creation time: 8741 Start time: 0 Stop time: 0
+46538 size: 2 lifetime: 10 Creation time: 8749 Start time: 0 Stop time: 0
+46539 size: 7 lifetime: 12 Creation time: 8764 Start time: 0 Stop time: 0
+46540 size: 4 lifetime: 2 Creation time: 8777 Start time: 0 Stop time: 0
+46541 size: 1 lifetime: 11 Creation time: 8785 Start time: 0 Stop time: 0
+46542 size: 5 lifetime: 9 Creation time: 8794 Start time: 0 Stop time: 0
+46543 size: 1 lifetime: 2 Creation time: 8806 Start time: 0 Stop time: 0
+46544 size: 4 lifetime: 4 Creation time: 8815 Start time: 0 Stop time: 0
+46545 size: 9 lifetime: 4 Creation time: 8822 Start time: 0 Stop time: 0
+46546 size: 6 lifetime: 6 Creation time: 8831 Start time: 0 Stop time: 0
+46547 size: 9 lifetime: 2 Creation time: 8848 Start time: 0 Stop time: 0
+46548 size: 2 lifetime: 5 Creation time: 8857 Start time: 0 Stop time: 0
+46549 size: 7 lifetime: 3 Creation time: 8866 Start time: 0 Stop time: 0
+46550 size: 1 lifetime: 7 Creation time: 8875 Start time: 0 Stop time: 0
+46551 size: 9 lifetime: 6 Creation time: 8884 Start time: 0 Stop time: 0
+46552 size: 3 lifetime: 22 Creation time: 8902 Start time: 0 Stop time: 0
+46553 size: 9 lifetime: 1 Creation time: 8914 Start time: 0 Stop time: 0
+46554 size: 9 lifetime: 7 Creation time: 8925 Start time: 0 Stop time: 0
+46555 size: 5 lifetime: 3 Creation time: 8934 Start time: 0 Stop time: 0
+46556 size: 10 lifetime: 7 Creation time: 8947 Start time: 0 Stop time: 0
+46557 size: 10 lifetime: 11 Creation time: 8956 Start time: 0 Stop time: 0
+46558 size: 5 lifetime: 3 Creation time: 8962 Start time: 0 Stop time: 0
+46559 size: 1 lifetime: 2 Creation time: 8971 Start time: 0 Stop time: 0
+46560 size: 10 lifetime: 2 Creation time: 8991 Start time: 0 Stop time: 0
+46561 size: 1 lifetime: 12 Creation time: 8999 Start time: 0 Stop time: 0
+46562 size: 4 lifetime: 1 Creation time: 9010 Start time: 0 Stop time: 0
+46563 size: 4 lifetime: 5 Creation time: 9022 Start time: 0 Stop time: 0
+46564 size: 6 lifetime: 9 Creation time: 9032 Start time: 0 Stop time: 0
+46565 size: 4 lifetime: 1 Creation time: 9044 Start time: 0 Stop time: 0
+46566 size: 9 lifetime: 10 Creation time: 9054 Start time: 0 Stop time: 0
+46567 size: 9 lifetime: 35 Creation time: 9059 Start time: 0 Stop time: 0
+46568 size: 2 lifetime: 2 Creation time: 9067 Start time: 0 Stop time: 0
+46569 size: 1 lifetime: 6 Creation time: 9074 Start time: 0 Stop time: 0
+46570 size: 2 lifetime: 6 Creation time: 9082 Start time: 0 Stop time: 0
+46571 size: 6 lifetime: 4 Creation time: 9086 Start time: 0 Stop time: 0
+46572 size: 5 lifetime: 13 Creation time: 9095 Start time: 0 Stop time: 0
+46573 size: 1 lifetime: 10 Creation time: 9108 Start time: 0 Stop time: 0
+46574 size: 2 lifetime: 25 Creation time: 9114 Start time: 0 Stop time: 0
+46575 size: 1 lifetime: 11 Creation time: 9124 Start time: 0 Stop time: 0
+46576 size: 6 lifetime: 4 Creation time: 9129 Start time: 0 Stop time: 0
+46577 size: 7 lifetime: 27 Creation time: 9144 Start time: 0 Stop time: 0
+46578 size: 2 lifetime: 19 Creation time: 9150 Start time: 0 Stop time: 0
+46579 size: 8 lifetime: 7 Creation time: 9160 Start time: 0 Stop time: 0
+46580 size: 9 lifetime: 6 Creation time: 9171 Start time: 0 Stop time: 0
+46581 size: 3 lifetime: 36 Creation time: 9183 Start time: 0 Stop time: 0
+46582 size: 7 lifetime: 2 Creation time: 9195 Start time: 0 Stop time: 0
+46583 size: 6 lifetime: 70 Creation time: 9204 Start time: 0 Stop time: 0
+46584 size: 4 lifetime: 56 Creation time: 9210 Start time: 0 Stop time: 0
+46585 size: 2 lifetime: 15 Creation time: 9219 Start time: 0 Stop time: 0
+46586 size: 1 lifetime: 1 Creation time: 9227 Start time: 0 Stop time: 0
+46587 size: 3 lifetime: 13 Creation time: 9236 Start time: 0 Stop time: 0
+46588 size: 2 lifetime: 10 Creation time: 9247 Start time: 0 Stop time: 0
+46589 size: 1 lifetime: 6 Creation time: 9257 Start time: 0 Stop time: 0
+46590 size: 8 lifetime: 1 Creation time: 9268 Start time: 0 Stop time: 0
+46591 size: 2 lifetime: 16 Creation time: 9280 Start time: 0 Stop time: 0
+46592 size: 10 lifetime: 11 Creation time: 9292 Start time: 0 Stop time: 0
+46593 size: 9 lifetime: 31 Creation time: 9307 Start time: 0 Stop time: 0
+46594 size: 5 lifetime: 32 Creation time: 9323 Start time: 0 Stop time: 0
+46595 size: 8 lifetime: 1 Creation time: 9331 Start time: 0 Stop time: 0
+46596 size: 10 lifetime: 1 Creation time: 9337 Start time: 0 Stop time: 0
+46597 size: 5 lifetime: 24 Creation time: 9350 Start time: 0 Stop time: 0
+46598 size: 1 lifetime: 5 Creation time: 9358 Start time: 0 Stop time: 0
+46599 size: 9 lifetime: 4 Creation time: 9369 Start time: 0 Stop time: 0
+46600 size: 3 lifetime: 13 Creation time: 9380 Start time: 0 Stop time: 0
+46601 size: 10 lifetime: 24 Creation time: 9386 Start time: 0 Stop time: 0
+46602 size: 1 lifetime: 2 Creation time: 9394 Start time: 0 Stop time: 0
+46603 size: 9 lifetime: 4 Creation time: 9405 Start time: 0 Stop time: 0
+46604 size: 8 lifetime: 7 Creation time: 9415 Start time: 0 Stop time: 0
+46605 size: 1 lifetime: 13 Creation time: 9430 Start time: 0 Stop time: 0
+46606 size: 6 lifetime: 1 Creation time: 9433 Start time: 0 Stop time: 0
+46607 size: 1 lifetime: 19 Creation time: 9443 Start time: 0 Stop time: 0
+46608 size: 10 lifetime: 4 Creation time: 9449 Start time: 0 Stop time: 0
+46609 size: 7 lifetime: 1 Creation time: 9458 Start time: 0 Stop time: 0
+46610 size: 1 lifetime: 5 Creation time: 9477 Start time: 0 Stop time: 0
+46611 size: 6 lifetime: 2 Creation time: 9485 Start time: 0 Stop time: 0
+46612 size: 3 lifetime: 13 Creation time: 9495 Start time: 0 Stop time: 0
+46613 size: 6 lifetime: 12 Creation time: 9503 Start time: 0 Stop time: 0
+46614 size: 2 lifetime: 7 Creation time: 9514 Start time: 0 Stop time: 0
+46615 size: 9 lifetime: 5 Creation time: 9524 Start time: 0 Stop time: 0
+46616 size: 3 lifetime: 3 Creation time: 9531 Start time: 0 Stop time: 0
+46617 size: 1 lifetime: 2 Creation time: 9541 Start time: 0 Stop time: 0
+46618 size: 7 lifetime: 27 Creation time: 9552 Start time: 0 Stop time: 0
+46619 size: 2 lifetime: 19 Creation time: 9561 Start time: 0 Stop time: 0
+46620 size: 8 lifetime: 9 Creation time: 9572 Start time: 0 Stop time: 0
+46621 size: 1 lifetime: 4 Creation time: 9577 Start time: 0 Stop time: 0
+46622 size: 8 lifetime: 18 Creation time: 9588 Start time: 0 Stop time: 0
+46623 size: 1 lifetime: 8 Creation time: 9597 Start time: 0 Stop time: 0
+46624 size: 10 lifetime: 6 Creation time: 9608 Start time: 0 Stop time: 0
+46625 size: 2 lifetime: 13 Creation time: 9617 Start time: 0 Stop time: 0
+46626 size: 7 lifetime: 2 Creation time: 9633 Start time: 0 Stop time: 0
+46627 size: 8 lifetime: 15 Creation time: 9642 Start time: 0 Stop time: 0
+46628 size: 4 lifetime: 6 Creation time: 9650 Start time: 0 Stop time: 0
+46629 size: 5 lifetime: 11 Creation time: 9659 Start time: 0 Stop time: 0
+46630 size: 7 lifetime: 15 Creation time: 9668 Start time: 0 Stop time: 0
+46631 size: 9 lifetime: 9 Creation time: 9677 Start time: 0 Stop time: 0
+46632 size: 7 lifetime: 2 Creation time: 9687 Start time: 0 Stop time: 0
+46633 size: 1 lifetime: 1 Creation time: 9695 Start time: 0 Stop time: 0
+46634 size: 1 lifetime: 15 Creation time: 9708 Start time: 0 Stop time: 0
+46635 size: 7 lifetime: 3 Creation time: 9719 Start time: 0 Stop time: 0
+46636 size: 6 lifetime: 2 Creation time: 9731 Start time: 0 Stop time: 0
+46637 size: 2 lifetime: 8 Creation time: 9739 Start time: 0 Stop time: 0
+46638 size: 1 lifetime: 1 Creation time: 9751 Start time: 0 Stop time: 0
+46639 size: 2 lifetime: 17 Creation time: 9760 Start time: 0 Stop time: 0
+46640 size: 7 lifetime: 2 Creation time: 9770 Start time: 0 Stop time: 0
+46641 size: 10 lifetime: 8 Creation time: 9778 Start time: 0 Stop time: 0
+46642 size: 1 lifetime: 9 Creation time: 9789 Start time: 0 Stop time: 0
+46643 size: 7 lifetime: 6 Creation time: 9796 Start time: 0 Stop time: 0
+46644 size: 10 lifetime: 4 Creation time: 9806 Start time: 0 Stop time: 0
+46645 size: 2 lifetime: 8 Creation time: 9819 Start time: 0 Stop time: 0
+46646 size: 10 lifetime: 2 Creation time: 9827 Start time: 0 Stop time: 0
+46647 size: 4 lifetime: 21 Creation time: 9837 Start time: 0 Stop time: 0
+46648 size: 2 lifetime: 3 Creation time: 9845 Start time: 0 Stop time: 0
+46649 size: 9 lifetime: 8 Creation time: 9854 Start time: 0 Stop time: 0
+46650 size: 4 lifetime: 7 Creation time: 9860 Start time: 0 Stop time: 0
+46651 size: 6 lifetime: 8 Creation time: 9872 Start time: 0 Stop time: 0
+46652 size: 10 lifetime: 23 Creation time: 9886 Start time: 0 Stop time: 0
+46653 size: 8 lifetime: 9 Creation time: 9894 Start time: 0 Stop time: 0
+46654 size: 9 lifetime: 1 Creation time: 9903 Start time: 0 Stop time: 0
+46655 size: 7 lifetime: 23 Creation time: 9912 Start time: 0 Stop time: 0
+46656 size: 3 lifetime: 11 Creation time: 9922 Start time: 0 Stop time: 0
+46657 size: 3 lifetime: 5 Creation time: 9935 Start time: 0 Stop time: 0
+46658 size: 2 lifetime: 6 Creation time: 9950 Start time: 0 Stop time: 0
+46659 size: 1 lifetime: 22 Creation time: 9964 Start time: 0 Stop time: 0
+46660 size: 2 lifetime: 14 Creation time: 9975 Start time: 0 Stop time: 0
+46661 size: 10 lifetime: 7 Creation time: 9984 Start time: 0 Stop time: 0
+46662 size: 2 lifetime: 59 Creation time: 9998 Start time: 0 Stop time: 0
+46663 size: 5 lifetime: 9 Creation time: 10008 Start time: 0 Stop time: 0

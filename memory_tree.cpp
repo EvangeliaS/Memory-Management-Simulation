@@ -51,11 +51,9 @@ int Memory_Tree_Node::remove_process(){
     }
 }
 
-
 Memory_Tree::Memory_Tree(int size){
     this->root = NULL;
     this->Memory_Size = size;
-
 }
 
 Memory_Tree::~Memory_Tree(){
@@ -68,12 +66,14 @@ Memory_Tree::~Memory_Tree(){
     this->root = NULL;
 }
 
-int Memory_Tree::insert_process(Process* process, Memory_Tree_Node* buddy, Pending_Processes_List* L, int start_time){
+int Memory_Tree::insert_process(Process* process, Memory_Tree_Node* buddy, Pending_Processes_List* L, int start_time, bool pending){
     if(buddy!=NULL){
         buddy->set_process(process, start_time);
         return 0;
     }   
-    L->append_process(process);
+    if(pending==false){
+        L->append_process(process);
+    }
     return -1;
 }
 
@@ -107,6 +107,24 @@ Memory_Tree_Node* Memory_Tree::search_process(Process* process, Memory_Tree_Node
         return left;
     }
     else if((right = search_process(process, node->right))!=NULL){
+        return right;
+    }
+    else{
+        return NULL;
+    }
+}
+Memory_Tree_Node* Memory_Tree::search_process_by_stop_time(int stop_time, Memory_Tree_Node* node){
+    Memory_Tree_Node* left = NULL,  *right = NULL;
+    if(node==NULL){
+        return NULL;
+    }
+    if(node->get_process()->get_stop_time()==stop_time){
+        return node;
+    }
+    if((left = search_process_by_stop_time(stop_time, node->left))!=NULL){
+        return left;
+    }
+    else if((right = search_process_by_stop_time(stop_time, node->right))!=NULL){
         return right;
     }
     else{
@@ -223,4 +241,18 @@ Memory_Tree_Node* buddy_algorithm(Process* process, Memory_Tree* tree){
         tree->set_root(new Memory_Tree_Node(tree->get_memory_size()));
     }
     return tree->find_tree_node(process->get_size(), tree->get_root());
+}
+
+int add_pending_process(Memory_Tree* tree,  Pending_Processes_List* L, int ptime){
+    Process* process = L->get_head();
+    if(process == NULL){
+        return -1;
+    }
+    if((tree->insert_process(process,buddy_algorithm(process, tree), L, ptime, true))==0){   
+        process = L->pop_process();
+    }
+    else{
+        return -1;
+    }
+    return 0;
 }
