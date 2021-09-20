@@ -36,8 +36,12 @@ string Process::print_to_filename(){
     data+= to_string(this->size);
     data+= " lifetime: ";
     data+= to_string(this->lifetime);
+    data+=" Creation time: ";
+    data+=to_string(this->birth_time);
     data+= " Start time: ";
     data+=to_string(this->start_time);
+    data+= " Stop time: ";
+    data+=to_string(this->stop_time);
     return data;
 }
 

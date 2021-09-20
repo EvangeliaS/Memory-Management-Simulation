@@ -119,18 +119,20 @@ int Memory_List::delete_node_by_position(int x){
     return 0;
 }
 
-int Memory_List::delete_node_by_process_stop_time(int stop){
+string Memory_List::delete_node_by_process_stop_time(int stop){
     Memory_List_Node* current = NULL; 
+    string process_details;
     if((current = search_node_by_process_stop_time(stop))==NULL){
-        return -1;
+        return "";
     }
     current->prev->next = current->next;
     if(current->next->prev!=NULL){
         current->next->prev = current->prev;
     }
-    cout << " Process: " << current->get_process()->get_process_id() << endl;
+    //cout << " Process: " << current->get_process()->get_process_id() << endl;
+    process_details = current->print_to_filename();
     delete current;
-    return 0;
+    return process_details;
 }
 
 Memory_List_Node* Memory_List::search_node_by_process(Process* process){

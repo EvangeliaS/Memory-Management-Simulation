@@ -53,32 +53,41 @@ int main(int argc, char* argv[]){
 /// EKTELESI ME BEST FIT ALGORITHM
     Memory_List* memory = new Memory_List(S);
 
+    //create log_file.xxx
+    
+    string details;
+
     while(d<D){
-        d++;
         sem_wait(semid, M_to_G_SEM_RECV);
-        //cout << "FROM M d = " << d << endl;
         memset(temp, 0, 128);
         pass_string(mem, temp);
     
         if(flag){
             new_proc = create_process(temp);
-            memory->insert_to_memory(new_proc, best_fit(new_proc, L, memory, false, d), d);   
-            //memory->delete_node_by_process_stop_time(d);  
+            d = new_proc->get_birth_time(); 
+            memory->insert_to_memory(new_proc, best_fit(new_proc, L, memory, false, d), d); 
+            
+            if((details = memory->delete_node_by_process_stop_time(d))!=""){
+                //filename << "Removed process: ";  
+                //filename << details; 
+            }
+
+            add_pending_process(memory, L, BEST_FIT, d);
         }
-        
         sem_signal(semid, G_to_M_SEM_SEND);
         flag++;
     }
 
-    //create log_file.xxx
+    Memory_List_Node* current = memory->get_head();
+    int i = 0;
     pid_t pid = getpid();
     string log_file = "log_file_best.";
     log_file+= to_string(pid);
 
     ofstream filename(log_file);
     filename << "Best Fit: " << endl;
-    Memory_List_Node* current = memory->get_head();
-    int i = 0;
+
+    //filename.flush();
     filename << "Processes currenty in the memory: " << endl;
     while(current!=NULL){
         i++;
@@ -87,7 +96,9 @@ int main(int argc, char* argv[]){
         filename << current->print_to_filename();
         current = current->next;
     }
- 
+
+
+    //filename.flush();
     filename << endl;
     filename << "Pending Processes: " << endl;
     

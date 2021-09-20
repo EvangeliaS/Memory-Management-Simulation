@@ -48,7 +48,7 @@ class Memory_List{
         int insert_to_memory(Process* process, Memory_List_Node* algorithm, int ptime);
         int delete_node(Process* proc);
         int delete_node_by_position(int x);
-        int delete_node_by_process_stop_time(int stop);
+        string delete_node_by_process_stop_time(int stop);
         Memory_List_Node* search_node_by_position(int position);
         Memory_List_Node* search_node_by_process(Process* process);
         Memory_List_Node* search_node_by_process_stop_time(int stop);
