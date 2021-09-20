@@ -10,7 +10,7 @@ int main(int argc, char* argv[]){
     if(argc!=7){
         return -1;
     }
-    int D  = stoi(argv[1]);
+//  int D  = stoi(argv[1]);
 //  int lo = stoi(argv[2]);
 //  int hi = stoi(argv[3]);
 //  int t  = stoi(argv[4]);
@@ -50,6 +50,7 @@ int main(int argc, char* argv[]){
     Pending_Processes_List* L = new Pending_Processes_List();
     int d = 0;
     string details;
+    int finished_processes = 0;
 
 /// EKTELESI ME BEST FIT ALGORITHM
 /*
@@ -118,6 +119,13 @@ int main(int argc, char* argv[]){
 */
 
     //EKTELESI ME WORST FIT
+    pid_t pid = getpid();
+    string log_file = "log_file_worst.";
+    log_file+= to_string(pid);
+
+    ofstream filename(log_file);
+    filename << "Worst Fit: " << endl << endl;
+    filename << "Finished processes: " << endl;
     Memory_List* memory = new Memory_List(S);
     while(1){
         sem_wait(semid, M_to_G_SEM_RECV);
@@ -125,7 +133,6 @@ int main(int argc, char* argv[]){
         memset(temp, 0, 128);
         pass_string(mem, temp);
         if(strcmp("$", temp)==0){
-            //cout << "OUT";
             break;
         }
     
@@ -136,54 +143,58 @@ int main(int argc, char* argv[]){
         }
         if(strcmp("", temp)!=0){
         	if((details = memory->delete_node_by_process_stop_time(d))!=""){
-                //filename << "Removed process: ";  
-                //filename << details; 
-                cout << details << endl;
-            }
+                if (filename.is_open()){
+                    filename << "Removed process: ";  
+                    filename << details; 
+                    filename.flush();
+                }
+                //cout << details;
+                else{
+                    cout << "COULD NOT PRINT IN FILE" << endl;
+                }
             //add_pending_process(memory, L, BEST_FIT, d);
-      
+            finished_processes++;
+            }
         }
-        
-        
         sem_signal(semid, G_to_M_SEM_SEND);
 
         flag++;
-        //d++;
     }
 
-    //create log_file.xxx
-    pid_t pid = getpid();
-    string log_file = "log_file_worst.";
-    log_file+= to_string(pid);
-
-    ofstream filename(log_file);
-    filename << "Worst Fit: " << endl;
+    sem_signal(semid, G_to_M_SEM_SEND);
+    cout << "OUTHJHK" << endl;
     Memory_List_Node* current = memory->get_head();
     int i = 0;
-    filename << "Processes currenty in the memory: " << endl;
-    while(current!=NULL){
-        i++;
-        filename << endl;
-        filename << i << ") ";
-        filename << current->print_to_filename();
-        current = current->next;
-    }
- 
-    filename << endl;
-    filename << "Pending Processes: " << endl;
-    
-    Process* process = L->get_head();
-    while(process!=NULL){
-        filename << endl;
-        filename << process->print_to_filename();
-        process = process->next;
-    }
+    if (filename.is_open()){
 
+        filename.flush();
+        filename << "Processes currenty in the memory: " << endl;
+        while(current!=NULL){
+            i++;
+            filename << endl;
+            filename << i << ") ";
+            filename << current->print_to_filename();
+            current = current->next;
+            filename.flush();
+        }
+    
+        filename << endl;
+        filename << "Pending Processes: " << endl;
+        
+        Process* process = L->get_head();
+        while(process!=NULL){
+            filename << endl;
+            filename << process->print_to_filename();
+            process = process->next;
+            filename.flush();
+        }
+    }
     filename.close();
 
     delete memory;
     delete L;
 
+    cout << "FINISHED M" << endl;
 
 
 /*

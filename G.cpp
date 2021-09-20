@@ -62,6 +62,6 @@ int main(int argc, char* argv[]){
     sem_wait(semid, G_to_M_SEM_SEND); 
     read_line("$", mem);
     sem_signal(semid, M_to_G_SEM_RECV);  
-
+    cout << "FINISHED G" << endl;
     return 0;
 }
