@@ -126,7 +126,7 @@ string Memory_List::delete_node_by_process_stop_time(int stop){
         return "";
     }
     current->prev->next = current->next;
-    if(current->next->prev!=NULL){
+    if( current->next!=NULL && current->next->prev!=NULL){
         current->next->prev = current->prev;
     }
     //cout << " Process: " << current->get_process()->get_process_id() << endl;

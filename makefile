@@ -34,4 +34,4 @@ functions.o: functions.cpp functions.hpp
 	$(CXX) $(CXXFLAGS) -c functions.cpp
 
 clean:
-	rm -f program G M *o
+	rm -f G M program *o
