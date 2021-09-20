@@ -51,6 +51,7 @@ int main(int argc, char* argv[]){
     int d = 0;
 
 /// EKTELESI ME BEST FIT ALGORITHM
+/*
     Memory_List* memory = new Memory_List(S);
 
     //create log_file.xxx
@@ -113,8 +114,8 @@ int main(int argc, char* argv[]){
 
     delete memory;
     delete L;
+*/
 
-/*
     //EKTELESI ME WORST FIT
     Memory_List* memory = new Memory_List(S);
     while(d<=D){
@@ -164,7 +165,7 @@ int main(int argc, char* argv[]){
 
     delete memory;
     delete L;
-*/
+
 
 
 /*
