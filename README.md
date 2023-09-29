@@ -41,6 +41,15 @@ The memory is represented starting from position 0 to S-1, and S must be a power
 
 - **Buddy Algorithm:** The Buddy algorithm is implemented using a binary tree structure. Memory allocation and deallocation are managed through this tree.
 
+### Pending Processes List (L)
+
+-A list named Pending_Processes_List, also known as L, is used to manage processes waiting to be placed in memory.
+-L is implemented as a singly linked list with head/tail pointers, representing a FIFO queue.
+-New processes are added to the end (tail) of the list using the add_process function.
+-Processes are removed from the front (head) of the list using the pop_process function.
+-Memory allocation for processes is handled externally, and memory is not released when processes are removed from this list.
+-Deletion of a process occurs after its lifespan has ended and upon removal from memory (Memory_List).
+
 ### Communication Between G and M
 
 - G generates VPs and notifies M about their placement in memory using "VP_Start" messages.
