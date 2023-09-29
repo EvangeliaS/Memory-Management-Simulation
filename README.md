@@ -61,7 +61,7 @@ The simulation stops when the total simulation duration D reaches zero. Process 
 
 ### Note
 
-- Automatic removal of processes from memory after their lifespan is not implemented for the Buddy algorithm. However, the necessary functions for deleting nodes from the tree and placing pending processes from the list into memory are implemented and functional.
+Automatic removal of processes from memory after their lifespan is not implemented for the Buddy algorithm. However, the necessary functions for deleting nodes from the tree and placing pending processes from the list into memory are implemented and functional.
 
 ### Performance Metrics
 
