@@ -4,6 +4,7 @@ This program simulates memory management using C++ and implements three differen
 
 ### Introduction
 
+The program can be compiled using the "make" command.
 The program begins by executing `./program`, which activates processes G and M. It accepts several parameters:
 
 - D: Total simulation duration
@@ -38,6 +39,8 @@ The memory is represented starting from position 0 to S-1, and S must be a power
   - The process occupies memory from position `x` to `x + size - 1`.
   - Gaps in memory occur between position `x' - y - 1` (the start of the next process after the gap - the end of the previous process before the gap - 1).
 
+- **Buddy Algorithm:** The Buddy algorithm is implemented using a binary tree structure. Memory allocation and deallocation are managed through this tree.
+
 ### Communication Between G and M
 
 - G generates VPs and notifies M about their placement in memory using "VP_Start" messages.
@@ -54,14 +57,13 @@ The log file includes information about terminated processes, memory state at th
 
 ### Note
 
-Automatic removal of processes from memory after their lifespan is not implemented for the Buddy algorithm, but the necessary functions for deleting nodes from the tree and placing pending processes from the list into memory are implemented and functional.
+Automatic removal of processes from memory after their lifespan is not implemented for the Buddy algorithm. However, the necessary functions for deleting nodes from the tree and placing pending processes from the list into memory are implemented and functional.
 
 ### Performance Metrics
 
 The simulation evaluates performance using the following metrics:
 
 1. **E [Shore 1975]:** The product of time and memory, offering insights into resource utilization.
-
 2. **Memory Gap Analysis:** Calculating the mean and variance of memory gap sizes, reflecting memory fragmentation.
 
 ### Conclusion
