@@ -3,8 +3,8 @@
 This program simulates memory management using C++ and implements three different memory allocation algorithms: best fit, worst fit, and the Buddy algorithm.
 
 ### Introduction
-- The program can be compiled using the "make" command.
-- The program begins by executing `./program`, which activates processes G and M. It accepts several parameters:
+The program can be compiled using the "make" command.
+The program begins by executing `./program`, which activates processes G and M. It accepts several parameters:
 
 - D: Total simulation duration
 - lo and hi: Range for VP (Virtual Process) size in KB
