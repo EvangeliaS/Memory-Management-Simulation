@@ -1,8 +1,8 @@
-## Memory Management Simulation
+# Memory Management Simulation
 
 This program simulates memory management using C++ and implements three different memory allocation algorithms: best fit, worst fit, and the Buddy algorithm.
 
-### Introduction
+## Introduction
 The program can be compiled using the "make" command
 and begins by executing `./program`, which activates processes G and M. It accepts several parameters:
 
@@ -15,18 +15,18 @@ and begins by executing `./program`, which activates processes G and M. It accep
 
 For each execution, the results are recorded in respective log files.
 
-### Memory Representation
+## Memory Representation
 
 The memory is represented starting from position 0 to S-1, and S must be a power of 2 for the Buddy algorithm to function correctly.
 
-### Process Generation
+## Process Generation
 
 - Virtual Processes (VPs) are generated based on a Poisson distribution for inter-arrival times.
 - Each VP's size is randomly chosen from a uniform distribution within the range [lo, hi].
 - VP lifetimes follow an exponential distribution with an average duration of T seconds.
 - The simulation runs for a total duration of D seconds.
 
-### Memory Management Algorithms
+## Memory Management Algorithms
 
 - **Best Fit and Worst Fit Algorithms:** These algorithms use a doubly linked list to manage memory. Here's how they operate:
   
@@ -40,7 +40,7 @@ The memory is represented starting from position 0 to S-1, and S must be a power
 
 - **Buddy Algorithm:** The Buddy algorithm is implemented using a binary tree structure. Memory allocation and deallocation are managed through this tree.
 
-### Communication Between G and M
+## Communication Between G and M
 
 - G generates VPs and notifies M about their placement in memory using "VP_Start" messages.
 - G also informs M when a VP completes its execution (typically when its lifetime expires) with a "VP_Stop" message.
@@ -50,7 +50,7 @@ The memory is represented starting from position 0 to S-1, and S must be a power
 
 The simulation stops when the total simulation duration D reaches zero. Process G determines this and notifies M with a "$" message.
 
-### Pending Processes List (L)
+## Pending Processes List (L)
 
 - A list named Pending_Processes_List, also known as L, is used to manage processes waiting to be placed in memory.
 - L is implemented as a singly linked list with head/tail pointers, representing a FIFO queue.
@@ -58,6 +58,11 @@ The simulation stops when the total simulation duration D reaches zero. Process 
 - Processes are removed from the front (head) of the list using the `pop_process` function.
 - Memory allocation for processes is handled externally, and memory is not released when processes are removed from this list.
 - Deletion of a process occurs after its lifespan has ended and upon removal from memory (Memory_List).
+
+## Conclusion
+
+The simulation provides valuable insights into the efficiency of different memory allocation algorithms under various scenarios. Both the best fit and worst fit algorithms were found to be equally efficient and outperform the Buddy algorithm.
+
 
 ### Note
 
@@ -70,7 +75,3 @@ The simulation evaluates performance using the following metrics:
 1. **E [Shore 1975]:** The product of time and memory, offering insights into resource utilization.
 
 2. **Memory Gap Analysis:** Calculating the mean and variance of memory gap sizes, reflecting memory fragmentation.
-
-### Conclusion
-
-The simulation provides valuable insights into the efficiency of different memory allocation algorithms under various scenarios. Both the best fit and worst fit algorithms were found to be equally efficient and outperform the Buddy algorithm.
